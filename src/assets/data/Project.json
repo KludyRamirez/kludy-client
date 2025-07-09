@@ -1,0 +1,149 @@
+[
+  {
+    "_id": "project-1",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/mathematrix-nobg-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/mathematrix-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "Mathematrix",
+    "description": "This web application is a thesis project designed for students with an interest in mathematics, particularly in rational functions.",
+    "url": "https://mathematrix-client.vercel.app",
+    "githubLink": "https://github.com/KludyRamirez/mathematrix-client",
+    "technologies": [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Redux",
+      "TailwindCSS",
+      "Git",
+      "MUI"
+    ]
+  },
+  {
+    "_id": "project-2",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/bpi-aia-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/bpi-aia-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "BPI-AIA",
+    "description": "The website covers insurance plans, company info, wellness programs, and support.",
+    "url": "https://www.bpi-aia.com.ph",
+    "githubLink": "https://www.bpi-aia.com.ph",
+    "technologies": ["AEM", "Java", "jQuery", "ReactJS", "Bootstrap", "Akamai"]
+  },
+  {
+    "_id": "project-3",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/aia-ph-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/aia-ph-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "AIA Philippines",
+    "description": "The website covers insurance plans, company info, wellness programs, and support.",
+    "url": "https://www.aia.com.ph",
+    "githubLink": "https://www.aia.com.ph",
+    "technologies": ["AEM", "Java", "jQuery", "ReactJS", "Bootstrap", "Akamai"]
+  },
+  {
+    "_id": "project-4",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/aia-ph-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/aia-ph-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "AIA Thailand",
+    "description": "The website covers insurance plans, company info, wellness programs, and support.",
+    "url": "https://www.aia.co.th",
+    "githubLink": "https://www.aia.co.th",
+    "technologies": ["AEM", "Java", "jQuery", "ReactJS", "Bootstrap", "Akamai"]
+  },
+  {
+    "_id": "project-5",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "PLV OSA Reprimand Hub",
+    "description": "A web-based digital hub where the pamantasan can handle student cases, offenses, and violations.",
+    "url": "https://plv-osa-reprimand-hub.vercel.app",
+    "githubLink": "https://github.com/KludyRamirez/plv-osa-reprimand-hub",
+    "technologies": [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Redux",
+      "TailwindCSS",
+      "Git",
+      "MUI"
+    ]
+  },
+  {
+    "_id": "project-6",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751881488/mlac-logo.png",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/mlac-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "MLAC",
+    "description": "A web-based application for MLAC parents to manage their children's weekly therapy attendance.",
+    "url": "https://plv-osa-reprimand-hub.vercel.app",
+    "githubLink": "https://github.com/KludyRamirez/plv-osa-reprimand-hub",
+    "technologies": [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Redux",
+      "TailwindCSS",
+      "Git",
+      "MUI"
+    ]
+  },
+  {
+    "_id": "project-7",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/apd-growthops-logo.svg",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/apd-growthops-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "APD - GrowthOps Technical Exam",
+    "description": "Technical assessment at GrowthOps, building components and retrieving data from a web service.",
+    "url": "https://techassessmentgrowthops.web.app",
+    "githubLink": "https://github.com/KludyRamirez/tech-assessment-growthops-kludy",
+    "technologies": ["ReactJS", "Bootstrap", "Git", "MUI"]
+  },
+  {
+    "_id": "project-8",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751942291/flexicon-logo.svg",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/galatic-proj-photo.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "Galatic Technical Exam 1",
+    "description": "This is the first part of the technical exam from Galatic. The purpose of this exam is to assess my front-end development skills and principles.",
+    "url": "https://galatic-first-card-assessment.netlify.app",
+    "githubLink": "https://github.com/KludyRamirez/Galatic-technical-assessment/tree/main/Galatic-first-card",
+    "technologies": ["HTML", "CSS", "SASS", "Javascript"]
+  },
+  {
+    "_id": "project-9",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751942291/flexicon-logo.svg",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/galatic-proj-photo.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "Galatic Technical Exam 2",
+    "description": "This is the second part of the technical exam from Galatic. The purpose of this exam is to assess my front-end development skills and principles.",
+    "url": "https://galatic-second-card-assessment.netlify.app",
+    "githubLink": "https://github.com/KludyRamirez/Galatic-technical-assessment/tree/main/Galatic-second-card",
+    "technologies": ["HTML", "CSS", "SASS", "Javascript"]
+  },
+  {
+    "_id": "project-10",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751942291/flexicon-logo.svg",
+    "splashPhoto": "https://res.cloudinary.com/dni1vtbsv/image/upload/registration-page-proj-photo.png",
+    "date": "2024-11-21T00:00:00Z",
+    "authors": ["Kludy Ramirez"],
+    "title": "Registration Page Project",
+    "description": "A registration page built on Nuxt 2 for Galatic Events Corporation.",
+    "url": "https://vue-nuxt-2-registration-form.vercel.app",
+    "githubLink": "https://github.com/KludyRamirez/vue-nuxt-2-registration-form",
+    "technologies": ["VueJS", "NuxtJS", "SASS", "ElementUI"]
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "_id": "badge-1",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ociaiprobadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=76E311E22A9F506E15C9E2E7F098394A10A3CAE03705998B08EEE1E644E67C68",
+    "categories": [
+      "Certification",
+      "AI / ML",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-2",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ociaibadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=3557639427BF6F7E34E0D16F03B6AECA77B28C750D231B26512FC7FB00236070",
+    "categories": [
+      "Certification",
+      "AI / ML",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-3",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ocidmbadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Data Management 2023 Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E38C16DFB5DA8B0A0EA4BA0698082A79A2B06C6534063349FFA4B697DA149CF4",
+    "categories": [
+      "Certification",
+      "Data",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-4",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ocifabadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=12C5A88AE64C80594163949821AF1ED5DDB039D5A90056A114D4E13097FEF707",
+    "categories": [
+      "Certification",
+      "Data",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-5",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ocifabadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=12C5A88AE64C80594163949821AF1ED5DDB039D5A90056A114D4E13097FEF707",
+    "categories": [
+      "Certification",
+      "Cloud",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-6",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/sc900badge.svg",
+    "date": "2023-10-11T00:00:00Z",
+    "title": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+    "providers": ["Microsoft"],
+    "url": "https://learn.microsoft.com/en-us/users/kludyramirez-9112/credentials/974ee59fb18f9cc8",
+    "categories": [
+      "Certification",
+      "Security",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-7",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751877371/icipbadge.svg",
+    "date": "2024-06-25T00:00:00Z",
+    "title": "OPSWAT Introduction to Critical Infrastructure Protection (ICIP)",
+    "providers": ["OPSWAT Academy"],
+    "url": "https://www.credly.com/badges/30cb08b7-97f0-4480-8070-55df43158979",
+    "categories": [
+      "Certification",
+      "Security",
+      "Relevant"
+    ]
+  },
+  {
+    "_id": "badge-8",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751877371/ofsabadge.svg",
+    "date": "2024-06-25T00:00:00Z",
+    "title": "OPSWAT File Security Associate (OFSA)",
+    "providers": ["OPSWAT Academy"],
+    "url": "https://www.credly.com/badges/b8a61bab-560a-4b7c-8a0f-7f236e02292a",
+    "categories": [
+      "Certification",
+      "Security",
+      "Relevant"
+    ]
+  },
+  {
+    "_id": "badge-9",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/acebadge.svg",
+    "date": "2024-06-24T00:00:00Z",
+    "title": "Multicloud Network Associate",
+    "providers": ["Aviatrix Academy"],
+    "url": "https://www.credly.com/badges/b8a61bab-560a-4b7c-8a0f-7f236e02292a",
+    "categories": [
+      "Certification",
+      "Cloud",
+      "Popular"
+    ]
+  },
+  {
+    "_id": "badge-10",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751879524/cyberbadge.svg",
+    "date": "2024-06-11T00:00:00Z",
+    "title": "Introduction to Cybersecurity",
+    "providers": ["Cisco Academy"],
+    "url": "https://www.credly.com/badges/9104605d-d3d8-4bdc-bf76-68ec409bbde5",
+    "categories": [
+      "Completion",
+      "Security",
+      "Relevant"
+    ]
+  },
+  {
+    "_id": "badge-11",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751879792/js1badge.svg",
+    "date": "2024-06-11T00:00:00Z",
+    "title": "JavaScript Essentials 1",
+    "providers": ["Cisco Academy"],
+    "url": "https://www.credly.com/badges/7982aaac-e9ff-407b-a6fe-2d5852da30b0",
+    "categories": [
+      "Completion",
+      "Development",
+      "Relevant"
+    ]
+  },
+  {
+    "_id": "badge-12",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751881720/js2badge.svg",
+    "date": "2024-06-14T00:00:00Z",
+    "title": "JavaScript Essentials 2",
+    "providers": ["Cisco Academy"],
+    "url": "https://www.credly.com/badges/679303a6-ea28-4c44-af8d-7e3dfd4d63f4",
+    "categories": [
+      "Completion",
+      "Development",
+      "Relevant"
+    ]
+  }
+]
