@@ -23,7 +23,7 @@ export const Badge = createApi({
 
     getBadgeById: builder.query<BadgeType, string>({
       query: (id) => `badge/${id}`,
-      providesTags: (result, error, id) => [{ type: 'Badge', id }],
+      providesTags: (_result, _error, id) => [{ type: 'Badge', id }],
     }),
 
     updateBadge: builder.mutation<
@@ -35,7 +35,7 @@ export const Badge = createApi({
         method: 'PUT',
         body: data,
       }),
-      invalidatesTags: (result, error, { id }) => [{ type: 'Badge', id }],
+      invalidatesTags: (_result, _error, { id }) => [{ type: 'Badge', id }],
     }),
 
     deleteBadge: builder.mutation<void, string>({
@@ -43,7 +43,7 @@ export const Badge = createApi({
         url: `badge/${id}`,
         method: 'DELETE',
       }),
-      invalidatesTags: (result, error, id) => [{ type: 'Badge', id }],
+      invalidatesTags: (_result, _error, id) => [{ type: 'Badge', id }],
     }),
   }),
 });

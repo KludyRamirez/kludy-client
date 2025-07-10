@@ -26,7 +26,7 @@ export const Certification = createApi({
 
     getCertificationById: builder.query<CertificationType, string>({
       query: (id) => `certification/${id}`,
-      providesTags: (result, error, id) => [{ type: 'Certification', id }],
+      providesTags: (_result, _error, id) => [{ type: 'Certification', id }],
     }),
 
     updateCertification: builder.mutation<
@@ -38,7 +38,7 @@ export const Certification = createApi({
         method: 'PUT',
         body: data,
       }),
-      invalidatesTags: (result, error, { id }) => [
+      invalidatesTags: (_result, _error, { id }) => [
         { type: 'Certification', id },
       ],
     }),
@@ -48,7 +48,7 @@ export const Certification = createApi({
         url: `certification/${id}`,
         method: 'DELETE',
       }),
-      invalidatesTags: (result, error, id) => [{ type: 'Certification', id }],
+      invalidatesTags: (_result, _error, id) => [{ type: 'Certification', id }],
     }),
   }),
 });

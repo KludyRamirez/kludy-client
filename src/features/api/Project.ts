@@ -23,7 +23,7 @@ export const Project = createApi({
 
     getProjectById: builder.query<ProjectType, string>({
       query: (id) => `project/${id}`,
-      providesTags: (result, error, id) => [{ type: 'Project', id }],
+      providesTags: (_result, _error, id) => [{ type: 'Project', id }],
     }),
 
     updateProject: builder.mutation<
@@ -35,7 +35,7 @@ export const Project = createApi({
         method: 'PUT',
         body: data,
       }),
-      invalidatesTags: (result, error, { id }) => [{ type: 'Project', id }],
+      invalidatesTags: (_result, _error, { id }) => [{ type: 'Project', id }],
     }),
 
     deleteProject: builder.mutation<void, string>({
@@ -43,7 +43,7 @@ export const Project = createApi({
         url: `project/${id}`,
         method: 'DELETE',
       }),
-      invalidatesTags: (result, error, id) => [{ type: 'Project', id }],
+      invalidatesTags: (_result, _error, id) => [{ type: 'Project', id }],
     }),
   }),
 });
