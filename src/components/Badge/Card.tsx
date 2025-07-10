@@ -20,10 +20,10 @@ const Meta: React.FC<{ date: string; providers: string[] }> = ({
 }) => (
   <div className="flex gap-2 text-[.850rem] text-gray-300">
     <span>
-      {new Date(date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
+      {new Date(date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
       })}
     </span>
     <span>|</span>
@@ -46,9 +46,9 @@ const Links: React.FC<{
 );
 
 const Clogo: React.FC<{ category: string }> = ({ category }) => (
-  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border border-white/20 text-[14px] text-gray-200 group-hover:rounded-[42px] gap-2 hover:bg-white hover:border-white hover:text-black transition-all duration-[400ms]">
+  <div className="cursor-pointer flex justify-center items-center py-1 px-3 border border-slate-100/20 text-[14px] text-gray-200 group-hover:rounded-[42px] gap-2 hover:bg-white hover:border-white hover:text-black transition-all duration-[400ms]">
     {category === 'Certification' ? (
-      <FaTrophy size={14}  />
+      <FaTrophy size={14} />
     ) : category === 'AI / ML' ? (
       <SiOpenai size={14} />
     ) : category === 'Popular' ? (
@@ -84,7 +84,7 @@ const Categories: React.FC<{ categories: BadgeType['categories'] }> = ({
 
 const Card: React.FC<{ badge: BadgeType }> = ({ badge }) => {
   return (
-    <div className="w-full h-full p-2 relative group">
+    <div className="cursor-pointer w-full h-full p-2 relative group hover:p-4 hover:border hover:border-slate-100/20 hover:rounded-xl">
       <Image photo={badge.photo} title={badge.title} />
 
       <Spacer size="small" />

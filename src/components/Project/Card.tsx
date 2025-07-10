@@ -68,7 +68,7 @@ const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
 
 const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
   return (
-    <div className="w-full h-full p-2 group relative">
+    <div className="w-full h-full p-2 group relative hover:p-4 hover:border hover:border-gray-300 hover:rounded-xl">
       <Image
         logo={project.logo}
         splashPhoto={project.splashPhoto}
@@ -81,7 +81,7 @@ const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
 
       <Spacer size="xs" />
 
-      <div className="text-[#282828] text-[20px] cursor-pointer group-hover:underline transition-all duration-300">
+      <div className="text-[#282828] text-[20px] cursor-pointer transition-all duration-300">
         {project.title}
       </div>
 
@@ -97,7 +97,7 @@ const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
 
       <Spacer size="small" />
 
-      <span className="text-[#282828] text-[20px]">Tech Stack</span>
+      <span className="text-[#282828] text-[16px]">Tech Stack</span>
 
       <Spacer size="small" />
 

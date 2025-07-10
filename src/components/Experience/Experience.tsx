@@ -35,11 +35,7 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
       'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png',
       'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
     ],
-    documentsLinks: [
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-    ],
+    documentsLinks: ['CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf'],
   },
   {
     period: 'January 2024 - July 2024',
@@ -55,9 +51,7 @@ user satisfaction compared to the previous system.
 streamlining backend operations enough to handle a high volume of concurrent users while
 ensuring 99% system availability.`,
     ],
-    photos: [
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
-    ],
+    photos: [],
   },
   {
     period: 'March 2023 - December 2023',
@@ -90,7 +84,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
       <div className="w-full flex justify-center items-start">
         <BsSuitcaseLg size={16} className="-mt-[2px] text-gray-600" />
       </div>
-      <div className="w-[1px] h-full bg-[#2f2f2f]"></div>
+      <div className="w-[1px] h-full bg-slate-100/20"></div>
     </div>
 
     <div className="flex flex-col items-start gap-4">
@@ -114,7 +108,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
           </li>
         ))}
       </ul>
-      <div className="w-full h-[1px] bg-[#2f2f2f] mt-2"></div>
+      <div className="w-full h-[1px] bg-slate-100/20 mt-2"></div>
       <div className="flex flex-col gap-4">
         <div className="text-[24px] text-white">Documents</div>
         {documentsLinks?.map((link, index) => (
@@ -132,7 +126,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
           </div>
         ))}
       </div>
-      <div className="w-full h-[1px] bg-[#2f2f2f] mt-2"></div>
+      <div className="w-full h-[1px] bg-slate-100/20 mt-2"></div>
       <div className="w-full flex flex-col gap-4">
         <div className="text-[24px] text-white">Photos</div>
         <div className="w-full flex flex-wrap items-start gap-4 mt-1">
@@ -140,7 +134,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
             <img
               key={index}
               src={photo}
-              className="w-full md:w-[304px] object-contain filter brightness-100 contrast-125 hover:grayscale-0"
+              className="w-full md:w-[304px] h-[200px] object-cover filter brightness-100 contrast-125 hover:grayscale-0"
             />
           ))}
         </div>
@@ -156,7 +150,7 @@ const Experience: React.FC<Props> = ({ experiencesRef }) => {
         <Spacer size="large" />
         <div className="text-white">Experiences</div>
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <h2 className="text-[2.875rem] text-white leading-[1.275]">
           <span>Check out my experiences</span>
@@ -168,7 +162,7 @@ const Experience: React.FC<Props> = ({ experiencesRef }) => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <h3 className="text-[1.75rem] text-white font-[regular]">
           Recent experiences

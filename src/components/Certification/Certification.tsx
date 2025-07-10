@@ -36,7 +36,7 @@ const Certification: React.FC = () => {
     <>
       <Spacer size="medium" />
       <Spacer size="small" />
-      <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+      <div className="w-full h-[1px] bg-slate-100/20"></div>
       <Spacer size="small" />
       <h3 className="text-[1.75rem] text-white font-[regular]">
         Recent certifications
