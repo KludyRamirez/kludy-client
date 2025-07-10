@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
       <div
         className={`fixed right-0 bg-white border-l-[1px] border-gray-300 z-40 ${
-          isOpen && !isClosing ? 'animate-slideInFull lg:animate-slideIn' : ''
+          isOpen && !isClosing ? 'animate-slideInFull md:animate-slideIn' : ''
         } ${isClosing ? 'animate-slideOut' : ''}`}
       >
         {isOpen && !isClosing && (

@@ -97,7 +97,7 @@ const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
 
       <Spacer size="small" />
 
-      <span className="text-[#282828] text-[20px]">Tech Stack</span>
+      <span className="text-[#282828] text-[16px]">Tech Stack</span>
 
       <Spacer size="small" />
 

@@ -35,11 +35,7 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
       'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png',
       'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
     ],
-    documentsLinks: [
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-      'CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf',
-    ],
+    documentsLinks: ['CEIT-Supervisor-Evaluation-Ramirez - HILIS_signed.pdf'],
   },
   {
     period: 'January 2024 - July 2024',
@@ -55,9 +51,7 @@ user satisfaction compared to the previous system.
 streamlining backend operations enough to handle a high volume of concurrent users while
 ensuring 99% system availability.`,
     ],
-    photos: [
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
-    ],
+    photos: [],
   },
   {
     period: 'March 2023 - December 2023',
@@ -140,7 +134,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
             <img
               key={index}
               src={photo}
-              className="w-full md:w-[304px] object-contain filter brightness-100 contrast-125 hover:grayscale-0"
+              className="w-full md:w-[304px] h-[200px] object-cover filter brightness-100 contrast-125 hover:grayscale-0"
             />
           ))}
         </div>

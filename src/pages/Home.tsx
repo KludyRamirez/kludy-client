@@ -32,7 +32,7 @@ import Project from '../components/Project/Project';
 import Experience from '../components/Experience/Experience';
 import Badge from '../components/Badge/Badge';
 import AboutMe from '../components/AboutMe/AboutMe';
-import Bubbles from '../utils/Bubbles';
+import Blog from '../components/Blog/Blog';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -135,7 +135,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToFaqs={scrollToFaqs}
       />
-      <section id="hero" className="relative" ref={heroSectionRef}>
+      <section id="hero" className="relative hero-bg" ref={heroSectionRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-large"></div>
@@ -257,6 +257,7 @@ const HomePage: React.FC<Home> = () => {
         </div>
         <div className="spacer-large"></div>
       </section>
+
       {/* <section id="blogs" className="bg-white relative z-20" ref={blogsRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
@@ -475,7 +476,7 @@ const HomePage: React.FC<Home> = () => {
       <AboutMe />
       <Experience experiencesRef={experiencesRef} />
       <Project projectsRef={projectsRef} projectsGif={projectsGif} />
-
+      <Blog blogsRef={blogsRef} />
       <Badge badgesRef={badgesRef} />
 
       {/* <section id="testimonials" className="relative">
@@ -632,15 +633,12 @@ const HomePage: React.FC<Home> = () => {
         id="footer"
         className="bg-white relative flex flex-col items-center"
       >
-        <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 rotate-180">
-            <Bubbles colors={['black']} />
-          </div>
+        <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">
             <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
             <div className="w-full flex flex-col justify-start items-center">
-              <span className="outlined-text font-[semi-bold]">
+              <span className="text-[44px] font-[semi-bold]">
                 Let's Connect
               </span>
               <div className="spacer-medium"></div>
@@ -691,26 +689,27 @@ const HomePage: React.FC<Home> = () => {
             <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
           </div>
-          <div className="w-full h-[1px] bg-[#e5e7eb]"></div>
-          <div className="spacer-xs"></div>
-          <div className="spacer-small"></div>
-          <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-3">
-            <div className="flex items-center gap-3">
-              <div className="relative flex h-3 w-3 -mt-1">
-                <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
-                <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
-              </div>
-              <span className="tracking-wide text-[16px]">
-                No issues detected
-              </span>
-            </div>
-            <div className="flex justify-end items-center gap-2">
-              <FaRegCopyright size={18} className="-mt-1" />
-              <span className="tracking-wider">Kludy.</span>
-            </div>
-          </div>
-          <div className="spacer-medium"></div>
         </div>
+        <div className="w-full h-[1px] bg-[#e5e7eb]"></div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
+        <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
+          <div className="flex justify-end items-center gap-2">
+            <FaRegCopyright size={14} className="-mt-1" />
+            <span className="tracking-wider text-[14px]">Kludy</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="relative flex h-3 w-3 -mt-1">
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
+            </div>
+            <span className="tracking-wider text-[14px]">
+              No issues detected
+            </span>
+          </div>
+        </div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
       </footer>
     </>
   );
