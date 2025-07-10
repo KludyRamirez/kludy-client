@@ -36,7 +36,7 @@ const Badge: React.FC<Props> = ({ badgesRef }) => {
         <Spacer size="large" />
         <div className="text-white">Badges and Certifications</div>
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <div className="text-[2.875rem] text-white leading-[1.275]">
           <span>Check out my medals</span>
@@ -48,7 +48,7 @@ const Badge: React.FC<Props> = ({ badgesRef }) => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <h3 className="text-[1.75rem] text-white font-[regular]">
           Recent badges

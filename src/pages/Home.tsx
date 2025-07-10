@@ -184,7 +184,7 @@ const HomePage: React.FC<Home> = () => {
             certifications.
           </div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+          <div className="w-full h-[1px] bg-slate-100/20"></div>
           <div className="spacer-small"></div>
           <div className="spacer-xs"></div>
           <Swiper

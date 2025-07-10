@@ -2,6 +2,7 @@ import React from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Autoplay, Pagination } from 'swiper/modules';
 import Spacer from '../../utils/Spacer';
+import Card from './Card';
 // import Card from './Card';
 // import { Blog as BlogType } from '../../types/Blog';
 // import { useGetBlogsQuery } from '../../features/api/Blog';
@@ -22,7 +23,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
         <Spacer size="large" />
         <div className="text-white">Blogs</div>
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <div className="text-[2.875rem] text-white leading-[1.275]">
           <span>Our field evolves rapidly</span>
@@ -34,7 +35,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
+        <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <h3 className="text-[1.75rem] text-white font-[regular]">
           Recent blogs
@@ -52,6 +53,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
             </div>
           )}
         </div> */}
+        <Card />
         <Spacer size="large" />
       </div>
     </section>

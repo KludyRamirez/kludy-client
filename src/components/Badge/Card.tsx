@@ -84,7 +84,7 @@ const Categories: React.FC<{ categories: BadgeType['categories'] }> = ({
 
 const Card: React.FC<{ badge: BadgeType }> = ({ badge }) => {
   return (
-    <div className="w-full h-full p-2 relative group">
+    <div className="cursor-pointer w-full h-full p-2 relative group hover:p-4 hover:border hover:border-slate-100/20 hover:rounded-xl">
       <Image photo={badge.photo} title={badge.title} />
 
       <Spacer size="small" />
