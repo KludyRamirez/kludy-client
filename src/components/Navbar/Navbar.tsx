@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       <div className="w-full flex flex-col z-30 fixed">
-        <div className="w-full flex justify-center py-4 bg-yellow-300">
+        {/* <div className="w-full flex justify-center py-4 bg-yellow-300">
           <div className="max-w-5xl w-full h-full px-[1rem] relative flex flex-wrap justify-between items-center">
             <div className="flex flex-wrap items-center gap-2">
               <FaTriangleExclamation size={18} className="-mt-1" />
@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({
               })}
             </div>
           </div>
-        </div>
+        </div> */}
         <div
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
             isHeroSectionActive
