@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import { FaTriangleExclamation } from 'react-icons/fa6';
-import { HiOutlineXMark } from 'react-icons/hi2';
+import { useState } from "react";
+import { HiOutlineXMark } from "react-icons/hi2";
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
@@ -59,15 +58,15 @@ const Navbar: React.FC<NavbarProps> = ({
         <div
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
             isHeroSectionActive
-              ? 'bg-transparent text-[#efefef]'
-              : 'bg-black shadow-lg text-white'
+              ? "bg-transparent text-[#efefef]"
+              : "bg-black shadow-lg text-white"
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? 'pt-[1.75rem] pb-[1rem] px-[1.25rem]'
-                : 'pt-[1rem] pb-[1rem] px-[1rem]'
+                ? "pt-[1.75rem] pb-[1rem] px-[1.25rem]"
+                : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
             <span className="text-[20px] font-[semi-bold] tracking-wide">
@@ -86,8 +85,8 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
       <div
         className={`fixed right-0 bg-white border-l-[1px] border-gray-300 z-40 ${
-          isOpen && !isClosing ? 'animate-slideInFull md:animate-slideIn' : ''
-        } ${isClosing ? 'animate-slideOut' : ''}`}
+          isOpen && !isClosing ? "animate-slideInFull md:animate-slideIn" : ""
+        } ${isClosing ? "animate-slideOut" : ""}`}
       >
         {isOpen && !isClosing && (
           <>

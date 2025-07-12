@@ -1,38 +1,37 @@
-import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { Home } from '../types/Home';
-import Navbar from '../components/Navbar/Navbar';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
-import emailjs from 'emailjs-com';
-import growthops from '../assets/images/growthops.png';
-import microsoft from '../assets/images/microsoft.svg';
-import opswat from '../assets/images/opswat.svg';
-import oracle from '../assets/images/oracle.svg';
-import udemy from '../assets/images/udemy.svg';
-import codecademy from '../assets/images/codecademy.svg';
-import cisco from '../assets/images/cisco.svg';
+import React, { useState, useEffect, useRef, FormEvent } from "react";
+import { Home } from "../types/Home";
+import Navbar from "../components/Navbar/Navbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import emailjs from "emailjs-com";
+import growthops from "../assets/images/growthops.png";
+import microsoft from "../assets/images/microsoft.svg";
+import opswat from "../assets/images/opswat.svg";
+import oracle from "../assets/images/oracle.svg";
+import udemy from "../assets/images/udemy.svg";
+import codecademy from "../assets/images/codecademy.svg";
+import cisco from "../assets/images/cisco.svg";
 
-import projectsGif from '../assets/gif/projects-gif.gif';
+import projectsGif from "../assets/gif/projects-gif.gif";
 
-import StarsCanvas from '../components/Background/Stars';
+import StarsCanvas from "../components/Background/Stars";
 
 import {
   FaFacebook,
   FaGithub,
-  FaHatWizard,
   FaLinkedinIn,
   FaRegCopyright,
-} from 'react-icons/fa6';
+} from "react-icons/fa6";
 
-import { RxEnvelopeClosed } from 'react-icons/rx';
+import { RxEnvelopeClosed } from "react-icons/rx";
 
-import toast from 'react-hot-toast';
-import Project from '../components/Project/Project';
-import Experience from '../components/Experience/Experience';
-import Badge from '../components/Badge/Badge';
-import AboutMe from '../components/AboutMe/AboutMe';
-import Blog from '../components/Blog/Blog';
+import toast from "react-hot-toast";
+import Project from "../components/Project/Project";
+import Experience from "../components/Experience/Experience";
+import Badge from "../components/Badge/Badge";
+import AboutMe from "../components/AboutMe/AboutMe";
+import Blog from "../components/Blog/Blog";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -65,10 +64,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        'service_7ps65lj',
-        'template_gy0m0sm',
+        "service_7ps65lj",
+        "template_gy0m0sm",
         e.currentTarget,
-        'PxOfC-PYxo4STwqcF'
+        "PxOfC-PYxo4STwqcF"
       )
       .then(
         (result) => {
@@ -89,37 +88,37 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToHero = () => {
     if (heroSectionRef.current) {
-      heroSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      heroSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToBlogs = () => {
     if (blogsRef.current) {
-      blogsRef.current.scrollIntoView({ behavior: 'smooth' });
+      blogsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToExperiences = () => {
     if (experiencesRef.current) {
-      experiencesRef.current.scrollIntoView({ behavior: 'smooth' });
+      experiencesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToProjects = () => {
     if (projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToBadges = () => {
     if (badgesRef.current) {
-      badgesRef.current.scrollIntoView({ behavior: 'smooth' });
+      badgesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToFaqs = () => {
     if (faqsRef.current) {
-      faqsRef.current.scrollIntoView({ behavior: 'smooth' });
+      faqsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -142,21 +141,20 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-[3.525rem] leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white">
               <div className="text-center font-[semi-bold]">
-                'Zup,{' '}
-                <span className="text-[#919191] font-[regular]">I am</span>{' '}
+                'Zup,{" "}
+                <span className="text-[#919191] font-[regular]">I am</span>{" "}
                 Kludy
               </div>
               <div className="text-center text-[#919191] relative">
-                <span className="font-[semi-bold]">Software</span>{' '}
-                <span className="font-[semi-bold] text-white">Engineer</span>{' '}
-                <span className="font-[regular]">and</span>{' '}
-                <span className="font-[semi-bold]">GenAI</span>{' '}
+                <span className="font-[semi-bold]">Software</span>{" "}
+                <span className="font-[semi-bold] text-white">Engineer</span>{" "}
+                <span className="font-[regular]">and</span>{" "}
+                <span className="font-[semi-bold]">GenAI</span>{" "}
                 <span className="font-[semi-bold] text-white relative z-20">
                   Pro
                 </span>
               </div>
               <div className="spacer-small"></div>
-              
             </div>
           </div>
           <div className="spacer-small"></div>
@@ -170,7 +168,7 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-          
+
           <div className="text-center text-white font-[extra-light] tracking-wider relative">
             These are the organizations and institutions that have issued my
             certifications.
@@ -692,8 +690,8 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{" "}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{" "}
             </div>
             <span className="tracking-wider text-[14px]">
               No issues detected
