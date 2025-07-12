@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { HiLink } from 'react-icons/hi2';
-import { Project as ProjectType } from '../../types/Project';
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { HiLink } from "react-icons/hi2";
+import { Project as ProjectType } from "../../types/Project";
 
 const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
@@ -10,20 +10,20 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
 }) => (
   <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
     <span>
-      {new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+      {new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       })}
     </span>
     <span>|</span>
-    <span>by {authors.join(', ')}</span>
+    <span>by {authors.join(", ")}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: ProjectType['url'];
-  githubLink: ProjectType['githubLink'];
+  url: ProjectType["url"];
+  githubLink: ProjectType["githubLink"];
 }> = ({ url, githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@ const Links: React.FC<{
 );
 
 const Badges: React.FC<{ technology: string }> = ({ technology }) => (
-  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px] transition-all duration-300">
+  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
     <img
       src={`https://res.cloudinary.com/dni1vtbsv/image/upload/v1751536999/${technology}.png`}
       alt={technology}
@@ -56,7 +56,7 @@ const Badges: React.FC<{ technology: string }> = ({ technology }) => (
   </div>
 );
 
-const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
+const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
   technologies,
 }) => (
   <div className="w-full flex flex-wrap justify-start items-start gap-2">
@@ -68,40 +68,38 @@ const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
 
 const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
   return (
-    <div className="w-full h-full p-2 group relative hover:p-4 hover:border hover:border-gray-300 hover:rounded-xl">
+    <div className="w-full h-full group relative hover:border hover:border-gray-300 hover:rounded-xl">
       <Image
         logo={project.logo}
         splashPhoto={project.splashPhoto}
         title={project.title}
       />
 
-      <Spacer size="small" />
+      <div className="group-hover:px-4 pb-4">
+        <Spacer size="small" />
 
-      <Meta date={project.date} authors={project.authors} />
+        <Meta date={project.date} authors={project.authors} />
 
-      <Spacer size="xs" />
+        <Spacer size="xs" />
 
-      <div className="text-[#282828] text-[20px] cursor-pointer transition-all duration-300">
-        {project.title}
+        <div className="text-[#282828] text-[20px] cursor-pointer transition-all duration-300">
+          {project.title}
+        </div>
+
+        <Spacer size="xs" />
+
+        <span className="text-[#282828] text-[14px] tracking-wide">
+          {project.description}
+        </span>
+
+        <Spacer size="xs" />
+
+        <Links url={project.url} githubLink={project.githubLink} />
+
+        <Spacer size="small" />
+
+        <Technologies technologies={project.technologies} />
       </div>
-
-      <Spacer size="xs" />
-
-      <span className="text-[#282828] text-[14px] tracking-wide">
-        {project.description}
-      </span>
-
-      <Spacer size="xs" />
-
-      <Links url={project.url} githubLink={project.githubLink} />
-
-      <Spacer size="small" />
-
-      <span className="text-[#282828] text-[16px]">Tech Stack</span>
-
-      <Spacer size="small" />
-
-      <Technologies technologies={project.technologies} />
     </div>
   );
 };

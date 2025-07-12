@@ -92,7 +92,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
         <div>{period}</div>
       </div>
       <div className="flex items-center gap-2 group">
-        <div className="text-[24px] text-white hover:underline cursor-pointer">
+        <div className="text-[24px] text-white hover:underline cursor-pointer font-[semi-bold]">
           {title}
         </div>
         <FaLinkedin
@@ -103,7 +103,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
 
       <ul className="list-disc list-inside space-y-4 md:space-y-2 text-[16px] tracking-wider">
         {points.map((point, idx) => (
-          <li key={idx} className="text-gray-400 hover:text-white">
+          <li key={idx} className="text-white">
             {point}
           </li>
         ))}
@@ -116,7 +116,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
             key={index}
             className="cursor-pointer flex items-center gap-2 group tracking-wider"
           >
-            <span className="text-gray-400 hover:underline group-hover:text-white">
+            <span className="text-gray-300 hover:underline group-hover:text-white">
               {link}
             </span>
             <BsArrowUpRight

@@ -135,7 +135,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToFaqs={scrollToFaqs}
       />
-      <section id="hero" className="relative hero-bg" ref={heroSectionRef}>
+      <section id="hero" className="h-screen relative" ref={heroSectionRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-large"></div>
@@ -152,33 +152,25 @@ const HomePage: React.FC<Home> = () => {
                 <span className="font-[regular]">and</span>{' '}
                 <span className="font-[semi-bold]">GenAI</span>{' '}
                 <span className="font-[semi-bold] text-white relative z-20">
-                  Prof
+                  Pro
                 </span>
               </div>
-              <div className="spacer-xs"></div>
               <div className="spacer-small"></div>
-              <div className="flex justify-center items-center gap-2">
-                <div className="text-[16px] text-center font-[semi-bold] tracking-wide">
-                  <span className="font-[regular] text-[#919191]">Also a</span>
-                  {'  '}
-                  Cybersecurity{'  '}
-                  <span className="font-[regular] text-[#919191]">Nerd</span>
-                </div>
-                <FaHatWizard size={16} className="-mt-[6px]" />
-              </div>
+              
             </div>
           </div>
-          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
           <div className="w-[100%] flex justify-center gap-8">
-            <div className="cursor-pointer py-[0.60rem] px-[1.75rem] text-[14px] bg-gray-200 border border-white hover:bg-white rounded-[42px] tracking-wider">
+            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-[14px] bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wider">
               Recruit me
             </div>
-            <div className="cursor-pointer py-[0.60rem] px-[1.75rem] text-[14px] text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-[42px] tracking-wider">
+            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-[14px] text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-lg tracking-wider">
               Download CV
             </div>
           </div>
-          <div className="spacer-large"></div>
+          <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
+          
           <div className="text-center text-white font-[extra-light] tracking-wider relative">
             These are the organizations and institutions that have issued my
             certifications.
