@@ -306,10 +306,3 @@
     );
   background-blend-mode: overlay, normal, normal, normal, normal, normal, normal;
 }
-
-.hero-bg {
-  /* opacity: 1;
-  background-image: linear-gradient(white 1px, transparent 1px),
-    linear-gradient(to right, white 1px, transparent 1px);
-  background-size: 20px 20px; */
-}
