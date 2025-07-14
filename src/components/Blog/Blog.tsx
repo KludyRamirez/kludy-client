@@ -1,21 +1,18 @@
-import React from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay, Pagination } from 'swiper/modules';
-import Spacer from '../../utils/Spacer';
-import Card from './Card';
-// import Card from './Card';
-// import { Blog as BlogType } from '../../types/Blog';
-// import { useGetBlogsQuery } from '../../features/api/Blog';
-// import BlogData from '../../assets/data/Blog.json';
-// import Loader from '../../utils/Loader';
+import React from "react";
+import Spacer from "../../utils/Spacer";
+import Card from "./Card";
+import { useGetBlogsQuery } from "../../features/api/Blog";
+import { Blog as BlogType } from "../../types/Blog";
+import BlogData from "../../assets/data/Blog.json";
+import { Loader } from "@react-three/drei";
 
 interface Props {
   blogsRef: React.RefObject<HTMLElement>;
 }
 
 const Blog: React.FC<Props> = ({ blogsRef }) => {
-  //   const { data, isLoading } = useGetBlogsQuery();
-  //   const blogs: BlogType[] = data ?? (BlogData as BlogType[]);
+  const { data, isLoading } = useGetBlogsQuery();
+  const blogs: BlogType[] = data ?? (BlogData as BlogType[]);
 
   return (
     <section id="blog" className="" ref={blogsRef}>
@@ -42,7 +39,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
         </h3>
         <Spacer size="medium" />
         <Spacer size="xs" />
-        {/* <div className="flex flex-col">
+        <div className="flex flex-col">
           {blogs && blogs.length > 0 ? (
             blogs.map((blog) => <Card key={blog._id} blog={blog} />)
           ) : isLoading ? (
@@ -52,8 +49,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
               No blogs found.
             </div>
           )}
-        </div> */}
-        <Card />
+        </div>
         <Spacer size="large" />
       </div>
     </section>

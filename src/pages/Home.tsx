@@ -32,6 +32,8 @@ import Experience from "../components/Experience/Experience";
 import Badge from "../components/Badge/Badge";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Blog from "../components/Blog/Blog";
+import Typewriter from "../utils/Typewriter";
+import Bubbles from "../utils/Bubbles";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -134,42 +136,52 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToFaqs={scrollToFaqs}
       />
-      <section id="hero" className="h-screen relative" ref={heroSectionRef}>
+      <section id="hero" className="xl:h-screen relative" ref={heroSectionRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
-          <div className="spacer-large"></div>
-          <div className="text-[3.525rem] leading-[1.275]">
-            <div className="flex flex-col justify-center items-center text-white">
+          <div className="spacer-medium"></div>
+          <div className="spacer-medium"></div>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-xs"></div>
+          <div className="text-7xl leading-[1.275]">
+            <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
                 'Zup,{" "}
                 <span className="text-[#919191] font-[regular]">I am</span>{" "}
                 Kludy
               </div>
-              <div className="text-center text-[#919191] relative">
-                <span className="font-[semi-bold]">Software</span>{" "}
-                <span className="font-[semi-bold] text-white">Engineer</span>{" "}
-                <span className="font-[regular]">and</span>{" "}
-                <span className="font-[semi-bold]">GenAI</span>{" "}
-                <span className="font-[semi-bold] text-white relative z-20">
-                  Pro
-                </span>
+              <div className="flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4 text-[#919191] relative tracking-wide">
+                <Typewriter
+                  words={["Full Stack", "Frontend", "Backend", "DevOps"]}
+                  speed={200}
+                  pause={300}
+                />
+                <div className="font-[semi-bold] text-white">Engineer</div>
+                <div className="font-[regular]"> and </div>
+                <div className="font-[semi-bold] text-white">GenAI</div>
+                <Typewriter
+                  words={["Weeb", "Leader", "Expert", "Nerd"]}
+                  speed={400}
+                  pause={300}
+                />
               </div>
               <div className="spacer-small"></div>
             </div>
           </div>
           <div className="spacer-small"></div>
           <div className="w-[100%] flex justify-center gap-8">
-            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-[14px] bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wider">
+            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide">
               Recruit me
             </div>
-            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-[14px] text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-lg tracking-wider">
+            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-lg tracking-wide">
               Download CV
             </div>
           </div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
 
-          <div className="text-center text-white font-[extra-light] tracking-wider relative">
+          <div className="text-lg text-center text-white font-[extra-light] tracking-wide relative">
             These are the organizations and institutions that have issued my
             certifications.
           </div>
@@ -245,7 +257,11 @@ const HomePage: React.FC<Home> = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="spacer-large"></div>
+        <div className="w-full flex justify-center items-center gap-12">
+          <div className="w-[200px] mt-8">
+            <Bubbles colors={["white"]} />
+          </div>
+        </div>
       </section>
 
       {/* <section id="blogs" className="bg-white relative z-20" ref={blogsRef}>

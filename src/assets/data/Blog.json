@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "project-1",
+    "date": "2024-11-21T00:00:00Z",
+    "minRead": "3 min read",
+    "title": "Mathematrix",
+    "description": "This web application is a thesis project designed for students with an interest in mathematics, particularly in rational functions.",
+    "content": "https://mathematrix-client.vercel.app",
+    "categories": [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Redux",
+      "TailwindCSS",
+      "Docker",
+      "MUI"
+    ]
+  }
+]

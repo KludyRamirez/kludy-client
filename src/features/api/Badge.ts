@@ -1,29 +1,29 @@
-import { createApi } from '@reduxjs/toolkit/query/react';
-import { BaseQueryWithReAuth } from './ReAuth';
-import { Badge as BadgeType } from '../../types/Badge';
+import { createApi } from "@reduxjs/toolkit/query/react";
+import { BaseQueryWithReAuth } from "./ReAuth";
+import { Badge as BadgeType } from "../../types/Badge";
 
 export const Badge = createApi({
-  reducerPath: 'Badge',
+  reducerPath: "Badge",
   baseQuery: BaseQueryWithReAuth,
-  tagTypes: ['Badge'],
+  tagTypes: ["Badge"],
   endpoints: (builder) => ({
     createBadge: builder.mutation<BadgeType, Partial<BadgeType>>({
       query: (newBadge) => ({
-        url: 'badge',
-        method: 'POST',
+        url: "badge",
+        method: "POST",
         body: newBadge,
       }),
-      invalidatesTags: ['Badge'],
+      invalidatesTags: ["Badge"],
     }),
 
     getBadges: builder.query<BadgeType[], void>({
-      query: () => 'badge',
-      providesTags: ['Badge'],
+      query: () => "badge",
+      providesTags: ["Badge"],
     }),
 
     getBadgeById: builder.query<BadgeType, string>({
       query: (id) => `badge/${id}`,
-      providesTags: (_result, _error, id) => [{ type: 'Badge', id }],
+      providesTags: (_result, _error, id) => [{ type: "Badge", id }],
     }),
 
     updateBadge: builder.mutation<
@@ -32,18 +32,18 @@ export const Badge = createApi({
     >({
       query: ({ id, data }) => ({
         url: `badge/${id}`,
-        method: 'PUT',
+        method: "PUT",
         body: data,
       }),
-      invalidatesTags: (_result, _error, { id }) => [{ type: 'Badge', id }],
+      invalidatesTags: (_result, _error, { id }) => [{ type: "Badge", id }],
     }),
 
     deleteBadge: builder.mutation<void, string>({
       query: (id) => ({
         url: `badge/${id}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: (_result, _error, id) => [{ type: 'Badge', id }],
+      invalidatesTags: (_result, _error, id) => [{ type: "Badge", id }],
     }),
   }),
 });

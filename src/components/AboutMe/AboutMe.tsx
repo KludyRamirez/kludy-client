@@ -1,19 +1,15 @@
-import React from 'react';
-import Spacer from '../../utils/Spacer';
-import profilePic from '../../assets/images/profilepic.svg';
-import { PiSealCheckFill } from 'react-icons/pi';
-import { TiLocation } from 'react-icons/ti';
-import Bubbles from '../../utils/Bubbles';
-import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import { RxEnvelopeClosed } from 'react-icons/rx';
+import React from "react";
+import Spacer from "../../utils/Spacer";
+import profilePic from "../../assets/images/profilepic.svg";
+import { PiSealCheckFill } from "react-icons/pi";
+import { TiLocation } from "react-icons/ti";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { RxEnvelopeClosed } from "react-icons/rx";
 
 const AboutMe: React.FC = () => {
   return (
     <section id="aboutme" className="bg-white relative">
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 hidden md:block">
-          <Bubbles colors={['black']} />
-        </div>
         <Spacer size="large" />
         <div className="text-[#282828]">About Me</div>
         <Spacer size="small" />
