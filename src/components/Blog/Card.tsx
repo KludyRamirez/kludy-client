@@ -3,7 +3,7 @@ import React from "react";
 import { Blog as BlogType } from "../../types/Blog";
 import { BsArrowRightShort } from "react-icons/bs";
 
-const Card: React.FC<{ blog: BlogType }> = ({ blog }) => {
+const Card: React.FC<{ blog: BlogType }> = () => {
   return (
     <div className="cursor-pointer p-4 relative group border border-slate-100/20 hover:border-slate-100 text-gray-200 hover:text-white hover:rounded-xl hover:scale-105 transition-transform duration-300 flex flex-col gap-4">
       <div id="meta" className="flex items-center">
