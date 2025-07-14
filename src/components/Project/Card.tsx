@@ -68,7 +68,7 @@ const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
 
 const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
   return (
-    <div className="w-full h-full group relative hover:border hover:border-gray-300 hover:rounded-xl">
+    <div className="w-full h-full group relative hover:border hover:border-gray-300 hover:rounded-xl overflow-hidden">
       <Image
         logo={project.logo}
         splashPhoto={project.splashPhoto}

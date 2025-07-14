@@ -22,7 +22,7 @@ const Image: React.FC<{
       <img
         src={splashPhoto}
         alt={`${title} project screenshot`}
-        className="aspect-[3/2] opacity-0 group-hover:opacity-100 transition-all duration-[300ms] ease-in-out group-hover:rounded-tl-xl group-hover:rounded-tr-xl"
+        className="aspect-[3/2] opacity-0 group-hover:opacity-100 transition-all duration-[300ms] ease-in-out"
       />
     </div>
   );

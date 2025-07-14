@@ -12,38 +12,38 @@
 }
 
 @font-face {
-  font-family: 'extra-light';
-  src: url('./assets/fonts/PPMori-Extralight.otf') format('opentype');
+  font-family: "extra-light";
+  src: url("./assets/fonts/PPMori-Extralight.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'extra-light-italic';
-  src: url('./assets/fonts/PPMori-ExtralightItalic.otf') format('opentype');
+  font-family: "extra-light-italic";
+  src: url("./assets/fonts/PPMori-ExtralightItalic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'regular';
-  src: url('./assets/fonts/PPMori-Regular.otf') format('opentype');
+  font-family: "regular";
+  src: url("./assets/fonts/PPMori-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'regular-italic';
-  src: url('./assets/fonts/PPMori-RegularItalic.otf') format('opentype');
+  font-family: "regular-italic";
+  src: url("./assets/fonts/PPMori-RegularItalic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'semi-bold';
-  src: url('./assets/fonts/PPMori-SemiBold.otf') format('opentype');
+  font-family: "semi-bold";
+  src: url("./assets/fonts/PPMori-SemiBold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'semi-bold-italic';
-  src: url('./assets/fonts/PPMori-SemiBoldItalic.otf') format('opentype');
+  font-family: "semi-bold-italic";
+  src: url("./assets/fonts/PPMori-SemiBoldItalic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'child-hood';
-  src: url('./assets/fonts/Child-Hood.otf') format('opentype');
+  font-family: "child-hood";
+  src: url("./assets/fonts/Child-Hood.otf") format("opentype");
 }
 
 .spacer-large {
@@ -175,7 +175,7 @@
 }
 
 .footer-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -305,4 +305,61 @@
       transparent 40%
     );
   background-blend-mode: overlay, normal, normal, normal, normal, normal, normal;
+}
+
+.typewriter {
+  display: block;
+}
+
+.text-wrapper {
+  display: block;
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.5s ease-out, opacity 0.3s ease-in;
+}
+
+.text-wrapper.show {
+  max-width: 20ch;
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.glowing-circle {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: glowing 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: transparent;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+      0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff,
+      0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+      0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  }
 }

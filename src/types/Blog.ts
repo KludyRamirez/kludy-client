@@ -1,10 +1,9 @@
 export interface Blog {
   _id: string;
-  photo: string;
   date: string;
+  minRead: string;
   title: string;
-  authors: string[];
-  url: string;
+  description: string;
+  content: string;
   categories: string[];
-  min: string;
 }
