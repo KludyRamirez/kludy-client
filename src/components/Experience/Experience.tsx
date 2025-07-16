@@ -2,7 +2,8 @@ import React from "react";
 import Spacer from "../../utils/Spacer";
 
 import { FaLinkedin } from "react-icons/fa6";
-import { BsArrowUpRight, BsSuitcaseLg } from "react-icons/bs";
+import { BsSuitcaseLg } from "react-icons/bs";
+import { MdLink } from "react-icons/md";
 
 interface Props {
   experiencesRef: React.RefObject<HTMLElement>;
@@ -87,12 +88,12 @@ const TimelineItem: React.FC<ExperienceItem> = ({
       <div className="w-[1px] h-full bg-slate-100/20"></div>
     </div>
 
-    <div className="flex flex-col items-start gap-4">
+    <div className="flex flex-col items-start gap-3">
       <div className="flex items-center gap-2 text-white text-[14px] leading-none tracking-wide pb-2">
         <div>{period}</div>
       </div>
       <div className="flex items-center gap-2 group">
-        <div className="text-[24px] text-white hover:underline cursor-pointer font-[semi-bold]">
+        <div className="text-[28px] text-white hover:underline cursor-pointer">
           {title}
         </div>
         <FaLinkedin
@@ -108,33 +109,30 @@ const TimelineItem: React.FC<ExperienceItem> = ({
           </li>
         ))}
       </ul>
-      <div className="w-full h-[1px] bg-slate-100/20 mt-2"></div>
-      <div className="flex flex-col gap-4">
-        <div className="text-[24px] text-white">Documents</div>
+      
+      <div className="flex items-center gap-4">
         {documentsLinks?.map((link, index) => (
           <div
             key={index}
-            className="cursor-pointer flex items-center gap-2 group tracking-wider"
+            className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-[13px] py-1 text-white border border-slate-100/20 mt-3 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] hover:rounded-[56px]"
           >
-            <span className="text-gray-300 hover:underline group-hover:text-white">
+            <MdLink
+              size={20}
+            />
+            <span className="text-[14px] mt-[2px]">
               {link}
             </span>
-            <BsArrowUpRight
-              size={16}
-              className="-mt-[2px] text-gray-400 group-hover:text-white hidden md:block"
-            />
           </div>
         ))}
       </div>
-      <div className="w-full h-[1px] bg-slate-100/20 mt-2"></div>
-      <div className="w-full flex flex-col gap-4">
-        <div className="text-[24px] text-white">Photos</div>
-        <div className="w-full flex flex-wrap items-start gap-4 mt-1">
+     
+      <div className="w-full flex flex-col gap-4 mt-2">
+        <div className="w-full flex flex-wrap items-start gap-4">
           {photos.map((photo, index) => (
             <img
               key={index}
               src={photo}
-              className="w-full md:w-[304px] h-[200px] object-cover filter brightness-100 contrast-125 hover:grayscale-0"
+              className="w-full md:w-[304px] h-[200px] object-cover"
             />
           ))}
         </div>
