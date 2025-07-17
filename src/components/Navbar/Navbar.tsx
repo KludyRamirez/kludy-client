@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaHouse } from "react-icons/fa6";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 interface NavbarProps {
@@ -38,23 +39,6 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       <div className="w-full flex flex-col z-30 fixed">
-        {/* <div className="w-full flex justify-center py-4 bg-yellow-300">
-          <div className="max-w-5xl w-full h-full px-[1rem] relative flex flex-wrap justify-between items-center">
-            <div className="flex flex-wrap items-center gap-2">
-              <FaTriangleExclamation size={18} className="-mt-1" />
-              <span className="font-[semi-bold]">
-                This website is currently under construction.
-              </span>
-            </div>
-            <div className="font-[semi-bold]">
-              {new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: '2-digit',
-              })}
-            </div>
-          </div>
-        </div> */}
         <div
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
             isHeroSectionActive
@@ -69,13 +53,43 @@ const Navbar: React.FC<NavbarProps> = ({
                 : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
-            <span className="text-[20px] font-[semi-bold] tracking-wide">
-              Kludy
-            </span>
+            <div className="cursor-pointer flex flex-col items-start py-1 px-3 group">
+              <span className="text-[16px] tracking-widest">Kludy</span>
+              <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[2px]"></div>
+            </div>
+
+            <div className="hidden lg:flex items-center">
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">Experiences</span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">Projects</span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">Badges</span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">
+                  Certifications
+                </span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">Blogs</span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+                <span className="text-[16px] tracking-wide">Testimonials</span>
+                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              </div>
+            </div>
 
             <div
               onClick={handleToggleWindow}
-              className="flex cursor-pointer relative w-[30px] flex-col justify-start items-end group gap-3"
+              className="lg:hidden flex cursor-pointer relative w-[30px] flex-col justify-start items-end group gap-3"
             >
               <div className={`w-[30px] h-[1px] bg-white transform`}></div>
               <div className={`w-[18px] h-[1px] bg-white transform`}></div>
