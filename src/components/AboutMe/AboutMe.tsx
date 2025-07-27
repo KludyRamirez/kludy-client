@@ -11,26 +11,11 @@ const AboutMe: React.FC = () => {
     <section id="aboutme" className="bg-white relative">
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
         <Spacer size="large" />
-        <div className="text-[#282828]">About Me</div>
+        <div className="text-[#282828]">About me</div>
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
-        <div className="flex justify-between text-[2.875rem] text-[#282828] leading-[1.275]">
-          <div className="flex flex-col">
-            <span>Matthew 19:26</span>
-            <span className="text-[#919191] font-[regular] black-sweep">
-              With God all things are possible.
-            </span>
-          </div>
-        </div>
-        <Spacer size="medium" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-gray-200"></div>
-        <Spacer size="small" />
-        <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
-          Recent Me
-        </h3>
-        <Spacer size="medium" />
         <div className="flex flex-wrap justify-start items-center gap-8">
           <img src={profilePic} className="w-[160px] h-[160px] shadow-lg"></img>
           <div className="flex flex-col gap-3">
@@ -47,24 +32,46 @@ const AboutMe: React.FC = () => {
               </span>
             </div>
             <div className="flex items-center gap-3 mt-[2px]">
-              <span className="text-[16px] text-[#282828]">
-                Full Stack Developer and Certified GenAI Pro
+              <span className="text-sm text-[#282828] tracking-wide">
+                Full Stack Developer and Certified GenAI Leader
               </span>
             </div>
             <div className="flex items-center gap-4 mt-[2px]">
-              <FaGithub size={32} className="cursor-pointer text-gray-700" />
+              <FaGithub
+                size={32}
+                className="cursor-pointer text-gray-700 hover:text-black"
+              />
               <FaLinkedinIn
                 size={32}
-                className="cursor-pointer text-gray-700"
+                className="cursor-pointer text-gray-700 hover:text-black"
               />
               <RxEnvelopeClosed
                 size={32}
-                className="cursor-pointer text-gray-700"
+                className="cursor-pointer text-gray-700 hover:text-black"
               />
-              <FaFacebook size={32} className="cursor-pointer text-gray-700" />
+              <FaFacebook
+                size={32}
+                className="cursor-pointer text-gray-700 hover:text-black"
+              />
             </div>
           </div>
         </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <div className="w-full h-[1px] bg-gray-200"></div>
+        <Spacer size="small" />
+        <Spacer size="xs" />
+        <span className="text-sm leading-relaxed tracking-wide">
+          I’m Kludy Ramirez, a Full Stack Developer with a growing
+          specialization in AI-driven applications. I build scalable, end-to-end
+          web solutions using modern frameworks like React, Django, and Node.js,
+          while integrating AI tools to enhance automation, personalization, and
+          data intelligence. With a strong foundation in both front-end and
+          back-end technologies, I thrive on transforming complex challenges
+          into streamlined, user-centric digital experiences. Passionate about
+          continuous learning, I’m committed to staying at the forefront of
+          emerging tech to deliver innovative and impactful solutions.
+        </span>
         <Spacer size="xs" />
         <Spacer size="large" />
       </div>

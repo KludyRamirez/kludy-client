@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaHouse } from "react-icons/fa6";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 interface NavbarProps {
@@ -53,37 +52,50 @@ const Navbar: React.FC<NavbarProps> = ({
                 : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
-            <div className="cursor-pointer flex flex-col items-start py-1 px-3 group">
-              <span className="text-[16px] tracking-widest">Kludy</span>
-              <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[2px]"></div>
+            <div
+              className="cursor-pointer flex flex-col items-start py-1 group"
+              onClick={() => {
+                scrollToHero();
+              }}
+            >
+              <span className="text-sm tracking-widest">Kludy</span>
+              <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[1px]"></div>
             </div>
 
             <div className="hidden lg:flex items-center">
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">Experiences</span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              <div
+                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
+                onClick={() => {
+                  scrollToExperiences();
+                }}
+              >
+                <span className="text-sm tracking-wide">Experiences</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
               <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">Projects</span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+                <span className="text-sm tracking-wide">Projects</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
               <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">Badges</span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+                <span className="text-sm tracking-wide">Badges</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
               <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">
-                  Certifications
-                </span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+                <span className="text-sm tracking-wide">Certifications</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">Blogs</span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              <div
+                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
+                onClick={() => {
+                  scrollToBlogs();
+                }}
+              >
+                <span className="text-sm tracking-wide">Blogs</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-[16px] tracking-wide">Testimonials</span>
-                <div className="w-[25%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[2px]"></div>
+              <div className="cursor-pointer flex flex-col items-end py-1 pl-3 group">
+                <span className="text-sm tracking-wide">Testimonials</span>
+                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
             </div>
 
