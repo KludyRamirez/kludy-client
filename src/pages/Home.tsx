@@ -146,32 +146,30 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-xs"></div>
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
+              <div className=""></div>
               <div className="text-center font-[semi-bold]">
                 'Zup,{" "}
                 <span className="text-[#919191] font-[regular]">I am</span>{" "}
                 Kludy
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4 text-[#919191] relative tracking-wide">
-                <Typewriter
-                  words={["Full Stack", "Frontend", "Backend", "DevOps"]}
-                  speed={200}
-                  pause={300}
-                />
-                <div className="font-[semi-bold] text-white">Engineer</div>
-                <div className="font-[regular]"> and </div>
+                <Typewriter words={["Frontend", "Backend"]} />
+                <div className="font-[semi-bold] text-white">Dev</div>
+                <div className=""> & </div>
                 <div className="font-[semi-bold] text-white">GenAI</div>
-                <Typewriter
-                  words={["Weeb", "Leader", "Expert", "Nerd"]}
-                  speed={400}
-                  pause={300}
-                />
+                <Typewriter words={["Mech", "Oracle", "Builder", "Nerd"]} />
               </div>
               <div className="spacer-small"></div>
             </div>
           </div>
           <div className="spacer-small"></div>
           <div className="w-[100%] flex justify-center gap-8">
-            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide">
+            <div
+              className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide"
+              onClick={() => {
+                scrollToFaqs();
+              }}
+            >
               Recruit me
             </div>
             <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-lg tracking-wide">
@@ -181,7 +179,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
 
-          <div className="text-lg text-center text-white font-[extra-light] tracking-wide relative">
+          <div className="text-md text-center text-white font-[extra-light] tracking-wide relative">
             These are the organizations and institutions that have issued my
             certifications.
           </div>
@@ -263,381 +261,15 @@ const HomePage: React.FC<Home> = () => {
           </div>
         </div>
       </section>
-
-      {/* <section id="blogs" className="bg-white relative z-20" ref={blogsRef}>
-        <div className="max-w-5xl px-[1.25rem] mx-auto">
-          <div className="spacer-large"></div>
-          <div className="text-[#282828]">Blogs</div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
-          <div className="spacer-small"></div>
-          <h2 className="text-[2.875rem] text-[#282828] leading-[1.275]">
-            <span>Our field evolves rapidly</span>
-            <br />
-            <span className="font-[regular] black-sweep">
-              These blogs help you stay ahead
-            </span>
-          </h2>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
-          <div className="spacer-small"></div>
-          <h3 className="text-[1.75rem] text-[#282828]">Recent blogs</h3>
-          <div className="spacer-medium"></div>
-          <div className="spacer-xs"></div>
-          <Swiper
-            spaceBetween="20"
-            breakpoints={{
-              639: {
-                slidesPerView: 1,
-              },
-              767: {
-                slidesPerView: 2,
-              },
-              1023: {
-                slidesPerView: 3,
-              },
-              1279: {
-                slidesPerView: 4,
-              },
-            }}
-            autoplay={{
-              delay: 1400,
-              disableOnInteraction: true,
-            }}
-            loop={true}
-            modules={[Autoplay, Pagination]}
-            className="blogs-swiper"
-          >
-            <SwiperSlide>
-              <Loader />
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
-                href="https://www.wired.com/story/most-dangerous-hackers-youve-never-heard-of/"
-                target="_blank"
-              >
-                <div className="w-full h-full group">
-                  <img src={mdhb} className="cursor-pointer aspect-[1/1]" />
-                  <div className="spacer-small"></div>
-                  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
-                    <span>April 14, 2025</span>
-                    <span>|</span>
-                    <span>wired.com</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#282828] group-hover:underline">
-                    The Most Dangerous Hackers You’ve Never Heard Of
-                  </div>
-                  <div className="spacer-small"></div>
-                  <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#282828] text-[14px] text-gray-800 gap-2 border-[1px] border-gray-200 group-hover:border-[#282828]">
-                      <FaShieldHalved
-                        size={14}
-                        className="group-hover:text-white"
-                      />
-                      <div className="mt-[2px] tracking-wide group-hover:text-white">
-                        Security
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
-                href="https://www.wired.com/frontiers-of-computing/"
-                target="_blank"
-              >
-                <div className="w-full h-full group">
-                  <img src={htgc} className="cursor-pointer aspect-[3/2]" />
-                  <div className="spacer-small"></div>
-                  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
-                    <span>April 14, 2025</span>
-                    <span>|</span>
-                    <span>wired.com</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#282828] group-hover:underline">
-                    How to Get Computers—Before Computers Get You
-                  </div>
-                  <div className="spacer-small"></div>
-                  <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#282828] text-[14px] text-gray-800 gap-2 border-[1px] border-gray-200 group-hover:border-[#282828]">
-                      <FaScreenpal
-                        size={14}
-                        className="group-hover:text-white"
-                      />
-                      <div className="mt-[2px] tracking-wide group-hover:text-white">
-                        IoT
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
-                href="https://www.wired.com/story/cve-program-cisa-funding-chaos/"
-                target="_blank"
-              >
-                <div className="w-full h-full group">
-                  <img src={skull} className="cursor-pointer aspect-[2/3]" />
-                  <div className="spacer-small"></div>
-                  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
-                    <span>April 14, 2025</span>
-                    <span>|</span>
-                    <span>wired.com</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#282828] group-hover:underline">
-                    ‘Stupid and Dangerous’: CISA Funding Chaos Threatens
-                    Essential Cybersecurity Program
-                  </div>
-                  <div className="spacer-small"></div>
-                  <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#282828] text-[14px] text-gray-800 gap-2 border-[1px] border-gray-200 group-hover:border-[#282828]">
-                      <FaShieldHalved
-                        size={14}
-                        className="group-hover:text-white"
-                      />
-                      <div className="mt-[2px] tracking-wide group-hover:text-white">
-                        Security
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
-                href="https://www.wired.com/story/gmail-end-to-end-encryption-scams/"
-                target="_blank"
-              >
-                <div className="w-full h-full group">
-                  <img src={gnem} className="cursor-pointer aspect-[3/2]" />
-                  <div className="spacer-small"></div>
-                  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
-                    <span>April 14, 2025</span>
-                    <span>|</span>
-                    <span>wired.com</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#282828] group-hover:underline">
-                    Gmail’s New Encrypted Messages Feature Opens a Door for
-                    Scams
-                  </div>
-                  <div className="spacer-small"></div>
-                  <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#282828] text-[14px] text-gray-800 gap-2 border-[1px] border-gray-200 group-hover:border-[#282828]">
-                      <FaShieldHalved
-                        size={14}
-                        className="group-hover:text-white"
-                      />
-                      <div className="mt-[2px] tracking-wide group-hover:text-white">
-                        Security
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
-                href="https://www.wired.com/story/florida-man-enters-the-encryption-wars/"
-                target="_blank"
-              >
-                <div className="w-full h-full group">
-                  <img src={fme} className="cursor-pointer aspect-[1/1]" />
-                  <div className="spacer-small"></div>
-                  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
-                    <span>April 14, 2025</span>
-                    <span>|</span>
-                    <span>wired.com</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#282828] group-hover:underline">
-                    Florida Man Enters the Encryption Wars
-                  </div>
-                  <div className="spacer-small"></div>
-                  <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-gray-100 group-hover:bg-[#282828] text-[14px] text-gray-800 gap-2 border-[1px] border-gray-200 group-hover:border-[#282828]">
-                      <FaShieldHalved
-                        size={14}
-                        className="group-hover:text-white"
-                      />
-                      <div className="mt-[2px] tracking-wide group-hover:text-white">
-                        Security
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </SwiperSlide>
-          </Swiper>
-          <div className="spacer-large"></div>
-        </div>
-      </section> */}
       <AboutMe />
       <Experience experiencesRef={experiencesRef} />
       <Project projectsRef={projectsRef} projectsGif={projectsGif} />
       <Blog blogsRef={blogsRef} />
       <Badge badgesRef={badgesRef} />
-
-      {/* <section id="testimonials" className="relative">
-        <img className="absolute bottom-0 w-full" src={dotunder} />
-        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
-          <div className="spacer-large"></div>
-          <div className="text-[#282828]">Testimonials</div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
-          <div className="spacer-small"></div>
-          <h2 className="text-[2.875rem] text-[#282828] leading-[1.275]">
-            Insights from mentors <br />
-            <span className="text-[#282828] font-[regular] black-sweep">
-              These responses keep me grounded
-            </span>
-          </h2>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
-          <div className="spacer-small"></div>
-          <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
-            Recent testimonials
-          </h3>
-          <div className="spacer-medium"></div>
-          <div className="spacer-xs"></div>
-          <Swiper
-            spaceBetween="20"
-            slidesPerView={4}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: true,
-            }}
-            loop={true}
-            modules={[Autoplay, Pagination]}
-            className="blogs-swiper"
-          >
-            <SwiperSlide>
-              <div className="w-full h-full">
-                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div>
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full">
-                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div>
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full">
-                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div>
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full">
-                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div>
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-            <div className="spacer-large"></div>
-          </Swiper>
-        </div>
-      </section> */}
-      {/* <section
-        id="faqs"
-        className="bg-white relative flex flex-col items-center"
-        ref={faqsRef}
-      >
-        <div className="w-full xl:w-[86.8125rem] flex flex-col items-center">
-          <div className="w-full px-[1.25rem] mx-auto relative z-20">
-            <div className="spacer-small"></div>
-            <div className="spacer-small"></div>
-            <div className="spacer-medium"></div>
-            <div className="w-full flex flex-col justify-start items-start">
-              <span className="text-[48px] text-[#282828] font-[semi-bold]">
-                FAQs
-              </span>
-              <div className="spacer-small"></div>
-              <div className="w-full flex flex-col px-2">
-                {accordionData.map((item, index) => (
-                  <div key={index} className="w-full">
-                    <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full text-left py-7 font-semibold text-lg flex justify-between items-center text-gray-900 tracking-wide"
-                    >
-                      {item.title}
-                      <span className="text-gray-700">
-                        {openIndex === index ? <FaMinus /> : <FaPlus />}
-                      </span>
-                    </button>
-
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out bg-white border-l-[1px] border-r-[1px] border-b-[1px] border-gray-200 bg-[#fefefe] ${
-                        openIndex === index
-                          ? "border-t-[1px] max-h-40 px-3 py-7 text-gray-700"
-                          : "max-h-0"
-                      }`}
-                    >
-                      {openIndex === index && <div>{item.content}</div>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="spacer-small"></div>
-            <div className="spacer-medium"></div>
-            <div className="spacer-medium"></div>
-          </div>
-        </div>
-      </section> */}
       <footer
         id="footer"
         className="bg-white relative flex flex-col items-center"
+        ref={faqsRef}
       >
         <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">

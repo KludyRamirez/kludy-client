@@ -2,34 +2,41 @@ import React, { useEffect, useState } from "react";
 
 interface TypewriterProps {
   words: string[];
-  speed?: number;
-  pause?: number;
+  speed?: number; // Total duration per word
+  fadeDuration?: number; // Duration of fade in/out
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
   words,
-  speed = 200,
-  pause = 1500,
+  speed = 3000,
+  fadeDuration = 500,
 }) => {
   const [wordIndex, setWordIndex] = useState(0);
-  const [showWord, setShowWord] = useState(false);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
-    setShowWord(true); // start typing
+    const fadeOutTimeout = setTimeout(() => {
+      setOpacity(0);
+    }, speed - fadeDuration * 2); // Start fade out before switching
 
-    const pauseTimeout = setTimeout(() => {
-      setShowWord(false); // start deleting
-      setTimeout(() => {
-        setWordIndex((prev) => (prev + 1) % words.length);
-      }, speed * words[wordIndex].length + 500); // allow smooth deletion time
-    }, pause + speed * words[wordIndex].length);
+    const switchWordTimeout = setTimeout(() => {
+      setWordIndex((prev) => (prev + 1) % words.length);
+      setOpacity(1);
+    }, speed - fadeDuration); // Switch word after fade out
 
-    return () => clearTimeout(pauseTimeout);
-  }, [wordIndex, words, speed, pause]);
+    return () => {
+      clearTimeout(fadeOutTimeout);
+      clearTimeout(switchWordTimeout);
+    };
+  }, [wordIndex, words.length, speed, fadeDuration]);
 
   return (
-    <div className="typewriter font-[semi-bold]">
-      <span className={`text-wrapper text-white ${showWord ? "show" : ""}`}>
+    <div className="typewriter font-semibold text-white overflow-hidden">
+      <span
+        key={wordIndex}
+        className="transition-opacity duration-500 font-[semi-bold]"
+        style={{ opacity }}
+      >
         {words[wordIndex]}
       </span>
     </div>
