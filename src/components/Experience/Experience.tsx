@@ -1,9 +1,8 @@
-import React from "react";
-import Spacer from "../../utils/Spacer";
+import React from 'react';
+import Spacer from '../../utils/Spacer';
 
-import { FaLinkedin } from "react-icons/fa6";
-import { BsSuitcaseLg } from "react-icons/bs";
-import { MdLink } from "react-icons/md";
+import { BsArrowUpRight, BsSuitcaseLg } from 'react-icons/bs';
+import { MdLink } from 'react-icons/md';
 
 interface Props {
   experiencesRef: React.RefObject<HTMLElement>;
@@ -15,12 +14,14 @@ interface ExperienceItem {
   points: string[];
   photos: string[];
   documentsLinks?: string[];
+  address: string;
+  companyLink: string;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    period: "July 2024 - Present",
-    title: "Software Engineer at Flexicon Solution Inc.",
+    period: 'July 2024 - Present',
+    title: 'Software Engineer at Flexicon Solution Inc.',
     points: [
       `Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js,
 Storybook.js, Pug.js, Cypress, and Jest.`,
@@ -32,15 +33,17 @@ systems, ensuring alignment with technical standards and business goals.
 branches, including maintaining detailed changelogs to ensure consistent and traceable releases.`,
     ],
     photos: [
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png",
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
+      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png',
+      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png',
+      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
     ],
-    documentsLinks: ["Performance Review", "Supervisor Feedback"],
+    documentsLinks: [],
+    address: 'Makati City, Philippines',
+    companyLink: '',
   },
   {
-    period: "January 2024 - July 2024",
-    title: "Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela",
+    period: 'January 2024 - July 2024',
+    title: 'Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela',
     points: [
       `Built a web application that handled over 12,000 student affairs records and processed 9,000+
 cases and appeals, featuring secure data delivery to official school email without requiring
@@ -53,11 +56,13 @@ streamlining backend operations enough to handle a high volume of concurrent use
 ensuring 99% system availability.`,
     ],
     photos: [],
-    documentsLinks: ["Performance Review", "Supervisor Feedback"],
+    documentsLinks: [],
+    address: 'Makati City, Philippines',
+    companyLink: '',
   },
   {
-    period: "March 2023 - December 2023",
-    title: "Junior Web Developer at Asia Pacific Digital GrowthOps",
+    period: 'March 2023 - December 2023',
+    title: 'Junior Web Developer at Asia Pacific Digital GrowthOps',
     points: [
       `Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand
 websites.
@@ -69,9 +74,11 @@ enabling advanced analytics and remarketing strategies.`,
       `Configured dynamic meta tags in SPAs for accurate SEO and crawler rendering.`,
     ],
     photos: [
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
+      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
     ],
-    documentsLinks: ["Performance Review", "Supervisor Feedback"],
+    documentsLinks: ['Performance Review', 'Supervisor Feedback'],
+    address: 'Makati City, Philippines',
+    companyLink: '',
   },
 ];
 
@@ -79,8 +86,9 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   period,
   title,
   points,
-  photos,
   documentsLinks,
+  address,
+  companyLink,
 }) => (
   <div className="w-full flex justify-start gap-4">
     <div className="hidden md:flex flex-col items-center justify-center gap-5">
@@ -97,35 +105,42 @@ const TimelineItem: React.FC<ExperienceItem> = ({
       <Spacer size="small" />
       <div className="flex items-center gap-2 group">
         <div className="text-[28px] text-white cursor-pointer">{title}</div>
-        <FaLinkedin
+        <BsArrowUpRight
           size={22}
           className="opacity-0 group-hover:opacity-100 text-white"
         />
       </div>
       <Spacer size="small" />
-      <ul className="list-inside space-y-4 md:space-y-2">
+      <div className="flex items-center gap-2 text-white text-[14px] leading-none tracking-wide pb-2">
+        <div>{address}</div>
+      </div>
+      <Spacer size="small" />
+      <ul className="list-disc list-inside space-y-4 md:space-y-2">
         {points.map((point, idx) => (
           <li key={idx} className="text-white text-[14px] tracking-wide">
             {point}
           </li>
         ))}
       </ul>
-      <Spacer size="xs" />
-      <Spacer size="small" />
+
       {documentsLinks && documentsLinks.length > 0 ? (
-        <div className="flex items-center gap-3">
-          {documentsLinks?.map((link, index) => (
-            <div
-              key={index}
-              className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-white border border-slate-100/20 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
-            >
-              <MdLink size={20} />
-              <span className="text-[14px] mt-[2px] font-[extra-light] group-hover:font-[regular] tracking-wide">
-                {link}
-              </span>
-            </div>
-          ))}
-        </div>
+        <>
+          <Spacer size="xs" />
+          <Spacer size="small" />
+          <div className="flex items-center gap-3">
+            {documentsLinks?.map((link, index) => (
+              <div
+                key={index}
+                className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-neutral-100 border border-slate-100/30 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
+              >
+                <MdLink size={20} />
+                <span className="text-[14px] mt-[2px] tracking-wide">
+                  {link}
+                </span>
+              </div>
+            ))}
+          </div>
+        </>
       ) : null}
 
       {/* {photos?.length > 0 ? (
