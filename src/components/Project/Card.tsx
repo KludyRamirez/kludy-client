@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "./Image";
 import Spacer from "../../utils/Spacer";
-import { HiLink } from "react-icons/hi2";
 import { Project as ProjectType } from "../../types/Project";
+import { MdLink } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
 
 const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
@@ -28,16 +29,17 @@ const Links: React.FC<{
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
       <div className="cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-gray-300 bg-white hover:bg-[#282828] hover:text-white hover:border-gray-600 group-hover:rounded-[32px] transition-all duration-300">
-        <span className="font-[semi-bold] text-[12px] tracking-wide">
-          View project
+        <span className="font-[semi-bold] text-[12px] tracking-wider block group-hover:hidden">
+          View Source
         </span>
+        <BsGithub size={18} className="hidden group-hover:block" />
       </div>
     </a>
     <Spacer size="small" />
     <div className="w-full flex flex-wrap justify-start items-start gap-4">
       <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="cursor-pointer flex justify-center items-center gap-2 text-[#282828] hover:underline">
-          <HiLink size={14} />
+          <MdLink size={20} className="-mt-[2px]" />
           <span className="text-[14px] tracking-wide">{url}</span>
         </div>
       </a>

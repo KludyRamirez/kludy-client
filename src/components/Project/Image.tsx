@@ -14,7 +14,7 @@ const Image: React.FC<{
         <img
           src={logo}
           alt={`${title} logo`}
-          className="max-w-full max-h-full object-contain transition-all duration-[300ms] ease-in-out group-hover:opacity-0 filter brightness-100 contrast-125 grayscale z-20"
+          className="max-w-full max-h-full object-contain transition-all duration-[300ms] ease-in-out group-hover:opacity-0 filter brightness-100 contrast-150 z-20"
         />
       </div>
       <div className="absolute w-full h-full box-pattern transition-all duration-[300ms] ease-in-out group-hover:hidden"></div>

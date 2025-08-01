@@ -17,7 +17,10 @@ const AboutMe: React.FC = () => {
         <Spacer size="small" />
         <Spacer size="small" />
         <div className="flex flex-wrap justify-start items-center gap-8">
-          <img src={profilePic} className="w-[160px] h-[160px] shadow-lg"></img>
+          <img
+            src={profilePic}
+            className="w-[160px] h-[160px] shadow-lg rounded-[50%]"
+          ></img>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
               <span className="font-[semi-bold] text-2xl text-[#282828]">
@@ -61,17 +64,7 @@ const AboutMe: React.FC = () => {
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
         <Spacer size="xs" />
-        <span className="text-sm leading-relaxed tracking-wide">
-          I’m Kludy Ramirez, a Full Stack Developer with a growing
-          specialization in AI-driven applications. I build scalable, end-to-end
-          web solutions using modern frameworks like React, Django, and Node.js,
-          while integrating AI tools to enhance automation, personalization, and
-          data intelligence. With a strong foundation in both front-end and
-          back-end technologies, I thrive on transforming complex challenges
-          into streamlined, user-centric digital experiences. Passionate about
-          continuous learning, I’m committed to staying at the forefront of
-          emerging tech to deliver innovative and impactful solutions.
-        </span>
+        <h3 className="text-[1.75rem] text-white font-[regular]">Tech Stack</h3>
         <Spacer size="xs" />
         <Spacer size="large" />
       </div>

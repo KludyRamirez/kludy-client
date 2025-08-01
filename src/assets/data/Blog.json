@@ -1,20 +1,11 @@
 [
   {
     "_id": "project-1",
-    "date": "2024-11-21T00:00:00Z",
+    "date": "2025-11-21T00:00:00Z",
     "minRead": "3 min read",
-    "title": "Mathematrix",
-    "description": "This web application is a thesis project designed for students with an interest in mathematics, particularly in rational functions.",
-    "content": "https://mathematrix-client.vercel.app",
-    "categories": [
-      "ReactJS",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "Redux",
-      "TailwindCSS",
-      "Docker",
-      "MUI"
-    ]
+    "title": "Navigating the Startup Jungle: Building a Productive and Positive Culture",
+    "description": "This post explores the key elements of a successful startup culture, offering practical tips and examples for fostering a productive and positive environment.",
+    "content": "",
+    "categories": ["Programming", "Web Development"]
   }
 ]

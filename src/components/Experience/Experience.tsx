@@ -142,20 +142,6 @@ const TimelineItem: React.FC<ExperienceItem> = ({
           </div>
         </>
       ) : null}
-
-      {/* {photos?.length > 0 ? (
-        <div className="w-full flex flex-col gap-4">
-          <div className="w-full flex flex-wrap items-start gap-4">
-            {photos.map((photo, index) => (
-              <img
-                key={index}
-                src={photo}
-                className="w-full md:w-[304px] h-[200px] object-cover"
-              />
-            ))}
-          </div>
-        </div>
-      ) : null} */}
     </div>
   </div>
 );

@@ -15,8 +15,6 @@ import cisco from "../assets/images/cisco.svg";
 
 import projectsGif from "../assets/gif/projects-gif.gif";
 
-import StarsCanvas from "../components/Background/Stars";
-
 import {
   FaFacebook,
   FaGithub,
@@ -33,7 +31,6 @@ import Badge from "../components/Badge/Badge";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Blog from "../components/Blog/Blog";
 import Typewriter from "../utils/Typewriter";
-import Bubbles from "../utils/Bubbles";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -126,7 +123,6 @@ const HomePage: React.FC<Home> = () => {
 
   return (
     <>
-      <StarsCanvas />
       <Navbar
         isHeroSectionActive={isHeroSectionActive}
         scrollToHero={scrollToHero}
@@ -143,21 +139,19 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-          <div className="spacer-xs"></div>
+          <div className="spacer-small"></div>
+
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
-              <div className=""></div>
               <div className="text-center font-[semi-bold]">
-                'Zup,{" "}
-                <span className="text-[#919191] font-[regular]">I am</span>{" "}
-                Kludy
+                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
+                <span>Kludy</span>
               </div>
-              <div className="flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4 text-[#919191] relative tracking-wide">
+              <div className="flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4 text-[#919191] relative tracking-wide text-white">
                 <Typewriter words={["Frontend", "Backend"]} />
-                <div className="font-[semi-bold] text-white">Dev</div>
-                <div className=""> & </div>
+                <div className="text-[#919191]"> & </div>
                 <div className="font-[semi-bold] text-white">GenAI</div>
-                <Typewriter words={["Mech", "Oracle", "Builder", "Nerd"]} />
+                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -255,11 +249,11 @@ const HomePage: React.FC<Home> = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="w-full flex justify-center items-center gap-12">
+        {/* <div className="w-full flex justify-center items-center gap-12">
           <div className="w-[200px] mt-8">
             <Bubbles colors={["white"]} />
           </div>
-        </div>
+        </div> */}
       </section>
       <AboutMe />
       <Experience experiencesRef={experiencesRef} />
@@ -309,18 +303,18 @@ const HomePage: React.FC<Home> = () => {
               <div className="spacer-small"></div>
               <div className="spacer-medium"></div>
               <div className="flex justify-center items-center gap-5">
-                <FaGithub size={32} className="cursor-pointer text-gray-700" />
+                <FaGithub size={32} className="cursor-pointer text-gray-900" />
                 <FaLinkedinIn
                   size={32}
-                  className="cursor-pointer text-gray-700"
+                  className="cursor-pointer text-gray-900"
                 />
                 <RxEnvelopeClosed
                   size={32}
-                  className="cursor-pointer text-gray-700"
+                  className="cursor-pointer text-gray-900"
                 />
                 <FaFacebook
                   size={32}
-                  className="cursor-pointer text-gray-700"
+                  className="cursor-pointer text-gray-900"
                 />
               </div>
             </div>

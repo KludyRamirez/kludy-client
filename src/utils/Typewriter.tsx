@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 interface TypewriterProps {
   words: string[];
-  speed?: number; // Total duration per word
-  fadeDuration?: number; // Duration of fade in/out
+  speed?: number;
+  fadeDuration?: number;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
@@ -17,12 +17,12 @@ const Typewriter: React.FC<TypewriterProps> = ({
   useEffect(() => {
     const fadeOutTimeout = setTimeout(() => {
       setOpacity(0);
-    }, speed - fadeDuration * 2); // Start fade out before switching
+    }, speed - fadeDuration * 2);
 
     const switchWordTimeout = setTimeout(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
       setOpacity(1);
-    }, speed - fadeDuration); // Switch word after fade out
+    }, speed - fadeDuration);
 
     return () => {
       clearTimeout(fadeOutTimeout);
@@ -31,7 +31,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   }, [wordIndex, words.length, speed, fadeDuration]);
 
   return (
-    <div className="typewriter font-semibold text-white overflow-hidden">
+    <div className="typewriter overflow-hidden">
       <span
         key={wordIndex}
         className="transition-opacity duration-500 font-[semi-bold]"
