@@ -132,13 +132,13 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToFaqs={scrollToFaqs}
       />
-      <section id="hero" className="xl:h-screen relative" ref={heroSectionRef}>
+      <section id="hero" className="h-screen relative" ref={heroSectionRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-medium"></div>
-          <div className="spacer-medium"></div>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
+          <div className="hidden lg:block spacer-medium"></div>
+          <div className="hidden lg:block spacer-medium"></div>
+          <div className="hidden lg:block spacer-small"></div>
           <div className="spacer-small"></div>
 
           <div className="text-7xl leading-[1.275]">
@@ -147,10 +147,10 @@ const HomePage: React.FC<Home> = () => {
                 <span className="text-[#919191] font-[regular]">I'm</span>{" "}
                 <span>Kludy</span>
               </div>
-              <div className="flex flex-wrap lg:flex-nowrap justify-center items-center lg:gap-4 text-[#919191] relative tracking-wide text-white">
+              <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
                 <Typewriter words={["Frontend", "Backend"]} />
-                <div className="text-[#919191]"> & </div>
-                <div className="font-[semi-bold] text-white">GenAI</div>
+                <div className="text-[#919191]">and</div>
+                <div className="font-[semi-bold] text-white"> GenAI</div>
                 <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
               </div>
               <div className="spacer-small"></div>

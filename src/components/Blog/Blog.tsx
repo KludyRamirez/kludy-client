@@ -39,7 +39,7 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
         </h3>
         <Spacer size="medium" />
         <Spacer size="xs" />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           {blogs?.length > 0 ? (
             blogs.map((blog) => <Card key={blog._id} blog={blog} />)
           ) : isLoading ? (
