@@ -76,7 +76,7 @@ enabling advanced analytics and remarketing strategies.`,
     photos: [
       'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
     ],
-    documentsLinks: ['Performance Review', 'Supervisor Feedback'],
+    documentsLinks: ['Performance Review'],
     address: 'Makati City, Philippines',
     companyLink: '',
   },

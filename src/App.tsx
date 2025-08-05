@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import { Toaster } from "react-hot-toast";
-import Blog from "./pages/Blog";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import { Toaster } from 'react-hot-toast';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -12,14 +12,14 @@ function App() {
         reverseOrder={false}
         toastOptions={{
           style: {
-            fontWeight: "600",
-            textAlign: "center",
+            fontWeight: '600',
+            textAlign: 'center',
           },
         }}
       />
       <Router>
         <Routes>
-          <Route path="/" element={<Home title={"Landing"} />} />
+          <Route path="/" element={<Home title={'Landing'} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/blog/:id" element={<Blog />} />
         </Routes>

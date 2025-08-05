@@ -1,10 +1,10 @@
-import React from "react";
-import Spacer from "../../utils/Spacer";
-import profilePic from "../../assets/images/profilepic.svg";
-import { PiSealCheckFill } from "react-icons/pi";
-import { TiLocation } from "react-icons/ti";
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { RxEnvelopeClosed } from "react-icons/rx";
+import React from 'react';
+import Spacer from '../../utils/Spacer';
+import profilePic from '../../assets/images/profilepic.svg';
+import { PiSealCheckFill } from 'react-icons/pi';
+import { TiLocation } from 'react-icons/ti';
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import { RxEnvelopeClosed } from 'react-icons/rx';
 
 const AboutMe: React.FC = () => {
   return (
@@ -64,8 +64,9 @@ const AboutMe: React.FC = () => {
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
         <Spacer size="xs" />
-        <h3 className="text-[1.75rem] text-white font-[regular]">Tech Stack</h3>
-        <Spacer size="xs" />
+        <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
+        <Spacer size="small" />
+        <div className="flex items-center gap-2"></div>
         <Spacer size="large" />
       </div>
     </section>

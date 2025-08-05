@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 // import Spacer from '../../utils/Spacer';
-import { Blog as BlogType } from "../types/Blog";
-import BlogData from "../assets/data/Blog.json";
-import { BsArrowRightShort } from "react-icons/bs";
+import { Blog as BlogType } from '../types/Blog';
+import BlogData from '../assets/data/Blog.json';
+import { BsArrowRightShort } from 'react-icons/bs';
 
 const Blog: React.FC = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState<BlogType | null>(null);
 
   useEffect(() => {
+    console.log(id);
     if (!id) {
       setBlog(null);
       return;
@@ -25,11 +26,11 @@ const Blog: React.FC = () => {
     <div className="cursor-pointer p-4 relative group border border-slate-100/20 hover:bg-neutral-100/10 text-gray-200 hover:text-white rounded-xl hover:scale-[101%] transition-transform duration-400 flex flex-col gap-4">
       <div id="meta" className="flex items-center">
         <span className="text-xs tracking-wide">
-          {new Date(blog.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}{" "}
+          {new Date(blog.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}{' '}
           • {blog.minRead}
         </span>
       </div>
