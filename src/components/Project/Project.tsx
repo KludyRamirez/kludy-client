@@ -16,7 +16,7 @@ interface Props {
 const SWIPER_CONFIG = {
   spaceBetween: 28,
   autoplay: {
-    delay: 1400,
+    delay: 2000,
     disableOnInteraction: false,
   },
   breakpoints: {

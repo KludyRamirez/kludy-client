@@ -1,8 +1,61 @@
 [
   {
-    "frontend": ["React"],
-    "backend": [],
-    "cloud": [],
-    "database": []
+    "frontend": [
+      "ReactJS",
+      "ReactNative",
+      "VueJS",
+      "AngularJS",
+      "NextJS",
+      "NuxtJS",
+      "Ionic",
+      "TailwindCSS",
+      "ElementUI",
+      "Bootstrap",
+      "MUI",
+      "ShadCN",
+      "Flowbite",
+      "SASS"
+    ],
+    "backend": [
+      "NodeJS",
+      "ExpressJS",
+      "NestJS",
+      "Java",
+      "SpringBoot",
+      "Python",
+      "Django",
+      "FastAPI",
+      "Ruby",
+      "RoR",
+      "Rust",
+      "CSharp",
+      "C++"
+    ],
+    "database": [
+      "MongoDB",
+      "MySQL",
+      "Firebase",
+      "MSSQL",
+      "SQLite",
+      "PostgreSQL",
+      "MariaDB",
+      "DynamoDB",
+      "GraphQL",
+      "GRPC"
+    ],
+    "devops": [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "Ansible",
+      "Vercel",
+      "Railway"
+    ],
+    "cloud": ["AWS", "Azure", "OCI"],
+    "pm": ["JIRA", "Trello", "Confluence"]
   }
 ]

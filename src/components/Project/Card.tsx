@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { Project as ProjectType } from '../../types/Project';
-import { MdLink } from 'react-icons/md';
-import { BsGithub } from 'react-icons/bs';
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { Project as ProjectType } from "../../types/Project";
+import { MdLink } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
 
 const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
@@ -11,24 +11,24 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
 }) => (
   <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
     <span>
-      {new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+      {new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       })}
     </span>
     <span>|</span>
-    <span>by {authors.join(', ')}</span>
+    <span>by {authors.join(", ")}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: ProjectType['url'];
-  githubLink: ProjectType['githubLink'];
+  url: ProjectType["url"];
+  githubLink: ProjectType["githubLink"];
 }> = ({ url, githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
-      <div className="cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-gray-300 bg-white hover:bg-[#282828] hover:text-white hover:border-gray-600 group-hover:rounded-[32px] transition-all duration-300">
+      <div className="project-links cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-gray-300 bg-white hover:bg-[#282828] hover:text-white hover:border-gray-600 group-hover:rounded-[32px] transition-all duration-300">
         <span className="font-[semi-bold] text-[12px] tracking-wider block group-hover:hidden">
           View Source
         </span>
@@ -48,17 +48,17 @@ const Links: React.FC<{
 );
 
 const Technology: React.FC<{ technology: string }> = ({ technology }) => (
-  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
+  <div className="project-technology cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
     <img
-      src={`https://res.cloudinary.com/dni1vtbsv/image/upload/${technology}.png`}
+      src={`https://res.cloudinary.com/dni1vtbsv/image/upload/v1754623985/${technology}.png`}
       alt={technology}
-      className="w-[16px] h-[16px]"
+      className="w-[16px] h-[16px] brightness-100 contrast-175"
     />
     <div className="text-[14px] mt-[2px] tracking-wide">{technology}</div>
   </div>
 );
 
-const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
+const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
   technologies,
 }) => (
   <div className="w-full flex flex-wrap justify-start items-start gap-2">
@@ -70,14 +70,14 @@ const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
 
 const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
   return (
-    <div className="w-full h-full group relative hover:border hover:border-gray-300 hover:rounded-xl overflow-hidden">
+    <div className="project w-full h-full group relative hover:border hover:border-gray-300 hover:rounded-xl overflow-hidden">
       <Image
         logo={project.logo}
         splashPhoto={project.splashPhoto}
         title={project.title}
       />
 
-      <div className="group-hover:px-4 pb-4">
+      <div className="group-hover:px-4 pb-4 project-details">
         <Spacer size="small" />
 
         <Meta date={project.date} authors={project.authors} />

@@ -1,12 +1,17 @@
-import React from 'react';
-import Spacer from '../../utils/Spacer';
-import profilePic from '../../assets/images/profilepic.svg';
-import { PiSealCheckFill } from 'react-icons/pi';
-import { TiLocation } from 'react-icons/ti';
-import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import { RxEnvelopeClosed } from 'react-icons/rx';
+import React from "react";
+import Spacer from "../../utils/Spacer";
+import profilePic from "../../assets/images/profilepic.svg";
+import { PiSealCheckFill } from "react-icons/pi";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { RxEnvelopeClosed } from "react-icons/rx";
+import AboutMeData from "../../assets/data/AboutMe.json";
+import { AboutMe as AboutMeType } from "../../types/AboutMe";
+import Technology from "./Technology";
 
 const AboutMe: React.FC = () => {
+  const aboutMeInfo: AboutMeType[] = AboutMeData;
+  const { frontend, backend, devops, database, cloud } = aboutMeInfo[0];
+
   return (
     <section id="aboutme" className="bg-white relative">
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
@@ -29,13 +34,12 @@ const AboutMe: React.FC = () => {
               <PiSealCheckFill size={22} className="text-[#1d9bf0] -mt-[2px]" />
             </div>
             <div className="flex items-center gap-2">
-              <TiLocation size={22} className="text-[#282828] -mt-[8px]" />
-              <span className="font-[extra-light] text-[14px] text-[#282828] tracking-wide">
+              <span className="text-sm text-[#282828] tracking-wider">
                 Valenzuela, Philippines
               </span>
             </div>
             <div className="flex items-center gap-3 mt-[2px]">
-              <span className="text-sm text-[#282828] tracking-wide">
+              <span className="text-sm text-[#282828] tracking-wide black-sweep">
                 Full Stack Developer and Certified GenAI Leader
               </span>
             </div>
@@ -66,7 +70,78 @@ const AboutMe: React.FC = () => {
         <Spacer size="xs" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
         <Spacer size="small" />
-        <div className="flex items-center gap-2"></div>
+        <div className="flex flex-wrap items-center gap-2">
+          {frontend?.length > 0 ? (
+            frontend.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Backend</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {backend?.length > 0 ? (
+            backend.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Database</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {database?.length > 0 ? (
+            database.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">DevOps</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {devops?.length > 0 ? (
+            devops.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Cloud</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {cloud?.length > 0 ? (
+            cloud.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
         <Spacer size="large" />
       </div>
     </section>
