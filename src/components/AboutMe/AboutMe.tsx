@@ -2,11 +2,12 @@ import React from "react";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaGoogle, FaLinkedinIn } from "react-icons/fa6";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import AboutMeData from "../../assets/data/AboutMe.json";
 import { AboutMe as AboutMeType } from "../../types/AboutMe";
 import Technology from "./Technology";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const AboutMe: React.FC = () => {
   const aboutMeInfo: AboutMeType[] = AboutMeData;
@@ -43,23 +44,23 @@ const AboutMe: React.FC = () => {
                 Full Stack Developer and Certified GenAI Leader
               </span>
             </div>
-            <div className="flex items-center gap-4 mt-[2px]">
-              <FaGithub
-                size={32}
-                className="cursor-pointer text-gray-700 hover:text-black"
-              />
-              <FaLinkedinIn
-                size={32}
-                className="cursor-pointer text-gray-700 hover:text-black"
-              />
-              <RxEnvelopeClosed
-                size={32}
-                className="cursor-pointer text-gray-700 hover:text-black"
-              />
-              <FaFacebook
-                size={32}
-                className="cursor-pointer text-gray-700 hover:text-black"
-              />
+            <div className="flex items-center gap-2 mt-1">
+              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#141b23] border border-[#141b23] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
+                <FaGithub />
+                <div className="text-[14px] mt-[2px] tracking-wide">GitHub</div>
+              </div>
+              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#0d66be] border border-[#0d66be] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
+                <FaLinkedinIn />
+                <div className="text-[14px] mt-[2px] tracking-wide">
+                  LinkedIn
+                </div>
+              </div>
+              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#0a68ff] border border-[#0a68ff] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
+                <FaFacebook />
+                <div className="text-[14px] mt-[2px] tracking-wide">
+                  Facebook
+                </div>
+              </div>
             </div>
           </div>
         </div>
