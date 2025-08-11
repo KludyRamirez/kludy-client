@@ -61,7 +61,7 @@ const Technology: React.FC<{ technology: string }> = ({ technology }) => (
 const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
   technologies,
 }) => (
-  <div className="w-full flex flex-wrap justify-start items-start gap-2">
+  <div className="project-technologies w-full flex flex-wrap justify-start items-start gap-2">
     {technologies.map((technology, index) => (
       <Technology key={index} technology={technology} />
     ))}

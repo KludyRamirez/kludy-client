@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "certification-1",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751363540/ociaiprobadge.svg",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=76E311E22A9F506E15C9E2E7F098394A10A3CAE03705998B08EEE1E644E67C68",
+    "categories": ["Certification", "AI / ML", "Popular"]
+  }
+]

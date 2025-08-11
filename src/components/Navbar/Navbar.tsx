@@ -8,7 +8,7 @@ interface NavbarProps {
   scrollToExperiences: () => void;
   scrollToProjects: () => void;
   scrollToBadges: () => void;
-  scrollToFaqs: () => void;
+  scrollToCertification: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({
   scrollToExperiences,
   scrollToProjects,
   scrollToBadges,
-  scrollToFaqs,
+  scrollToCertification,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(false);
@@ -80,7 +80,12 @@ const Navbar: React.FC<NavbarProps> = ({
                 <span className="text-sm tracking-wide">Badges</span>
                 <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
+              <div
+                onClick={() => {
+                  scrollToCertification();
+                }}
+                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
+              >
                 <span className="text-sm tracking-wide">Certifications</span>
                 <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
               </div>
@@ -172,7 +177,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToFaqs();
+                  scrollToCertification();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 hover:bg-gray-100 hover:border-b-[1px]"

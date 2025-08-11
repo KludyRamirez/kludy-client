@@ -98,6 +98,7 @@
   .swiper-slide-active
   .project
   .project-details
+  .project-technologies
   .project-technology {
   border-radius: 6px;
 }
@@ -110,15 +111,6 @@
   a
   .project-links {
   border-radius: 32px;
-}
-
-.projects-swiper
-  .swiper-wrapper
-  .swiper-slide-active
-  .project
-  .project-image
-  .logo-image-background {
-  /* background-color: #f6f7f8; */
 }
 
 .badge-swiper .swiper-wrapper .swiper-slide-active .badge {
@@ -139,6 +131,12 @@
 .hero-swiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
+}
+
+.certification-swiper .swiper-wrapper .swiper-slide-active .certification {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 16px;
 }
 
 /* light-sweep */

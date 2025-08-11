@@ -2,12 +2,10 @@ import React from "react";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
-import { FaFacebook, FaGithub, FaGoogle, FaLinkedinIn } from "react-icons/fa6";
-import { RxEnvelopeClosed } from "react-icons/rx";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import AboutMeData from "../../assets/data/AboutMe.json";
 import { AboutMe as AboutMeType } from "../../types/AboutMe";
 import Technology from "./Technology";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const AboutMe: React.FC = () => {
   const aboutMeInfo: AboutMeType[] = AboutMeData;
@@ -22,47 +20,46 @@ const AboutMe: React.FC = () => {
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="flex flex-wrap justify-start items-center gap-8">
-          <img
-            src={profilePic}
-            className="w-[160px] h-[160px] shadow-lg rounded-[50%]"
-          ></img>
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3">
-              <span className="font-[semi-bold] text-2xl text-[#282828]">
-                Kludy Ramirez
-              </span>
-              <PiSealCheckFill size={22} className="text-[#1d9bf0] -mt-[2px]" />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-[#282828] tracking-wider">
-                Valenzuela, Philippines
-              </span>
-            </div>
-            <div className="flex items-center gap-3 mt-[2px]">
-              <span className="text-sm text-[#282828] tracking-wide black-sweep">
-                Full Stack Developer and Certified GenAI Leader
-              </span>
-            </div>
-            <div className="flex items-center gap-2 mt-1">
-              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#141b23] border border-[#141b23] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
-                <FaGithub />
-                <div className="text-[14px] mt-[2px] tracking-wide">GitHub</div>
+        <div className="w-full flex justify-between items-center">
+          <div className="w-[60%] flex flex-wrap justify-start items-center gap-8">
+            <img
+              src={profilePic}
+              className="w-[160px] h-[160px] shadow-lg rounded-xl"
+            ></img>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <span className="font-[semi-bold] text-2xl text-[#282828]">
+                  Kludy Ramirez
+                </span>
+                <PiSealCheckFill size={22} className="text-[#1d9bf0]" />
               </div>
-              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#0d66be] border border-[#0d66be] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
-                <FaLinkedinIn />
-                <div className="text-[14px] mt-[2px] tracking-wide">
-                  LinkedIn
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-[#282828] tracking-wider">
+                  Valenzuela, Philippines
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mt-[2px]">
+                <span className="text-sm text-[#282828] tracking-wide light-sweep">
+                  Full Stack Developer and Certified GenAI Leader
+                </span>
+              </div>
+              <div className="flex items-center gap-2 mt-[6px]">
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#141b23]/60 text-sm text-[#141b23] hover:bg-[#141b23] hover:text-white transition-all duration-300 rounded-md">
+                  <FaGithub />
+                  <div className="text-sm mt-[2px] tracking-wide">GitHub</div>
                 </div>
-              </div>
-              <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-[#0a68ff] border border-[#0a68ff] text-[14px] text-white hover:border-gray-300 hover:bg-white hover:text-black group-hover:rounded-[6px] transition-all duration-300 rounded-md">
-                <FaFacebook />
-                <div className="text-[14px] mt-[2px] tracking-wide">
-                  Facebook
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0d66be]/60 text-sm text-[#0d66be] hover:bg-[#0d66be] hover:text-white transition-all duration-300 rounded-md">
+                  <FaLinkedinIn />
+                  <div className="text-sm mt-[2px] tracking-wide">LinkedIn</div>
+                </div>
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0a68ff]/60 text-sm text-[#0a68ff] hover:bg-[#0a68ff] hover:text-white transition-all duration-300 rounded-md">
+                  <FaFacebook />
+                  <div className="text-sm mt-[2px] tracking-wide">Facebook</div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="w-[40%] h-[160px] border border-gray-300 rounded-xl"></div>
         </div>
         <Spacer size="small" />
         <Spacer size="small" />

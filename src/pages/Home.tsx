@@ -30,6 +30,7 @@ import Experience from "../components/Experience/Experience";
 import Badge from "../components/Badge/Badge";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Blog from "../components/Blog/Blog";
+import Certification from "../components/Certification/Certification";
 import Typewriter from "../utils/Typewriter";
 
 const HomePage: React.FC<Home> = () => {
@@ -83,7 +84,7 @@ const HomePage: React.FC<Home> = () => {
   const experiencesRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const badgesRef = useRef<HTMLDivElement | null>(null);
-  const faqsRef = useRef<HTMLDivElement | null>(null);
+  const certificationRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToHero = () => {
     if (heroSectionRef.current) {
@@ -115,9 +116,9 @@ const HomePage: React.FC<Home> = () => {
     }
   };
 
-  const scrollToFaqs = () => {
-    if (faqsRef.current) {
-      faqsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToCertification = () => {
+    if (certificationRef.current) {
+      certificationRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -130,7 +131,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToExperiences={scrollToExperiences}
         scrollToProjects={scrollToProjects}
         scrollToBadges={scrollToBadges}
-        scrollToFaqs={scrollToFaqs}
+        scrollToCertification={scrollToCertification}
       />
       <section id="hero" className="h-screen relative" ref={heroSectionRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
@@ -161,7 +162,7 @@ const HomePage: React.FC<Home> = () => {
             <div
               className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide"
               onClick={() => {
-                scrollToFaqs();
+                scrollToCertification();
               }}
             >
               Recruit me
@@ -249,21 +250,17 @@ const HomePage: React.FC<Home> = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className="w-full flex justify-center items-center gap-12">
-          <div className="w-[200px] mt-8">
-            <Bubbles colors={["white"]} />
-          </div>
-        </div> */}
       </section>
       <AboutMe />
       <Experience experiencesRef={experiencesRef} />
       <Project projectsRef={projectsRef} projectsGif={projectsGif} />
       <Blog blogsRef={blogsRef} />
+      <Certification certificationRef={certificationRef} />
       <Badge badgesRef={badgesRef} />
       <footer
         id="footer"
         className="bg-white relative flex flex-col items-center"
-        ref={faqsRef}
+        ref={certificationRef}
       >
         <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">
