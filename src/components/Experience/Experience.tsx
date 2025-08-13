@@ -1,8 +1,8 @@
-import React from 'react';
-import Spacer from '../../utils/Spacer';
+import React from "react";
+import Spacer from "../../utils/Spacer";
 
-import { BsArrowUpRight, BsSuitcaseLg } from 'react-icons/bs';
-import { MdLink } from 'react-icons/md';
+import { BsArrowUpRight, BsSuitcaseLg } from "react-icons/bs";
+import { MdLink } from "react-icons/md";
 
 interface Props {
   experiencesRef: React.RefObject<HTMLElement>;
@@ -20,8 +20,8 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    period: 'July 2024 - Present',
-    title: 'Software Engineer at Flexicon Solution Inc.',
+    period: "July 2024 - Present",
+    title: "Software Engineer at Flexicon Solution Inc.",
     points: [
       `Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js,
 Storybook.js, Pug.js, Cypress, and Jest.`,
@@ -33,17 +33,17 @@ systems, ensuring alignment with technical standards and business goals.
 branches, including maintaining detailed changelogs to ensure consistent and traceable releases.`,
     ],
     photos: [
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png',
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png',
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png",
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
     ],
     documentsLinks: [],
-    address: 'Makati City, Philippines',
-    companyLink: '',
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
   {
-    period: 'January 2024 - July 2024',
-    title: 'Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela',
+    period: "January 2024 - July 2024",
+    title: "Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela",
     points: [
       `Built a web application that handled over 12,000 student affairs records and processed 9,000+
 cases and appeals, featuring secure data delivery to official school email without requiring
@@ -57,12 +57,12 @@ ensuring 99% system availability.`,
     ],
     photos: [],
     documentsLinks: [],
-    address: 'Makati City, Philippines',
-    companyLink: '',
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
   {
-    period: 'March 2023 - December 2023',
-    title: 'Junior Web Developer at Asia Pacific Digital GrowthOps',
+    period: "March 2023 - December 2023",
+    title: "Junior Web Developer at Asia Pacific Digital GrowthOps",
     points: [
       `Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand
 websites.
@@ -74,11 +74,11 @@ enabling advanced analytics and remarketing strategies.`,
       `Configured dynamic meta tags in SPAs for accurate SEO and crawler rendering.`,
     ],
     photos: [
-      'https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png',
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
     ],
-    documentsLinks: ['Performance Review'],
-    address: 'Makati City, Philippines',
-    companyLink: '',
+    documentsLinks: ["Performance Review"],
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
 ];
 
@@ -88,7 +88,6 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   points,
   documentsLinks,
   address,
-  companyLink,
 }) => (
   <div className="w-full flex justify-start gap-4">
     <div className="hidden md:flex flex-col items-center justify-center gap-5">
