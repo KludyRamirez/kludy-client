@@ -1,7 +1,7 @@
 export interface Certification {
   _id: string;
   photo: string;
-  date: Date;
+  date: string;
   title: string;
   providers: string[];
   url: string;

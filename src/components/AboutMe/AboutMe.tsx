@@ -1,71 +1,183 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
-import { TiLocation } from "react-icons/ti";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { RxEnvelopeClosed } from "react-icons/rx";
+import AboutMeData from "../../assets/data/AboutMe.json";
+import { AboutMe as AboutMeType } from "../../types/AboutMe";
+import Technology from "./Technology";
 
 const AboutMe: React.FC = () => {
+  const aboutMeInfo: AboutMeType[] = AboutMeData;
+  const { frontend, backend, devops, database, cloud } = aboutMeInfo[0];
+
   return (
     <section id="aboutme" className="bg-white relative">
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
         <Spacer size="large" />
-        <div className="text-[#282828]">About Me</div>
+        <div className="text-[#282828]">About me</div>
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
-        <div className="flex justify-between text-[2.875rem] text-[#282828] leading-[1.275]">
-          <div className="flex flex-col">
-            <span>Matthew 19:26</span>
-            <span className="text-[#919191] font-[regular] black-sweep">
-              With God all things are possible.
-            </span>
+        <Spacer size="small" />
+        <div className="w-full flex justify-between items-center">
+          <div className="w-[60%] flex flex-wrap justify-start items-center gap-8">
+            <img
+              src={profilePic}
+              className="w-[160px] h-[160px] shadow-lg rounded-xl"
+            ></img>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <span className="font-[semi-bold] text-2xl text-[#282828]">
+                  Kludy Ramirez
+                </span>
+                <PiSealCheckFill size={22} className="text-[#1d9bf0]" />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-[#282828] tracking-wider">
+                  Valenzuela, Philippines
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mt-[2px]">
+                <span className="text-sm text-[#282828] tracking-wide light-sweep">
+                  Full Stack Developer and Certified GenAI Leader
+                </span>
+              </div>
+              <div className="flex items-center gap-2 mt-[6px]">
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#141b23]/60 text-sm text-[#141b23] hover:bg-[#141b23] hover:text-white transition-all duration-300 rounded-md">
+                  <FaGithub />
+                  <div className="text-sm mt-[2px] tracking-wide">GitHub</div>
+                </div>
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0d66be]/60 text-sm text-[#0d66be] hover:bg-[#0d66be] hover:text-white transition-all duration-300 rounded-md">
+                  <FaLinkedinIn />
+                  <div className="text-sm mt-[2px] tracking-wide">LinkedIn</div>
+                </div>
+                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0a68ff]/60 text-sm text-[#0a68ff] hover:bg-[#0a68ff] hover:text-white transition-all duration-300 rounded-md">
+                  <FaFacebook />
+                  <div className="text-sm mt-[2px] tracking-wide">Facebook</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-[40%] h-[160px] border border-gray-300 rounded-xl px-4 pt-4">
+            <Swiper
+              autoplay={{
+                delay: 3000,
+              }}
+              loop={true}
+              pagination={true}
+              modules={[Autoplay, Pagination]}
+              className="about-me-desc-swiper"
+            >
+              <SwiperSlide>
+                <div className="flex flex-col gap-4">
+                  <div className="text-xs tracking-wide leading-relaxed">
+                    With a knack for web development and a track record of
+                    turning challenges into results, I’m eager to bring
+                    innovative yet careful ideas to the company. I’m ready
+                    transform a single line of code into a robust
+                    infrastructure.
+                  </div>
+                  <div className="flex items-center justify-end text-xs font-[semi-bold] tracking-wider">
+                    - Kludy
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex flex-col gap-2">
+                  <div className="text-xs tracking-wider leading-relaxed">
+                    With a knack for web development and a track record of
+                    turning challenges into results, I’m eager to bring
+                    innovative yet careful ideas to your company. I’m ready
+                    transform a single line of code into a robust
+                    infrastructure.
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
-        <Spacer size="medium" />
+        <Spacer size="small" />
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
-        <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
-          Recent Me
-        </h3>
-        <Spacer size="medium" />
-        <div className="flex flex-wrap justify-start items-center gap-8">
-          <img src={profilePic} className="w-[160px] h-[160px] shadow-lg"></img>
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3">
-              <span className="font-[semi-bold] text-2xl text-[#282828]">
-                Kludy Ramirez
-              </span>
-              <PiSealCheckFill size={22} className="text-[#1d9bf0] -mt-[2px]" />
-            </div>
-            <div className="flex items-center gap-2">
-              <TiLocation size={22} className="text-[#282828] -mt-[8px]" />
-              <span className="font-[extra-light] text-[14px] text-[#282828] tracking-wide">
-                Valenzuela, Philippines
-              </span>
-            </div>
-            <div className="flex items-center gap-3 mt-[2px]">
-              <span className="text-[16px] text-[#282828]">
-                Full Stack Developer and Certified GenAI Pro
-              </span>
-            </div>
-            <div className="flex items-center gap-4 mt-[2px]">
-              <FaGithub size={32} className="cursor-pointer text-gray-700" />
-              <FaLinkedinIn
-                size={32}
-                className="cursor-pointer text-gray-700"
-              />
-              <RxEnvelopeClosed
-                size={32}
-                className="cursor-pointer text-gray-700"
-              />
-              <FaFacebook size={32} className="cursor-pointer text-gray-700" />
-            </div>
-          </div>
-        </div>
         <Spacer size="xs" />
+        <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {frontend?.length > 0 ? (
+            frontend.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Backend</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {backend?.length > 0 ? (
+            backend.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Database</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {database?.length > 0 ? (
+            database.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">DevOps</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {devops?.length > 0 ? (
+            devops.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <h3 className="text-[1.75rem] font-[regular]">Cloud</h3>
+        <Spacer size="small" />
+        <div className="flex flex-wrap items-center gap-2">
+          {cloud?.length > 0 ? (
+            cloud.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
+        </div>
         <Spacer size="large" />
       </div>
     </section>

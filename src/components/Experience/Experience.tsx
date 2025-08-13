@@ -1,8 +1,7 @@
 import React from "react";
 import Spacer from "../../utils/Spacer";
 
-import { FaLinkedin } from "react-icons/fa6";
-import { BsSuitcaseLg } from "react-icons/bs";
+import { BsArrowUpRight, BsSuitcaseLg } from "react-icons/bs";
 import { MdLink } from "react-icons/md";
 
 interface Props {
@@ -15,6 +14,8 @@ interface ExperienceItem {
   points: string[];
   photos: string[];
   documentsLinks?: string[];
+  address: string;
+  companyLink: string;
 }
 
 const experiences: ExperienceItem[] = [
@@ -36,7 +37,9 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
       "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
       "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
     ],
-    documentsLinks: ["Performance Review", "Supervisor Feedback"],
+    documentsLinks: [],
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
   {
     period: "January 2024 - July 2024",
@@ -53,6 +56,9 @@ streamlining backend operations enough to handle a high volume of concurrent use
 ensuring 99% system availability.`,
     ],
     photos: [],
+    documentsLinks: [],
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
   {
     period: "March 2023 - December 2023",
@@ -70,6 +76,9 @@ enabling advanced analytics and remarketing strategies.`,
     photos: [
       "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
     ],
+    documentsLinks: ["Performance Review"],
+    address: "Makati City, Philippines",
+    companyLink: "",
   },
 ];
 
@@ -77,13 +86,13 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   period,
   title,
   points,
-  photos,
   documentsLinks,
+  address,
 }) => (
-  <div className="w-full flex justify-start gap-6">
+  <div className="w-full flex justify-start gap-4">
     <div className="hidden md:flex flex-col items-center justify-center gap-5">
       <div className="w-full flex justify-center items-start">
-        <BsSuitcaseLg size={16} className="-mt-[2px] text-gray-600" />
+        <BsSuitcaseLg size={16} className="-mt-[2px] text-white" />
       </div>
       <div className="w-[1px] h-full bg-slate-100/20"></div>
     </div>
@@ -94,13 +103,15 @@ const TimelineItem: React.FC<ExperienceItem> = ({
       </div>
       <Spacer size="small" />
       <div className="flex items-center gap-2 group">
-        <div className="text-[28px] text-white hover:underline cursor-pointer">
-          {title}
-        </div>
-        <FaLinkedin
+        <div className="text-[28px] text-white cursor-pointer">{title}</div>
+        <BsArrowUpRight
           size={22}
           className="opacity-0 group-hover:opacity-100 text-white"
         />
+      </div>
+      <Spacer size="small" />
+      <div className="flex items-center gap-2 text-white text-[14px] leading-none tracking-wide pb-2">
+        <div>{address}</div>
       </div>
       <Spacer size="small" />
       <ul className="list-disc list-inside space-y-4 md:space-y-2">
@@ -110,35 +121,25 @@ const TimelineItem: React.FC<ExperienceItem> = ({
           </li>
         ))}
       </ul>
-      <Spacer size="xs" />
-      <Spacer size="small" />
+
       {documentsLinks && documentsLinks.length > 0 ? (
-        <div className="flex items-center gap-3">
-          {documentsLinks?.map((link, index) => (
-            <div
-              key={index}
-              className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-white border border-slate-100/20 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
-            >
-              <MdLink size={20} />
-              <span className="text-[14px] mt-[2px]">{link}</span>
-            </div>
-          ))}
-        </div>
-      ) : null}
-      <Spacer size="small" />
-      <Spacer size="small" />
-      {photos?.length > 0 ? (
-        <div className="w-full flex flex-col gap-4">
-          <div className="w-full flex flex-wrap items-start gap-4">
-            {photos.map((photo, index) => (
-              <img
+        <>
+          <Spacer size="xs" />
+          <Spacer size="small" />
+          <div className="flex items-center gap-3">
+            {documentsLinks?.map((link, index) => (
+              <div
                 key={index}
-                src={photo}
-                className="w-full md:w-[304px] h-[200px] object-cover"
-              />
+                className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-neutral-100 border border-slate-100/30 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
+              >
+                <MdLink size={20} />
+                <span className="text-[14px] mt-[2px] tracking-wide">
+                  {link}
+                </span>
+              </div>
             ))}
           </div>
-        </div>
+        </>
       ) : null}
     </div>
   </div>

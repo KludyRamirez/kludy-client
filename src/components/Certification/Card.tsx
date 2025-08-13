@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { Certification as CertificationType } from '../../types/Certification'; // changed
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { Certification as CertificationType } from "../../types/Certification"; // changed
 
 import {
   FaBullseye,
@@ -10,23 +10,29 @@ import {
   FaCrown,
   FaFireFlameCurved,
   FaShieldHalved,
-} from 'react-icons/fa6';
-import { SiOpenai } from 'react-icons/si';
+} from "react-icons/fa6";
+import { SiOpenai } from "react-icons/si";
 
-const Meta: React.FC<{ date: Date; authors: string[] }> = ({
+const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
   authors,
 }) => (
-  <div className="flex gap-2 text-[.850rem] text-gray-300">
-    <span>{date.toLocaleDateString()}</span>
+  <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+    <span>
+      {new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })}
+    </span>
     <span>|</span>
-    <span>by {authors.join(', ')}</span>
+    <span>by {authors.join(", ")}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: CertificationType['url'];
-  title: CertificationType['title'];
+  url: CertificationType["url"];
+  title: CertificationType["title"];
 }> = ({ url, title }) => (
   <a
     href={url}
@@ -39,32 +45,32 @@ const Links: React.FC<{
 );
 
 const Clogo: React.FC<{ category: string }> = ({ category }) => (
-  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#efefef] text-[14px] text-gray-300 gap-2">
-    {category === 'Certification' ? (
-      <FaBullseye size={14} className="group-hover:text-[#282828]" />
-    ) : category === 'AI / ML' ? (
-      <SiOpenai size={14} className="group-hover:text-[#282828]" />
-    ) : category === 'Popular' ? (
-      <FaFireFlameCurved size={14} className="group-hover:text-[#282828]" />
-    ) : category === 'Cloud' ? (
-      <FaCloud size={16} className="group-hover:text-[#282828]" />
-    ) : category === 'Security' ? (
-      <FaShieldHalved size={16} className="group-hover:text-[#282828]" />
-    ) : category === 'Relevant' ? (
-      <FaCrown size={16} className="group-hover:text-[#282828]" />
-    ) : category === 'Development' ? (
-      <FaCode size={14} className="group-hover:text-[#282828]" />
+  <div className="certification-clogo cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
+    {category === "Certification" ? (
+      <FaBullseye size={14} />
+    ) : category === "AI / ML" ? (
+      <SiOpenai size={14} />
+    ) : category === "Popular" ? (
+      <FaFireFlameCurved size={14} />
+    ) : category === "Cloud" ? (
+      <FaCloud size={16} />
+    ) : category === "Security" ? (
+      <FaShieldHalved size={16} />
+    ) : category === "Relevant" ? (
+      <FaCrown size={16} />
+    ) : category === "Development" ? (
+      <FaCode size={14} />
     ) : (
-      ''
+      ""
     )}
     <div className="mt-[2px] tracking-wide">{category}</div>
   </div>
 );
 
-const Categories: React.FC<{ categories: CertificationType['categories'] }> = ({
+const Categories: React.FC<{ categories: CertificationType["categories"] }> = ({
   categories,
 }) => (
-  <div className="w-full flex flex-wrap justify-start items-start gap-2">
+  <div className="certification-categories w-full flex flex-wrap justify-start items-start gap-2">
     {categories.map((category, index) => (
       <Clogo key={index} category={category} />
     ))}
@@ -75,7 +81,7 @@ const Card: React.FC<{ certification: CertificationType }> = ({
   certification,
 }) => {
   return (
-    <div className="w-full h-full p-2 relative group">
+    <div className="certification w-full h-full p-2 relative group hover:p-4 hover:border hover:border-gray-300 hover:rounded-xl">
       <Image photo={certification.photo} title={certification.title} />
 
       <Spacer size="small" />

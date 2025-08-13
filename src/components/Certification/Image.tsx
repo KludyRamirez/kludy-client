@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Image: React.FC<{
   photo: string;
@@ -9,7 +9,7 @@ const Image: React.FC<{
       <img
         src={photo}
         alt={`${title} badge`}
-        className="cursor-pointer aspect-[3/2] grayscale z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
+        className="max-w-full max-h-full object-contain transition-hover duration-[400ms] ease-in-out filter brightness-100 contrast-150 grayscale group-hover:grayscale-0"
       />
     </div>
   );

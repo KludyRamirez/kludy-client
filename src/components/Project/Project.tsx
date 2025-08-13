@@ -16,7 +16,7 @@ interface Props {
 const SWIPER_CONFIG = {
   spaceBetween: 28,
   autoplay: {
-    delay: 1400,
+    delay: 2000,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -24,7 +24,7 @@ const SWIPER_CONFIG = {
     767: { slidesPerView: 2 },
   },
   modules: [Autoplay, Pagination],
-  className: "projects-swiper",
+  className: "project-swiper",
 };
 
 const Project: React.FC<Props> = ({ projectsRef }) => {

@@ -1,12 +1,12 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import Spacer from '../../utils/Spacer';
-import Card from './Card';
-import { Badge as BadgeType } from '../../types/Badge';
-import { useGetBadgesQuery } from '../../features/api/Badge';
-import BadgeData from '../../assets/data/Badge.json';
-import Loader from '../../utils/Loader';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import Spacer from "../../utils/Spacer";
+import Card from "./Card";
+import { Badge as BadgeType } from "../../types/Badge";
+import { useGetBadgesQuery } from "../../features/api/Badge";
+import BadgeData from "../../assets/data/Badge.json";
+import Loader from "../../utils/Loader";
 
 interface Props {
   badgesRef: React.RefObject<HTMLElement>;
@@ -23,7 +23,7 @@ const SWIPER_CONFIG = {
     767: { slidesPerView: 2 },
   },
   modules: [Autoplay, Pagination],
-  className: 'bc-swiper',
+  className: "badge-swiper",
 };
 
 const Badge: React.FC<Props> = ({ badgesRef }) => {

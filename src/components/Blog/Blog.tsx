@@ -1,10 +1,11 @@
-import React from "react";
-import Spacer from "../../utils/Spacer";
-import Card from "./Card";
-import { useGetBlogsQuery } from "../../features/api/Blog";
-import { Blog as BlogType } from "../../types/Blog";
-import BlogData from "../../assets/data/Blog.json";
-import { Loader } from "@react-three/drei";
+import React from 'react';
+import Spacer from '../../utils/Spacer';
+import Card from './Card';
+import { useGetBlogsQuery } from '../../features/api/Blog';
+import { Blog as BlogType } from '../../types/Blog';
+import BlogData from '../../assets/data/Blog.json';
+import Loader from '../../utils/Loader';
+import { Link } from 'react-router-dom';
 
 interface Props {
   blogsRef: React.RefObject<HTMLElement>;
@@ -39,9 +40,13 @@ const Blog: React.FC<Props> = ({ blogsRef }) => {
         </h3>
         <Spacer size="medium" />
         <Spacer size="xs" />
-        <div className="flex flex-col">
-          {blogs && blogs.length > 0 ? (
-            blogs.map((blog) => <Card key={blog._id} blog={blog} />)
+        <div className="flex flex-col gap-4">
+          {blogs?.length > 0 ? (
+            blogs.map((blog) => (
+              <Link key={blog._id} to={`/blog/${blog._id}`}>
+                <Card key={blog._id} blog={blog} />
+              </Link>
+            ))
           ) : isLoading ? (
             <Loader />
           ) : (
