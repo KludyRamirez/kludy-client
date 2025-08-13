@@ -81,7 +81,7 @@ const Card: React.FC<{ certification: CertificationType }> = ({
   certification,
 }) => {
   return (
-    <div className="certification w-full h-full p-2 relative group">
+    <div className="certification w-full h-full p-2 relative group hover:p-4 hover:border hover:border-gray-300 hover:rounded-xl">
       <Image photo={certification.photo} title={certification.title} />
 
       <Spacer size="small" />

@@ -24,7 +24,7 @@ const SWIPER_CONFIG = {
     767: { slidesPerView: 2 },
   },
   modules: [Autoplay, Pagination],
-  className: "projects-swiper",
+  className: "project-swiper",
 };
 
 const Project: React.FC<Props> = ({ projectsRef }) => {

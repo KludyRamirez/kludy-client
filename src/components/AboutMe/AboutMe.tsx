@@ -1,4 +1,6 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
@@ -59,7 +61,43 @@ const AboutMe: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-[40%] h-[160px] border border-gray-300 rounded-xl"></div>
+          <div className="w-[40%] h-[160px] border border-gray-300 rounded-xl px-4 pt-4">
+            <Swiper
+              autoplay={{
+                delay: 3000,
+              }}
+              loop={true}
+              pagination={true}
+              modules={[Autoplay, Pagination]}
+              className="about-me-desc-swiper"
+            >
+              <SwiperSlide>
+                <div className="flex flex-col gap-4">
+                  <div className="text-xs tracking-wide leading-relaxed">
+                    With a knack for web development and a track record of
+                    turning challenges into results, I’m eager to bring
+                    innovative yet careful ideas to the company. I’m ready
+                    transform a single line of code into a robust
+                    infrastructure.
+                  </div>
+                  <div className="flex items-center justify-end text-xs font-[semi-bold] tracking-wider">
+                    - Kludy
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex flex-col gap-2">
+                  <div className="text-xs tracking-wider leading-relaxed">
+                    With a knack for web development and a track record of
+                    turning challenges into results, I’m eager to bring
+                    innovative yet careful ideas to your company. I’m ready
+                    transform a single line of code into a robust
+                    infrastructure.
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
         <Spacer size="small" />
         <Spacer size="small" />
