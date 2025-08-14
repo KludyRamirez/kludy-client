@@ -143,7 +143,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="hidden lg:block spacer-medium"></div>
           <div className="hidden lg:block spacer-medium"></div>
           <div className="hidden lg:block spacer-small"></div>
-          <div className="spacer-small"></div>
+          <div className="spacer-xs"></div>
 
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
@@ -171,14 +171,14 @@ const HomePage: React.FC<Home> = () => {
             >
               Recruit me
             </div>
-            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-white/10 border border-white/20 hover:bg-white/30 rounded-lg tracking-wide">
+            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-neutral-500/10 border border-white/20 hover:bg-white/20 rounded-lg tracking-wide">
               Download CV
             </div>
           </div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-xs"></div>
-          <div className="text-md text-center text-white font-[extra-light] tracking-wide relative">
+          <div className="text-sm text-center text-white font-[extra-light] tracking-wider relative">
             These are the organizations and institutions that have issued my
             certifications.
           </div>

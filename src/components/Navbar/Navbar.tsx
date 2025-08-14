@@ -44,13 +44,13 @@ const Navbar: React.FC<NavbarProps> = ({
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
             isHeroSectionActive
               ? "bg-white text-black"
-              : "bg-black shadow-lg text-white"
+              : "bg-black shadow-lg text-white border-b-[1px] border-slate-100/20"
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? "pt-[1.50rem] pb-[1rem] px-[1rem]"
+                ? "pt-[1rem] pb-[1rem] px-[1rem]"
                 : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 scrollToHero();
               }}
             >
-              <span className="text-sm tracking-widest">Kludy</span>
+              <span className="text-sm tracking-widest">Kludy Ramirez</span>
               <div className="w-[0%] group-hover:w-[75%] group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[1px]"></div>
             </div>
 
@@ -71,27 +71,11 @@ const Navbar: React.FC<NavbarProps> = ({
                   scrollToExperiences();
                 }}
               >
-                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
                   <BsSuitcaseLg size={16} className="-mt-[1px]" />
                 </div>
                 <span className="hidden group-hover:block text-sm tracking-wider">
                   Experiences
-                </span>
-              </div>
-              <div
-                className="cursor-pointer flex items-center px-1 group gap-2"
-                onClick={() => {
-                  scrollToExperiences();
-                }}
-              >
-                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
-                  <RiMedalLine
-                    size={16}
-                    className="group-hover:block -mt-[2px]"
-                  />
-                </div>
-                <span className="hidden group-hover:block text-sm tracking-wide">
-                  Badges
                 </span>
               </div>
               <div
@@ -108,6 +92,22 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
                 <span className="hidden group-hover:block text-sm tracking-wide">
                   Projects
+                </span>
+              </div>
+              <div
+                className="cursor-pointer flex items-center px-1 group gap-2"
+                onClick={() => {
+                  scrollToExperiences();
+                }}
+              >
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <RiMedalLine
+                    size={16}
+                    className="group-hover:block -mt-[2px]"
+                  />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Badges
                 </span>
               </div>
               <div
