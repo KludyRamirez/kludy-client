@@ -29,7 +29,9 @@
       "RoR",
       "Rust",
       "CSharp",
-      "C++"
+      "C++",
+      "GraphQL",
+      "GRPC"
     ],
     "database": [
       "MongoDB",
@@ -39,9 +41,7 @@
       "SQLite",
       "PostgreSQL",
       "MariaDB",
-      "DynamoDB",
-      "GraphQL",
-      "GRPC"
+      "DynamoDB"
     ],
     "devops": [
       "Git",
@@ -55,7 +55,7 @@
       "Vercel",
       "Railway"
     ],
-    "cloud": ["AWS", "Azure", "OCI"],
+    "cloud": ["AWS", "Azure", "GCP", "OCI", "DigitalOcean"],
     "pm": ["JIRA", "Trello", "Confluence"]
   }
 ]

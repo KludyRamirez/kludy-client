@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, EffectFlip } from "swiper/modules";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedinIn, FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import AboutMeData from "../../assets/data/AboutMe.json";
 import { AboutMe as AboutMeType } from "../../types/AboutMe";
 import Technology from "./Technology";
@@ -61,39 +61,37 @@ const AboutMe: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-[40%] h-[160px] border border-gray-300 rounded-xl px-4 pt-4">
+          <div className="w-[40%] h-[160px]">
             <Swiper
+              effect={'flip'}
               autoplay={{
-                delay: 3000,
+                delay: 5000,
               }}
               loop={true}
               pagination={true}
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, Pagination, EffectFlip]}
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="flex flex-col gap-4">
-                  <div className="text-xs tracking-wide leading-relaxed">
-                    With a knack for web development and a track record of
-                    turning challenges into results, I’m eager to bring
-                    innovative yet careful ideas to the company. I’m ready
-                    transform a single line of code into a robust
-                    infrastructure.
-                  </div>
-                  <div className="flex items-center justify-end text-xs font-[semi-bold] tracking-wider">
-                    - Kludy
+                <div className="w-full h-full flex flex-col gap-4 px-4 pt-4 border border-slate-300 rounded-xl">
+                  <div className="text-sm tracking-wide leading-relaxed">
+                    <FaQuoteLeft size={12} className="inline-block mr-2 -mt-[2px] align-text-top" />
+                    With a knack for <span className="tracking-wider font-[semi-bold]">web development</span>{" "}
+                    and a track record of turning <span className="tracking-wider font-[semi-bold]">challenges</span> into <span className="tracking-wider font-[semi-bold]">results</span>, I’m eager to bring 
+                    <span className="tracking-wider font-[semi-bold]"> innovative yet careful</span> ideas 
+                    to the company. I’m ready to transform a line of <span className="tracking-wider font-[semi-bold]">code</span> into a 
+                    <span className="tracking-wider font-[semi-bold]"> robust infrastructure</span>.
+                    <FaQuoteRight size={12} className="inline-block ml-2 -mt-[2px] align-text-top" />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="flex flex-col gap-2">
-                  <div className="text-xs tracking-wider leading-relaxed">
-                    With a knack for web development and a track record of
-                    turning challenges into results, I’m eager to bring
-                    innovative yet careful ideas to your company. I’m ready
-                    transform a single line of code into a robust
-                    infrastructure.
-                  </div>
+                <div className="flex flex-col gap-2 w-full h-full overflow-hidden rounded-xl">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755158653/aboutmeexplosion.gif"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </SwiperSlide>
             </Swiper>

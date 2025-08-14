@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import emailjs from "emailjs-com";
-import growthops from "../assets/images/growthops.png";
 import microsoft from "../assets/images/microsoft.svg";
 import opswat from "../assets/images/opswat.svg";
 import oracle from "../assets/images/oracle.svg";
@@ -229,12 +228,6 @@ const HomePage: React.FC<Home> = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img src={udemy} className="filter brightness-200 contrast-125" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={growthops}
-                className="filter brightness-200 contrast-125 h-[50px]"
-              />
             </SwiperSlide>
             <SwiperSlide>
               <img

@@ -78,10 +78,6 @@
   object-fit: cover;
 }
 
-.about-me-desc-swiper .swiper-pagination {
-  padding-top: 4px;
-}
-
 .project-swiper .swiper-wrapper .swiper-slide-active .project {
   border-width: 1px 1px 1px 1px;
   border-style: solid;
