@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from "react-icons/bs";
 import { HiOutlineXMark } from "react-icons/hi2";
+import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
@@ -41,14 +43,14 @@ const Navbar: React.FC<NavbarProps> = ({
         <div
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
             isHeroSectionActive
-              ? "bg-transparent text-[#efefef]"
+              ? "bg-white text-black"
               : "bg-black shadow-lg text-white"
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? "pt-[1.75rem] pb-[1rem] px-[1.25rem]"
+                ? "pt-[1.50rem] pb-[1rem] px-[1rem]"
                 : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
@@ -59,48 +61,96 @@ const Navbar: React.FC<NavbarProps> = ({
               }}
             >
               <span className="text-sm tracking-widest">Kludy</span>
-              <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[1px]"></div>
+              <div className="w-[0%] group-hover:w-[75%] group-hover:bg-white h-[1px] bg-slate-400 transition-all duration-[300ms] mt-[1px]"></div>
             </div>
 
             <div className="hidden lg:flex items-center">
               <div
-                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
+                className="cursor-pointer flex items-center px-1 group gap-2"
                 onClick={() => {
                   scrollToExperiences();
                 }}
               >
-                <span className="text-sm tracking-wide">Experiences</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
-              </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-sm tracking-wide">Projects</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
-              </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 px-3 group">
-                <span className="text-sm tracking-wide">Badges</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <BsSuitcaseLg size={16} className="-mt-[1px]" />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wider">
+                  Experiences
+                </span>
               </div>
               <div
+                className="cursor-pointer flex items-center px-1 group gap-2"
                 onClick={() => {
-                  scrollToCertification();
+                  scrollToExperiences();
                 }}
-                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
               >
-                <span className="text-sm tracking-wide">Certifications</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <RiMedalLine
+                    size={16}
+                    className="group-hover:block -mt-[2px]"
+                  />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Badges
+                </span>
               </div>
               <div
-                className="cursor-pointer flex flex-col items-end py-1 px-3 group"
+                className="cursor-pointer flex items-center px-1 group gap-2"
                 onClick={() => {
-                  scrollToBlogs();
+                  scrollToExperiences();
                 }}
               >
-                <span className="text-sm tracking-wide">Blogs</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <BsFolder2
+                    size={16}
+                    className="group-hover:block -mt-[2px]"
+                  />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Projects
+                </span>
               </div>
-              <div className="cursor-pointer flex flex-col items-end py-1 pl-3 group">
-                <span className="text-sm tracking-wide">Testimonials</span>
-                <div className="w-[0%] group-hover:w-full group-hover:bg-white h-[1px] bg-neutral-400 transition-all duration-[300ms] mt-[1px]"></div>
+              <div
+                className="cursor-pointer flex items-center px-1 group gap-2"
+                onClick={() => {
+                  scrollToExperiences();
+                }}
+              >
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <BsTrophy size={16} className="group-hover:block -mt-[2px]" />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Certifications
+                </span>
+              </div>
+              <div
+                className="cursor-pointer flex items-center px-1 group gap-2"
+                onClick={() => {
+                  scrollToExperiences();
+                }}
+              >
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <BsWindow size={16} className="group-hover:block -mt-[2px]" />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Blogs
+                </span>
+              </div>
+              <div
+                className="cursor-pointer flex items-center px-1 group gap-2"
+                onClick={() => {
+                  scrollToExperiences();
+                }}
+              >
+                <div className="flex items-center gap-2 group p-2 border border-neutral-500 rounded-[70px]">
+                  <RiSpeakLine
+                    size={16}
+                    className="group-hover:block -mt-[2px]"
+                  />
+                </div>
+                <span className="hidden group-hover:block text-sm tracking-wide">
+                  Testimonials
+                </span>
               </div>
             </div>
 

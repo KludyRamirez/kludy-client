@@ -4,7 +4,13 @@ import { Autoplay, Pagination, EffectFlip } from "swiper/modules";
 import Spacer from "../../utils/Spacer";
 import profilePic from "../../assets/images/profilepic.svg";
 import { PiSealCheckFill } from "react-icons/pi";
-import { FaFacebook, FaGithub, FaLinkedinIn, FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedinIn,
+  FaQuoteLeft,
+  FaQuoteRight,
+} from "react-icons/fa6";
 import AboutMeData from "../../assets/data/AboutMe.json";
 import { AboutMe as AboutMeType } from "../../types/AboutMe";
 import Technology from "./Technology";
@@ -63,7 +69,7 @@ const AboutMe: React.FC = () => {
           </div>
           <div className="w-[40%] h-[160px]">
             <Swiper
-              effect={'flip'}
+              effect={"flip"}
               autoplay={{
                 delay: 5000,
               }}
@@ -73,15 +79,43 @@ const AboutMe: React.FC = () => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 px-4 pt-4 border border-slate-300 rounded-xl">
+                <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-slate-300 rounded-xl">
                   <div className="text-sm tracking-wide leading-relaxed">
-                    <FaQuoteLeft size={12} className="inline-block mr-2 -mt-[2px] align-text-top" />
-                    With a knack for <span className="tracking-wider font-[semi-bold]">web development</span>{" "}
-                    and a track record of turning <span className="tracking-wider font-[semi-bold]">challenges</span> into <span className="tracking-wider font-[semi-bold]">results</span>, I’m eager to bring 
-                    <span className="tracking-wider font-[semi-bold]"> innovative yet careful</span> ideas 
-                    to the company. I’m ready to transform a line of <span className="tracking-wider font-[semi-bold]">code</span> into a 
-                    <span className="tracking-wider font-[semi-bold]"> robust infrastructure</span>.
-                    <FaQuoteRight size={12} className="inline-block ml-2 -mt-[2px] align-text-top" />
+                    <FaQuoteLeft
+                      size={12}
+                      className="inline-block mr-[6px] -mt-[2px] align-text-top"
+                    />
+                    With a knack for{" "}
+                    <span className="tracking-wider font-[semi-bold]">
+                      web development
+                    </span>{" "}
+                    and a track record of turning{" "}
+                    <span className="tracking-wider font-[semi-bold]">
+                      challenges
+                    </span>{" "}
+                    into{" "}
+                    <span className="tracking-wider font-[semi-bold]">
+                      results
+                    </span>
+                    , I’m eager to bring
+                    <span className="tracking-wider font-[semi-bold]">
+                      {" "}
+                      innovative yet careful
+                    </span>{" "}
+                    ideas to the company. I’m ready to transform a line of{" "}
+                    <span className="tracking-wider font-[semi-bold]">
+                      code
+                    </span>{" "}
+                    into a
+                    <span className="tracking-wider font-[semi-bold]">
+                      {" "}
+                      robust infrastructure
+                    </span>
+                    .
+                    <FaQuoteRight
+                      size={12}
+                      className="inline-block ml-[6px] -mt-[2px] align-text-top"
+                    />
                   </div>
                 </div>
               </SwiperSlide>

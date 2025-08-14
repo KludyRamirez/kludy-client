@@ -132,7 +132,11 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToCertification={scrollToCertification}
       />
-      <section id="hero" className="h-screen relative" ref={heroSectionRef}>
+      <section
+        id="hero"
+        className="hero-section h-screen relative"
+        ref={heroSectionRef}
+      >
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-medium"></div>
@@ -144,6 +148,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
                 <span className="text-[#919191] font-[regular]">I'm</span>{" "}
                 <span>Kludy</span>
               </div>
@@ -172,13 +177,11 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-
+          <div className="spacer-xs"></div>
           <div className="text-md text-center text-white font-[extra-light] tracking-wide relative">
             These are the organizations and institutions that have issued my
             certifications.
           </div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-slate-100/20"></div>
           <div className="spacer-small"></div>
           <div className="spacer-xs"></div>
           <Swiper
