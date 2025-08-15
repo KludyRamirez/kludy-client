@@ -1,36 +1,30 @@
-import React, { useState, useEffect, useRef, FormEvent } from "react";
-import { Home } from "../types/Home";
-import Navbar from "../components/Navbar/Navbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
-import emailjs from "emailjs-com";
-import microsoft from "../assets/images/microsoft.svg";
-import opswat from "../assets/images/opswat.svg";
-import oracle from "../assets/images/oracle.svg";
-import udemy from "../assets/images/udemy.svg";
-import codecademy from "../assets/images/codecademy.svg";
-import cisco from "../assets/images/cisco.svg";
+import React, { useState, useEffect, useRef, FormEvent } from 'react';
+import { Home } from '../types/Home';
+import Navbar from '../components/Navbar/Navbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+import emailjs from 'emailjs-com';
 
-import projectsGif from "../assets/gif/projects-gif.gif";
+import projectsGif from '../assets/gif/projects-gif.gif';
 
 import {
   FaFacebook,
   FaGithub,
   FaLinkedinIn,
   FaRegCopyright,
-} from "react-icons/fa6";
+} from 'react-icons/fa6';
 
-import { RxEnvelopeClosed } from "react-icons/rx";
+import { RxEnvelopeClosed } from 'react-icons/rx';
 
-import toast from "react-hot-toast";
-import Project from "../components/Project/Project";
-import Experience from "../components/Experience/Experience";
-import Badge from "../components/Badge/Badge";
-import AboutMe from "../components/AboutMe/AboutMe";
-import Blog from "../components/Blog/Blog";
-import Certification from "../components/Certification/Certification";
-import Typewriter from "../utils/Typewriter";
+import toast from 'react-hot-toast';
+import Project from '../components/Project/Project';
+import Experience from '../components/Experience/Experience';
+import Badge from '../components/Badge/Badge';
+import AboutMe from '../components/AboutMe/AboutMe';
+import Blog from '../components/Blog/Blog';
+import Certification from '../components/Certification/Certification';
+import Typewriter from '../utils/Typewriter';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -63,10 +57,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        "service_7ps65lj",
-        "template_gy0m0sm",
+        'service_7ps65lj',
+        'template_gy0m0sm',
         e.currentTarget,
-        "PxOfC-PYxo4STwqcF"
+        'PxOfC-PYxo4STwqcF'
       )
       .then(
         (result) => {
@@ -87,37 +81,37 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToHero = () => {
     if (heroSectionRef.current) {
-      heroSectionRef.current.scrollIntoView({ behavior: "smooth" });
+      heroSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToBlogs = () => {
     if (blogsRef.current) {
-      blogsRef.current.scrollIntoView({ behavior: "smooth" });
+      blogsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToExperiences = () => {
     if (experiencesRef.current) {
-      experiencesRef.current.scrollIntoView({ behavior: "smooth" });
+      experiencesRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToProjects = () => {
     if (projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToBadges = () => {
     if (badgesRef.current) {
-      badgesRef.current.scrollIntoView({ behavior: "smooth" });
+      badgesRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToCertification = () => {
+  const scrollToCertifications = () => {
     if (certificationRef.current) {
-      certificationRef.current.scrollIntoView({ behavior: "smooth" });
+      certificationRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -130,7 +124,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToExperiences={scrollToExperiences}
         scrollToProjects={scrollToProjects}
         scrollToBadges={scrollToBadges}
-        scrollToCertification={scrollToCertification}
+        scrollToCertifications={scrollToCertifications}
       />
       <section
         id="hero"
@@ -143,20 +137,19 @@ const HomePage: React.FC<Home> = () => {
           <div className="hidden lg:block spacer-medium"></div>
           <div className="hidden lg:block spacer-medium"></div>
           <div className="hidden lg:block spacer-small"></div>
-          <div className="spacer-xs"></div>
 
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
-                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
-                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{' '}
+                <span className="text-[#919191] font-[regular]">I'm</span>{' '}
                 <span>Kludy</span>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
-                <Typewriter words={["Frontend", "Backend"]} />
+                <Typewriter words={['Frontend', 'Backend']} />
                 <div className="text-[#919191]">and</div>
                 <div className="font-[semi-bold] text-white"> GenAI</div>
-                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
+                <Typewriter words={['Leader', 'Oracle', 'Builder', 'Nerd']} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -166,29 +159,29 @@ const HomePage: React.FC<Home> = () => {
             <div
               className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide"
               onClick={() => {
-                scrollToCertification();
+                scrollToCertifications();
               }}
             >
               Recruit me
             </div>
-            <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-neutral-500/10 border border-white/20 hover:bg-white/20 rounded-lg tracking-wide">
-              Download CV
-            </div>
+            <a href="/Ramirez-Kludy-CV.pdf" download="Ramirez-Kludy-CV">
+              <div className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md text-white bg-neutral-500/10 border border-white/20 hover:bg-white/20 rounded-lg tracking-wide">
+                Download CV
+              </div>
+            </a>
           </div>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-xs"></div>
           <div className="text-sm text-center text-white font-[extra-light] tracking-wider relative">
-            These are the organizations and institutions that have issued my
-            certifications.
+            These are the organizations I have worked with over the past years.
           </div>
           <div className="spacer-small"></div>
-          <div className="spacer-xs"></div>
+          <div className="spacer-small"></div>
           <Swiper
-            spaceBetween="84"
+            spaceBetween="42"
             autoplay={{
-              delay: 1400,
-              disableOnInteraction: true,
+              delay: 2000,
             }}
             loop={true}
             breakpoints={{
@@ -209,40 +202,95 @@ const HomePage: React.FC<Home> = () => {
             className="hero-swiper"
           >
             <SwiperSlide>
-              <img
-                src={oracle}
-                className="filter brightness-200 contrast-125"
-              />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  AIA PH
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={microsoft}
-                className="filter brightness-200 contrast-125"
-              />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755247013/apd-logo-white.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  APD
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={cisco} className="filter brightness-200 contrast-125" />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  AIA TH
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={opswat}
-                className="filter brightness-200 contrast-125"
-              />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-150 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  GO
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={udemy} className="filter brightness-200 contrast-125" />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  GO Asia
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={codecademy}
-                className="filter brightness-200 contrast-125"
-              />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755242964/bpi-logo.png"
+                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  BPI
+                </span>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={opswat}
-                className="filter brightness-200 contrast-125"
-              />
+              <div className="flex items-center gap-3 rounded-xl">
+                <div className="w-auto h-auto">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo.png"
+                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
+                  />
+                </div>
+                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                  Flexicon
+                </span>
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
@@ -256,7 +304,6 @@ const HomePage: React.FC<Home> = () => {
       <footer
         id="footer"
         className="bg-white relative flex flex-col items-center"
-        ref={certificationRef}
       >
         <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">
@@ -325,8 +372,8 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{" "}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{" "}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
             </div>
             <span className="tracking-wider text-[14px]">
               No issues detected
