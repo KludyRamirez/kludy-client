@@ -5,7 +5,7 @@ import { BsArrowUpRight, BsSuitcaseLg } from "react-icons/bs";
 import { MdLink } from "react-icons/md";
 
 interface Props {
-  experiencesRef: React.RefObject<HTMLElement>;
+  experienceRef: React.RefObject<HTMLElement>;
 }
 
 interface ExperienceItem {
@@ -145,9 +145,9 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   </div>
 );
 
-const Experience: React.FC<Props> = ({ experiencesRef }) => {
+const Experience: React.FC<Props> = ({ experienceRef }) => {
   return (
-    <section id="experiences" ref={experiencesRef}>
+    <section id="experiences" ref={experienceRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-white">Experiences</div>

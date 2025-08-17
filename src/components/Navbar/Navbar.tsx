@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from 'react-icons/bs';
-import { HiOutlineXMark } from 'react-icons/hi2';
-import { RiMedalLine, RiSpeakLine } from 'react-icons/ri';
+import { useState } from "react";
+import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from "react-icons/bs";
+import { HiOutlineXMark } from "react-icons/hi2";
+import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
+  isBlogSectionActive: boolean;
   scrollToHero: () => void;
   scrollToBlogs: () => void;
   scrollToExperiences: () => void;
@@ -15,6 +16,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({
   isHeroSectionActive,
+  isBlogSectionActive,
   scrollToHero,
   scrollToBlogs,
   scrollToExperiences,
@@ -41,38 +43,38 @@ const Navbar: React.FC<NavbarProps> = ({
     <>
       <div className="w-full flex flex-col z-30 fixed">
         <div
-          className={`w-full flex justify-center items-center transition-all duration-200 ease-in ${
+          className={`w-full flex justify-center items-center transition-all duration-200 ease-in border-b-[1px] ${
             isHeroSectionActive
-              ? 'bg-slate-900/60 shadow-lg text-white border-b-[1px] border-slate-100/10'
-              : 'bg-black shadow-lg text-white border-b-[1px] border-slate-100/10'
+              ? "backdrop-blur-sm text-white border-slate-100/10"
+              : isBlogSectionActive
+              ? "backdrop-blur-sm text-black border-slate-100/10"
+              : "backdrop-blur-sm text-neutral-500 border-slate-100/10"
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? 'pt-[1rem] pb-[1rem] px-[1rem]'
-                : 'pt-[1rem] pb-[1rem] px-[1rem]'
+                ? "pt-[1rem] pb-[1rem] px-[1rem]"
+                : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
             <div
-              className="cursor-pointer flex flex-col items-start py-1 group"
+              className="cursor-pointer flex items-start items-center gap-3 group"
               onClick={() => {
                 scrollToHero();
               }}
             >
-              <span className="font-[semi-bold] text-sm tracking-widest">
-                Kludy Ramirez
-              </span>
+              <span className="text-sm tracking-widest">Kludy Ramirez</span>
             </div>
 
-            <div className="hidden lg:flex items-center -mr-1">
+            <div className="hidden lg:flex items-center -mr-2">
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
                   scrollToExperiences();
                 }}
               >
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <BsSuitcaseLg size={16} className="-mt-[1px]" />
                 </div>
 
@@ -89,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   scrollToProjects();
                 }}
               >
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <BsFolder2 size={16} className="-mt-[1px]" />
                 </div>
 
@@ -106,7 +108,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   scrollToBadges();
                 }}
               >
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <RiMedalLine size={16} className="-mt-[1px]" />
                 </div>
 
@@ -123,7 +125,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   scrollToCertifications();
                 }}
               >
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <BsTrophy size={16} className="-mt-[1px]" />
                 </div>
 
@@ -140,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   scrollToBlogs();
                 }}
               >
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <BsWindow size={16} className="-mt-[1px]" />
                 </div>
 
@@ -152,7 +154,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <div className="cursor-pointer flex items-center group gap-2">
-                <div className="flex items-center gap-2 p-2 border border-neutral-500 rounded-[70px]">
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
                   <RiSpeakLine size={16} className="-mt-[1px]" />
                 </div>
 
@@ -177,8 +179,8 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
       <div
         className={`fixed right-0 bg-white border-l-[1px] border-gray-300 z-40 ${
-          isOpen && !isClosing ? 'animate-slideInFull md:animate-slideIn' : ''
-        } ${isClosing ? 'animate-slideOut' : ''}`}
+          isOpen && !isClosing ? "animate-slideInFull md:animate-slideIn" : ""
+        } ${isClosing ? "animate-slideOut" : ""}`}
       >
         {isOpen && !isClosing && (
           <>

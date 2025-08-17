@@ -9,7 +9,7 @@ import BadgeData from "../../assets/data/Badge.json";
 import Loader from "../../utils/Loader";
 
 interface Props {
-  badgesRef: React.RefObject<HTMLElement>;
+  badgeRef: React.RefObject<HTMLElement>;
 }
 
 const SWIPER_CONFIG = {
@@ -26,12 +26,12 @@ const SWIPER_CONFIG = {
   className: "badge-swiper",
 };
 
-const Badge: React.FC<Props> = ({ badgesRef }) => {
+const Badge: React.FC<Props> = ({ badgeRef }) => {
   const { data, isLoading } = useGetBadgesQuery();
   const badges: BadgeType[] = data ?? (BadgeData as BadgeType[]);
 
   return (
-    <section id="badge" className="" ref={badgesRef}>
+    <section id="badge" className="" ref={badgeRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-white">Badges and Certifications</div>

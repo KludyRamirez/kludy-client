@@ -9,7 +9,7 @@ import ProjectData from "../../assets/data/Project.json";
 import Loader from "../../utils/Loader";
 
 interface Props {
-  projectsRef: React.RefObject<HTMLElement>;
+  projectRef: React.RefObject<HTMLElement>;
   projectsGif: string;
 }
 
@@ -27,12 +27,12 @@ const SWIPER_CONFIG = {
   className: "project-swiper",
 };
 
-const Project: React.FC<Props> = ({ projectsRef }) => {
+const Project: React.FC<Props> = ({ projectRef }) => {
   const { data, isLoading } = useGetProjectsQuery();
   const projects: ProjectType[] = data ?? (ProjectData as ProjectType[]);
 
   return (
-    <section id="projects" className="bg-white relative" ref={projectsRef}>
+    <section id="projects" className="bg-white relative" ref={projectRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-[#282828]">Projects</div>

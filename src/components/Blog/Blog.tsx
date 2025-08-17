@@ -1,22 +1,22 @@
-import React from 'react';
-import Spacer from '../../utils/Spacer';
-import Card from './Card';
-import { useGetBlogsQuery } from '../../features/api/Blog';
-import { Blog as BlogType } from '../../types/Blog';
-import BlogData from '../../assets/data/Blog.json';
-import Loader from '../../utils/Loader';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Spacer from "../../utils/Spacer";
+import Card from "./Card";
+import { useGetBlogsQuery } from "../../features/api/Blog";
+import { Blog as BlogType } from "../../types/Blog";
+import BlogData from "../../assets/data/Blog.json";
+import Loader from "../../utils/Loader";
+import { Link } from "react-router-dom";
 
 interface Props {
-  blogsRef: React.RefObject<HTMLElement>;
+  blogRef: React.RefObject<HTMLElement>;
 }
 
-const Blog: React.FC<Props> = ({ blogsRef }) => {
+const Blog: React.FC<Props> = ({ blogRef }) => {
   const { data, isLoading } = useGetBlogsQuery();
   const blogs: BlogType[] = data ?? (BlogData as BlogType[]);
 
   return (
-    <section id="blog" className="" ref={blogsRef}>
+    <section id="blog" className="" ref={blogRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-white">Blogs</div>
