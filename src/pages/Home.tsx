@@ -1,38 +1,49 @@
-import React, { useState, useEffect, useRef, FormEvent } from "react";
-import { Home } from "../types/Home";
-import Navbar from "../components/Navbar/Navbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
-import emailjs from "emailjs-com";
+import React, { useState, useEffect, useRef, FormEvent } from 'react';
+import { Home } from '../types/Home';
+import Navbar from '../components/Navbar/Navbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+import emailjs from 'emailjs-com';
 
-import projectsGif from "../assets/gif/projects-gif.gif";
+import projectsGif from '../assets/gif/projects-gif.gif';
 
 import {
   FaFacebook,
   FaGithub,
   FaLinkedinIn,
   FaRegCopyright,
-} from "react-icons/fa6";
+} from 'react-icons/fa6';
 
-import { RxEnvelopeClosed } from "react-icons/rx";
+import { RxEnvelopeClosed } from 'react-icons/rx';
 
-import toast from "react-hot-toast";
-import Project from "../components/Project/Project";
-import Experience from "../components/Experience/Experience";
-import Badge from "../components/Badge/Badge";
-import AboutMe from "../components/AboutMe/AboutMe";
-import Blog from "../components/Blog/Blog";
-import Certification from "../components/Certification/Certification";
-import Typewriter from "../utils/Typewriter";
+import toast from 'react-hot-toast';
+import Project from '../components/Project/Project';
+import Experience from '../components/Experience/Experience';
+import Badge from '../components/Badge/Badge';
+import AboutMe from '../components/AboutMe/AboutMe';
+import Blog from '../components/Blog/Blog';
+import Certification from '../components/Certification/Certification';
+import Typewriter from '../utils/Typewriter';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
-  const [isBlogSectionActive, setIsBlogSectionActive] = useState(false);
   const [isAboutMeSectionActive, setIsAboutMeSectionActive] = useState(false);
+  const [isExperienceSectionActive, setIsExperienceSectionActive] =
+    useState(false);
+  const [isProjectSectionActive, setIsProjectSectionActive] = useState(false);
+  const [isBlogSectionActive, setIsBlogSectionActive] = useState(false);
+  const [isCertificationSectionActive, setIsCertificationSectionActive] =
+    useState(false);
+  const [isBadgeSectionActive, setIsBadgeSectionActive] = useState(false);
 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const blogRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const aboutMeRef = useRef<HTMLDivElement | null>(null);
+  const experienceRef = useRef<HTMLDivElement | null>(null);
+  const projectRef = useRef<HTMLDivElement | null>(null);
+  const blogRef = useRef<HTMLDivElement | null>(null);
+  const certificationRef = useRef<HTMLDivElement | null>(null);
+  const badgeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const heroObserver = new IntersectionObserver(
@@ -41,31 +52,95 @@ const HomePage: React.FC<Home> = () => {
       },
       { threshold: 0.1 }
     );
-
+    const aboutMeObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsAboutMeSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const experienceObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsExperienceSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const projectObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsProjectSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
     const blogObserver = new IntersectionObserver(
       ([entry]) => {
         setIsBlogSectionActive(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
+    const certificationObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsCertificationSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const badgeObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsBadgeSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
     const heroSection = heroRef.current;
+    const aboutMeSection = aboutMeRef.current;
+    const experienceSection = experienceRef.current;
+    const projectSection = projectRef.current;
     const blogSection = blogRef.current;
+    const certificationSection = certificationRef.current;
+    const badgeSection = badgeRef.current;
 
     if (heroSection) {
       heroObserver.observe(heroSection);
     }
-
+    if (aboutMeSection) {
+      aboutMeObserver.observe(aboutMeSection);
+    }
+    if (experienceSection) {
+      experienceObserver.observe(experienceSection);
+    }
+    if (projectSection) {
+      projectObserver.observe(projectSection);
+    }
     if (blogSection) {
       blogObserver.observe(blogSection);
+    }
+    if (certificationSection) {
+      certificationObserver.observe(certificationSection);
+    }
+    if (badgeSection) {
+      badgeObserver.observe(badgeSection);
     }
 
     return () => {
       if (heroSection) {
         heroObserver.unobserve(heroSection);
       }
+      if (aboutMeSection) {
+        aboutMeObserver.unobserve(aboutMeSection);
+      }
+      if (experienceSection) {
+        experienceObserver.unobserve(experienceSection);
+      }
+      if (projectSection) {
+        projectObserver.unobserve(projectSection);
+      }
       if (blogSection) {
         blogObserver.unobserve(blogSection);
+      }
+      if (certificationSection) {
+        certificationObserver.unobserve(certificationSection);
+      }
+      if (badgeSection) {
+        badgeObserver.unobserve(badgeSection);
       }
     };
   }, []);
@@ -75,10 +150,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        "service_7ps65lj",
-        "template_gy0m0sm",
+        'service_7ps65lj',
+        'template_gy0m0sm',
         e.currentTarget,
-        "PxOfC-PYxo4STwqcF"
+        'PxOfC-PYxo4STwqcF'
       )
       .then(
         (result) => {
@@ -91,44 +166,45 @@ const HomePage: React.FC<Home> = () => {
       );
   };
 
-  const experienceRef = useRef<HTMLDivElement | null>(null);
-  const projectRef = useRef<HTMLDivElement | null>(null);
-  const badgeRef = useRef<HTMLDivElement | null>(null);
-  const certificationRef = useRef<HTMLDivElement | null>(null);
-
   const scrollToHero = () => {
     if (heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: "smooth" });
+      heroRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToBlogs = () => {
-    if (blogRef.current) {
-      blogRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToAboutMe = () => {
+    if (aboutMeRef.current) {
+      aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToExperiences = () => {
     if (experienceRef.current) {
-      experienceRef.current.scrollIntoView({ behavior: "smooth" });
+      experienceRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToProjects = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: "smooth" });
+      projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToBadges = () => {
-    if (badgeRef.current) {
-      badgeRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToBlogs = () => {
+    if (blogRef.current) {
+      blogRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToCertifications = () => {
     if (certificationRef.current) {
-      certificationRef.current.scrollIntoView({ behavior: "smooth" });
+      certificationRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToBadges = () => {
+    if (badgeRef.current) {
+      badgeRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -136,7 +212,12 @@ const HomePage: React.FC<Home> = () => {
     <>
       <Navbar
         isHeroSectionActive={isHeroSectionActive}
+        isAboutMeSectionActive={isAboutMeSectionActive}
+        isExperienceSectionActive={isExperienceSectionActive}
+        isProjectSectionActive={isProjectSectionActive}
         isBlogSectionActive={isBlogSectionActive}
+        isCertificationSectionActive={isCertificationSectionActive}
+        isBadgeSectionActive={isBadgeSectionActive}
         scrollToHero={scrollToHero}
         scrollToBlogs={scrollToBlogs}
         scrollToExperiences={scrollToExperiences}
@@ -159,15 +240,15 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
-                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
-                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{' '}
+                <span className="text-[#919191] font-[regular]">I'm</span>{' '}
                 <span>Kludy</span>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
-                <Typewriter words={["Frontend", "Backend"]} />
+                <Typewriter words={['Frontend', 'Backend']} />
                 <div className="text-[#919191]">and</div>
                 <div className="font-[semi-bold] text-white"> GenAI</div>
-                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
+                <Typewriter words={['Leader', 'Oracle', 'Builder', 'Nerd']} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -224,7 +305,7 @@ const HomePage: React.FC<Home> = () => {
                 <div className="w-auto h-auto">
                   <img
                     src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
                 <span className="text-white text-2xl font-[semi-bold] tracking-wide">
@@ -250,7 +331,7 @@ const HomePage: React.FC<Home> = () => {
                 <div className="w-auto h-auto">
                   <img
                     src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
                 <span className="text-white text-2xl font-[semi-bold] tracking-wide">
@@ -263,7 +344,7 @@ const HomePage: React.FC<Home> = () => {
                 <div className="w-auto h-auto">
                   <img
                     src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-150 contrast-125"
+                    className="max-w-[52px] max-h-[52px] filter brightness-150 contrast-125"
                   />
                 </div>
                 <span className="text-white text-2xl font-[semi-bold] tracking-wide">
@@ -276,7 +357,7 @@ const HomePage: React.FC<Home> = () => {
                 <div className="w-auto h-auto">
                   <img
                     src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
+                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
                 <span className="text-white text-2xl font-[semi-bold] tracking-wide">
@@ -313,7 +394,7 @@ const HomePage: React.FC<Home> = () => {
           </Swiper>
         </div>
       </section>
-      <AboutMe />
+      <AboutMe aboutMeRef={aboutMeRef} />
       <Experience experienceRef={experienceRef} />
       <Project projectRef={projectRef} projectsGif={projectsGif} />
       <Blog blogRef={blogRef} />
@@ -390,8 +471,8 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{" "}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{" "}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
             </div>
             <span className="tracking-wider text-[14px]">
               No issues detected

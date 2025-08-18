@@ -1,11 +1,16 @@
-import { useState } from "react";
-import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from "react-icons/bs";
-import { HiOutlineXMark } from "react-icons/hi2";
-import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
+import { useState } from 'react';
+import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from 'react-icons/bs';
+import { HiOutlineXMark } from 'react-icons/hi2';
+import { RiMedalLine, RiSpeakLine } from 'react-icons/ri';
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
+  isAboutMeSectionActive: boolean;
+  isExperienceSectionActive: boolean;
+  isProjectSectionActive: boolean;
   isBlogSectionActive: boolean;
+  isCertificationSectionActive: boolean;
+  isBadgeSectionActive: boolean;
   scrollToHero: () => void;
   scrollToBlogs: () => void;
   scrollToExperiences: () => void;
@@ -16,7 +21,12 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({
   isHeroSectionActive,
+  isAboutMeSectionActive,
+  isExperienceSectionActive,
+  isProjectSectionActive,
   isBlogSectionActive,
+  isCertificationSectionActive,
+  isBadgeSectionActive,
   scrollToHero,
   scrollToBlogs,
   scrollToExperiences,
@@ -43,19 +53,29 @@ const Navbar: React.FC<NavbarProps> = ({
     <>
       <div className="w-full flex flex-col z-30 fixed">
         <div
-          className={`w-full flex justify-center items-center transition-all duration-200 ease-in border-b-[1px] ${
+          className={`w-full flex justify-center items-center transition-all duration-200 ease-in border-b-[1px] backdrop-blur-sm border-slate-100/10 ${
             isHeroSectionActive
-              ? "backdrop-blur-sm text-white border-slate-100/10"
+              ? 'text-white'
+              : isAboutMeSectionActive
+              ? 'text-black'
+              : isExperienceSectionActive
+              ? 'text-white'
+              : isProjectSectionActive
+              ? 'text-black'
               : isBlogSectionActive
-              ? "backdrop-blur-sm text-black border-slate-100/10"
-              : "backdrop-blur-sm text-neutral-500 border-slate-100/10"
+              ? 'text-white'
+              : isCertificationSectionActive
+              ? 'text-black'
+              : isBadgeSectionActive
+              ? 'text-white'
+              : 'text-neutral-500'
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? "pt-[1rem] pb-[1rem] px-[1rem]"
-                : "pt-[1rem] pb-[1rem] px-[1rem]"
+                ? 'pt-[1rem] pb-[1rem] px-[1rem]'
+                : 'pt-[1rem] pb-[1rem] px-[1rem]'
             }`}
           >
             <div
@@ -79,8 +99,12 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
 
                 <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-4"
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isExperienceSectionActive
+                   ? 'max-w-[120px] opacity-100 pr-2'
+                   : 'max-w-0 opacity-0 pr-0'
+               }`}
                 >
                   Experiences
                 </span>
@@ -96,44 +120,14 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
 
                 <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-4"
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isProjectSectionActive
+                   ? 'max-w-[120px] opacity-100 pr-2'
+                   : 'max-w-0 opacity-0 pr-0'
+               }`}
                 >
                   Projects
-                </span>
-              </div>
-              <div
-                className="cursor-pointer flex items-center group gap-2"
-                onClick={() => {
-                  scrollToBadges();
-                }}
-              >
-                <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <RiMedalLine size={16} className="-mt-[1px]" />
-                </div>
-
-                <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-4"
-                >
-                  Badges
-                </span>
-              </div>
-              <div
-                className="cursor-pointer flex items-center group gap-2"
-                onClick={() => {
-                  scrollToCertifications();
-                }}
-              >
-                <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsTrophy size={16} className="-mt-[1px]" />
-                </div>
-
-                <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-4"
-                >
-                  Certifications
                 </span>
               </div>
               <div
@@ -147,10 +141,56 @@ const Navbar: React.FC<NavbarProps> = ({
                 </div>
 
                 <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-4"
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isBlogSectionActive
+                   ? 'max-w-[120px] opacity-100 pr-2'
+                   : 'max-w-0 opacity-0 pr-0'
+               }`}
                 >
                   Blogs
+                </span>
+              </div>
+              <div
+                className="cursor-pointer flex items-center group gap-2"
+                onClick={() => {
+                  scrollToCertifications();
+                }}
+              >
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
+                  <BsTrophy size={16} className="-mt-[1px]" />
+                </div>
+
+                <span
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isCertificationSectionActive
+                   ? 'max-w-[120px] opacity-100 pr-2'
+                   : 'max-w-0 opacity-0 pr-0'
+               }`}
+                >
+                  Certifications
+                </span>
+              </div>
+              <div
+                className="cursor-pointer flex items-center group gap-2"
+                onClick={() => {
+                  scrollToBadges();
+                }}
+              >
+                <div className="flex items-center gap-2 p-2 rounded-[70px]">
+                  <RiMedalLine size={16} className="-mt-[1px]" />
+                </div>
+
+                <span
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isBadgeSectionActive
+                   ? 'max-w-[120px] opacity-100 pr-2'
+                   : 'max-w-0 opacity-0 pr-0'
+               }`}
+                >
+                  Badges
                 </span>
               </div>
               <div className="cursor-pointer flex items-center group gap-2">
@@ -179,8 +219,8 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
       <div
         className={`fixed right-0 bg-white border-l-[1px] border-gray-300 z-40 ${
-          isOpen && !isClosing ? "animate-slideInFull md:animate-slideIn" : ""
-        } ${isClosing ? "animate-slideOut" : ""}`}
+          isOpen && !isClosing ? 'animate-slideInFull md:animate-slideIn' : ''
+        } ${isClosing ? 'animate-slideOut' : ''}`}
       >
         {isOpen && !isClosing && (
           <>
