@@ -1,12 +1,12 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import Spacer from "../../utils/Spacer";
-import Card from "./Card";
-import { useGetProjectsQuery } from "../../features/api/Project";
-import { Project as ProjectType } from "../../types/Project";
-import ProjectData from "../../assets/data/Project.json";
-import Loader from "../../utils/Loader";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import Spacer from '../../utils/Spacer';
+import Card from './Card';
+import { useGetProjectsQuery } from '../../features/api/Project';
+import { Project as ProjectType } from '../../types/Project';
+import ProjectData from '../../assets/data/Project.json';
+import Loader from '../../utils/Loader';
 
 interface Props {
   projectRef: React.RefObject<HTMLElement>;
@@ -24,7 +24,7 @@ const SWIPER_CONFIG = {
     767: { slidesPerView: 2 },
   },
   modules: [Autoplay, Pagination],
-  className: "project-swiper",
+  className: 'project-swiper',
 };
 
 const Project: React.FC<Props> = ({ projectRef }) => {

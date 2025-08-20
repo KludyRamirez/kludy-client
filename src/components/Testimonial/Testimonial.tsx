@@ -8,8 +8,6 @@ import {
   FaFacebook,
   FaGithub,
   FaLinkedinIn,
-  FaQuoteLeft,
-  FaQuoteRight,
 } from 'react-icons/fa6';
 import AboutMeData from '../../assets/data/AboutMe.json';
 import { AboutMe as AboutMeType } from '../../types/AboutMe';
@@ -85,10 +83,6 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               <SwiperSlide>
                 <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-slate-300 rounded-xl">
                   <div className="text-sm tracking-wide leading-relaxed">
-                    <FaQuoteLeft
-                      size={12}
-                      className="inline-block mr-[6px] -mt-[2px] align-text-top"
-                    />
                     With a knack for{' '}
                     <span className="tracking-wider font-[semi-bold]">
                       web development
@@ -116,10 +110,6 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                       robust infrastructure
                     </span>
                     .
-                    <FaQuoteRight
-                      size={12}
-                      className="inline-block ml-[6px] -mt-[2px] align-text-top"
-                    />
                   </div>
                 </div>
               </SwiperSlide>

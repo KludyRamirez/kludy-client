@@ -12,38 +12,38 @@
 }
 
 @font-face {
-  font-family: "extra-light";
-  src: url("./assets/fonts/PPMori-Extralight.otf") format("opentype");
+  font-family: 'extra-light';
+  src: url('./assets/fonts/PPMori-Extralight.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "extra-light-italic";
-  src: url("./assets/fonts/PPMori-ExtralightItalic.otf") format("opentype");
+  font-family: 'extra-light-italic';
+  src: url('./assets/fonts/PPMori-ExtralightItalic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "regular";
-  src: url("./assets/fonts/PPMori-Regular.otf") format("opentype");
+  font-family: 'regular';
+  src: url('./assets/fonts/PPMori-Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "regular-italic";
-  src: url("./assets/fonts/PPMori-RegularItalic.otf") format("opentype");
+  font-family: 'regular-italic';
+  src: url('./assets/fonts/PPMori-RegularItalic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "semi-bold";
-  src: url("./assets/fonts/PPMori-SemiBold.otf") format("opentype");
+  font-family: 'semi-bold';
+  src: url('./assets/fonts/PPMori-SemiBold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "semi-bold-italic";
-  src: url("./assets/fonts/PPMori-SemiBoldItalic.otf") format("opentype");
+  font-family: 'semi-bold-italic';
+  src: url('./assets/fonts/PPMori-SemiBoldItalic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "child-hood";
-  src: url("./assets/fonts/Child-Hood.otf") format("opentype");
+  font-family: 'milker';
+  src: url('./assets/fonts/Milker.otf') format('opentype');
 }
 
 .spacer-large {
@@ -106,7 +106,7 @@
   .project-details
   a
   .project-links {
-  border-radius: 32px;
+  border-radius: 8px;
 }
 
 .badge-swiper .swiper-wrapper .swiper-slide-active .badge {
@@ -132,7 +132,14 @@
 .certification-swiper .swiper-wrapper .swiper-slide-active .certification {
   border: 1px solid #d1d5db;
   border-radius: 12px;
-  padding: 16px;
+}
+
+.certification-swiper
+  .swiper-wrapper
+  .swiper-slide-active
+  .certification
+  .certification-details {
+  padding: 0px 16px 16px 16px;
 }
 
 .certification-swiper
@@ -212,7 +219,7 @@
 }
 
 .footer-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;

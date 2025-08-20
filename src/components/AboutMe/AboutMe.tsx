@@ -1,16 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFlip } from 'swiper/modules';
+import { Autoplay, EffectFlip } from 'swiper/modules';
 import Spacer from '../../utils/Spacer';
 import profilePic from '../../assets/images/profilepic.svg';
 import { PiSealCheckFill } from 'react-icons/pi';
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedinIn,
-  FaQuoteLeft,
-  FaQuoteRight,
-} from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import AboutMeData from '../../assets/data/AboutMe.json';
 import { AboutMe as AboutMeType } from '../../types/AboutMe';
 import Technology from './Technology';
@@ -79,16 +73,12 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               }}
               loop={true}
               pagination={true}
-              modules={[Autoplay, Pagination, EffectFlip]}
+              modules={[Autoplay, EffectFlip]}
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-slate-300 rounded-xl">
+                <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-gray-300 rounded-xl">
                   <div className="text-sm tracking-wide leading-relaxed">
-                    <FaQuoteLeft
-                      size={12}
-                      className="inline-block mr-[6px] -mt-[2px] align-text-top"
-                    />
                     With a knack for{' '}
                     <span className="tracking-wider font-[semi-bold]">
                       web development
@@ -116,10 +106,6 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                       robust infrastructure
                     </span>
                     .
-                    <FaQuoteRight
-                      size={12}
-                      className="inline-block ml-[6px] -mt-[2px] align-text-top"
-                    />
                   </div>
                 </div>
               </SwiperSlide>
@@ -137,9 +123,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
         </div>
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
-        <Spacer size="xs" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
         <Spacer size="small" />
         <div className="flex flex-wrap items-center gap-2">

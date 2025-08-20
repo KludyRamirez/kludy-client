@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({
     <>
       <div className="w-full flex flex-col z-30 fixed">
         <div
-          className={`w-full flex justify-center items-center transition-all duration-200 ease-in border-b-[1px] backdrop-blur-sm border-slate-100/10 ${
+          className={`w-full flex justify-center items-center transition-all duration-200 ease-in backdrop-blur-lg ${
             isHeroSectionActive
               ? 'text-white'
               : isAboutMeSectionActive
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 scrollToHero();
               }}
             >
-              <span className="text-sm tracking-widest">Kludy Ramirez</span>
+              <span className="font-[milker] text-sm tracking-widest">Kludy</span>
             </div>
 
             <div className="hidden lg:flex items-center -mr-2">

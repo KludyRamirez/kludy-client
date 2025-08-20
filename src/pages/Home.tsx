@@ -172,11 +172,11 @@ const HomePage: React.FC<Home> = () => {
     }
   };
 
-  const scrollToAboutMe = () => {
-    if (aboutMeRef.current) {
-      aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToAboutMe = () => {
+  //   if (aboutMeRef.current) {
+  //     aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   const scrollToExperiences = () => {
     if (experienceRef.current) {
@@ -308,7 +308,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                <span className="text-white text-2xl font-[milker] tracking-wider">
                   AIA PH
                 </span>
               </div>
@@ -321,7 +321,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                <span className="text-white text-2xl font-[milker] tracking-wider">
                   APD
                 </span>
               </div>
@@ -334,7 +334,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                <span className="text-white text-2xl font-[milker] tracking-wide">
                   AIA TH
                 </span>
               </div>
@@ -347,7 +347,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-150 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                <span className="text-white text-2xl font-[milker] tracking-wide">
                   GO
                 </span>
               </div>
@@ -360,8 +360,8 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  GO Asia
+                <span className="text-white text-2xl font-[milker] tracking-wide">
+                  GO AS
                 </span>
               </div>
             </SwiperSlide>
@@ -373,7 +373,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
+                <span className="text-white text-2xl font-[milker] tracking-wide">
                   BPI
                 </span>
               </div>
@@ -386,8 +386,8 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  Flexicon
+                <span className="text-white text-2xl font-[milker] tracking-wide">
+                  Flexi
                 </span>
               </div>
             </SwiperSlide>
