@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from 'react-icons/bs';
-import { HiOutlineXMark } from 'react-icons/hi2';
-import { RiMedalLine, RiSpeakLine } from 'react-icons/ri';
+import { useState } from "react";
+import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from "react-icons/bs";
+import { HiOutlineXMark } from "react-icons/hi2";
+import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
@@ -55,27 +55,27 @@ const Navbar: React.FC<NavbarProps> = ({
         <div
           className={`w-full flex justify-center items-center transition-all duration-200 ease-in backdrop-blur-lg ${
             isHeroSectionActive
-              ? 'text-white'
+              ? "text-white"
               : isAboutMeSectionActive
-              ? 'text-black'
+              ? "text-black"
               : isExperienceSectionActive
-              ? 'text-white'
+              ? "text-white"
               : isProjectSectionActive
-              ? 'text-black'
+              ? "text-black"
               : isBlogSectionActive
-              ? 'text-white'
+              ? "text-white"
               : isCertificationSectionActive
-              ? 'text-black'
+              ? "text-black"
               : isBadgeSectionActive
-              ? 'text-white'
-              : 'text-neutral-500'
+              ? "text-white"
+              : "text-neutral-500"
           }`}
         >
           <div
             className={`w-full flex justify-between items-center max-w-5xl h-full transition-all duration-200 ease-in ${
               isHeroSectionActive
-                ? 'pt-[1rem] pb-[1rem] px-[1rem]'
-                : 'pt-[1rem] pb-[1rem] px-[1rem]'
+                ? "pt-[1rem] pb-[1rem] px-[1rem]"
+                : "pt-[1rem] pb-[1rem] px-[1rem]"
             }`}
           >
             <div
@@ -84,7 +84,9 @@ const Navbar: React.FC<NavbarProps> = ({
                 scrollToHero();
               }}
             >
-              <span className="font-[milker] text-sm tracking-widest">Kludy</span>
+              <span className="font-[semi-bold] text-sm tracking-widest">
+                Kludy
+              </span>
             </div>
 
             <div className="hidden lg:flex items-center -mr-2">
@@ -102,8 +104,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
                transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
                  isExperienceSectionActive
-                   ? 'max-w-[120px] opacity-100 pr-2'
-                   : 'max-w-0 opacity-0 pr-0'
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
                }`}
                 >
                   Experiences
@@ -123,8 +125,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
                transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
                  isProjectSectionActive
-                   ? 'max-w-[120px] opacity-100 pr-2'
-                   : 'max-w-0 opacity-0 pr-0'
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
                }`}
                 >
                   Projects
@@ -144,8 +146,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
                transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
                  isBlogSectionActive
-                   ? 'max-w-[120px] opacity-100 pr-2'
-                   : 'max-w-0 opacity-0 pr-0'
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
                }`}
                 >
                   Blogs
@@ -165,8 +167,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
                transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
                  isCertificationSectionActive
-                   ? 'max-w-[120px] opacity-100 pr-2'
-                   : 'max-w-0 opacity-0 pr-0'
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
                }`}
                 >
                   Certifications
@@ -186,8 +188,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
                transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
                  isBadgeSectionActive
-                   ? 'max-w-[120px] opacity-100 pr-2'
-                   : 'max-w-0 opacity-0 pr-0'
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
                }`}
                 >
                   Badges
@@ -219,8 +221,8 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
       <div
         className={`fixed right-0 bg-white border-l-[1px] border-gray-300 z-40 ${
-          isOpen && !isClosing ? 'animate-slideInFull md:animate-slideIn' : ''
-        } ${isClosing ? 'animate-slideOut' : ''}`}
+          isOpen && !isClosing ? "animate-slideInFull md:animate-slideIn" : ""
+        } ${isClosing ? "animate-slideOut" : ""}`}
       >
         {isOpen && !isClosing && (
           <>

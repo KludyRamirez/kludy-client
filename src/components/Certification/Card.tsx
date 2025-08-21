@@ -1,17 +1,19 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { Certification as CertificationType } from '../../types/Certification'; // changed
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { Certification as CertificationType } from "../../types/Certification"; // changed
 
 import {
-  FaBullseye,
   FaCloud,
   FaCode,
   FaCrown,
+  FaDatabase,
   FaFireFlameCurved,
+  FaMedal,
   FaShieldHalved,
-} from 'react-icons/fa6';
-import { SiOpenai } from 'react-icons/si';
+  FaTrophy,
+} from "react-icons/fa6";
+import { SiOpenai } from "react-icons/si";
 
 const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
@@ -19,20 +21,20 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
 }) => (
   <div className="flex gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
     <span>
-      {new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+      {new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       })}
     </span>
     <span>•</span>
-    <span>{authors.join(', ')}</span>
+    <span>{authors.join(", ")}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: CertificationType['url'];
-  title: CertificationType['title'];
+  url: CertificationType["url"];
+  title: CertificationType["title"];
 }> = ({ url, title }) => (
   <a
     href={url}
@@ -46,28 +48,32 @@ const Links: React.FC<{
 
 const Clogo: React.FC<{ category: string }> = ({ category }) => (
   <div className="certification-clogo cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-slate-400/90 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
-    {category === 'Certification' ? (
-      <FaBullseye size={14} />
-    ) : category === 'AI / ML' ? (
+    {category === "Certification" ? (
+      <FaTrophy size={14} />
+    ) : category === "AI / ML" ? (
       <SiOpenai size={14} />
-    ) : category === 'Popular' ? (
+    ) : category === "Popular" ? (
       <FaFireFlameCurved size={14} />
-    ) : category === 'Cloud' ? (
+    ) : category === "Cloud" ? (
       <FaCloud size={16} />
-    ) : category === 'Security' ? (
+    ) : category === "Security" ? (
       <FaShieldHalved size={16} />
-    ) : category === 'Relevant' ? (
+    ) : category === "Relevant" ? (
       <FaCrown size={16} />
-    ) : category === 'Development' ? (
+    ) : category === "Development" ? (
       <FaCode size={14} />
+    ) : category === "Data" ? (
+      <FaDatabase size={14} />
+    ) : category === "Completion" ? (
+      <FaMedal size={14} />
     ) : (
-      ''
+      ""
     )}
     <div className="mt-[2px] tracking-wide">{category}</div>
   </div>
 );
 
-const Categories: React.FC<{ categories: CertificationType['categories'] }> = ({
+const Categories: React.FC<{ categories: CertificationType["categories"] }> = ({
   categories,
 }) => (
   <div className="certification-categories w-full flex flex-wrap justify-start items-start gap-2">

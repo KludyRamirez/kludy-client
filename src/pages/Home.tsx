@@ -1,30 +1,30 @@
-import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { Home } from '../types/Home';
-import Navbar from '../components/Navbar/Navbar';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
-import emailjs from 'emailjs-com';
+import React, { useState, useEffect, useRef, FormEvent } from "react";
+import { Home } from "../types/Home";
+import Navbar from "../components/Navbar/Navbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import emailjs from "emailjs-com";
 
-import projectsGif from '../assets/gif/projects-gif.gif';
+import projectsGif from "../assets/gif/projects-gif.gif";
 
 import {
   FaFacebook,
   FaGithub,
   FaLinkedinIn,
   FaRegCopyright,
-} from 'react-icons/fa6';
+} from "react-icons/fa6";
 
-import { RxEnvelopeClosed } from 'react-icons/rx';
+import { RxEnvelopeClosed } from "react-icons/rx";
 
-import toast from 'react-hot-toast';
-import Project from '../components/Project/Project';
-import Experience from '../components/Experience/Experience';
-import Badge from '../components/Badge/Badge';
-import AboutMe from '../components/AboutMe/AboutMe';
-import Blog from '../components/Blog/Blog';
-import Certification from '../components/Certification/Certification';
-import Typewriter from '../utils/Typewriter';
+import toast from "react-hot-toast";
+import Project from "../components/Project/Project";
+import Experience from "../components/Experience/Experience";
+import Badge from "../components/Badge/Badge";
+import AboutMe from "../components/AboutMe/AboutMe";
+import Blog from "../components/Blog/Blog";
+import Certification from "../components/Certification/Certification";
+import Typewriter from "../utils/Typewriter";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -150,10 +150,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        'service_7ps65lj',
-        'template_gy0m0sm',
+        "service_7ps65lj",
+        "template_gy0m0sm",
         e.currentTarget,
-        'PxOfC-PYxo4STwqcF'
+        "PxOfC-PYxo4STwqcF"
       )
       .then(
         (result) => {
@@ -168,7 +168,7 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToHero = () => {
     if (heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: 'smooth' });
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -180,31 +180,31 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToExperiences = () => {
     if (experienceRef.current) {
-      experienceRef.current.scrollIntoView({ behavior: 'smooth' });
+      experienceRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToProjects = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: 'smooth' });
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToBlogs = () => {
     if (blogRef.current) {
-      blogRef.current.scrollIntoView({ behavior: 'smooth' });
+      blogRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToCertifications = () => {
     if (certificationRef.current) {
-      certificationRef.current.scrollIntoView({ behavior: 'smooth' });
+      certificationRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToBadges = () => {
     if (badgeRef.current) {
-      badgeRef.current.scrollIntoView({ behavior: 'smooth' });
+      badgeRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -225,11 +225,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToCertifications={scrollToCertifications}
       />
-      <section
-        id="hero"
-        className="hero-section h-screen relative"
-        ref={heroRef}
-      >
+      <section id="hero" className=" h-screen relative" ref={heroRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-medium"></div>
@@ -240,15 +236,15 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
-                <span className="text-[#919191] font-[regular]">'Zup,</span>{' '}
-                <span className="text-[#919191] font-[regular]">I'm</span>{' '}
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
+                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
                 <span>Kludy</span>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
-                <Typewriter words={['Frontend', 'Backend']} />
+                <Typewriter words={["Frontend", "Backend"]} />
                 <div className="text-[#919191]">and</div>
                 <div className="font-[semi-bold] text-white"> GenAI</div>
-                <Typewriter words={['Leader', 'Oracle', 'Builder', 'Nerd']} />
+                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -308,9 +304,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wider">
-                  AIA PH
-                </span>
+                <span className="text-white text-2xl font-[theory]">AIA</span>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -321,22 +315,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wider">
-                  APD
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
-                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[milker] tracking-wide">
-                  AIA TH
-                </span>
+                <span className="text-white text-2xl font-[theory]">APD</span>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -347,9 +326,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-150 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wide">
-                  GO
-                </span>
+                <span className="text-white text-2xl font-[theory]">GO</span>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -360,9 +337,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wide">
-                  GO AS
-                </span>
+                <span className="text-white text-2xl font-[theory]">GO AS</span>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -373,9 +348,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wide">
-                  BPI
-                </span>
+                <span className="text-white text-2xl font-[theory]">BPI</span>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -386,9 +359,7 @@ const HomePage: React.FC<Home> = () => {
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[milker] tracking-wide">
-                  Flexi
-                </span>
+                <span className="text-white text-2xl font-[theory]">Flexi</span>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -471,8 +442,8 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{" "}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{" "}
             </div>
             <span className="tracking-wider text-[14px]">
               No issues detected
