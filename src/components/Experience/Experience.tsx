@@ -1,14 +1,16 @@
 import React from "react";
 import Spacer from "../../utils/Spacer";
 
-import { BsArrowUpRight, BsSuitcaseLg } from "react-icons/bs";
 import { MdLink } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
 
 interface Props {
   experienceRef: React.RefObject<HTMLElement>;
 }
 
 interface ExperienceItem {
+  company: string;
+  logo: string;
   period: string;
   title: string;
   points: string[];
@@ -20,8 +22,10 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    period: "July 2024 - Present",
-    title: "Software Engineer at Flexicon Solution Inc.",
+    company: 'Flexicon Solution Inc.',
+    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png',
+    period: "July 2024 - Present • 1 yr and 2 mos",
+    title: "Mid Level Software Engineer",
     points: [
       `Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js,
 Storybook.js, Pug.js, Cypress, and Jest.`,
@@ -42,8 +46,10 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
     companyLink: "",
   },
   {
-    period: "January 2024 - July 2024",
-    title: "Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela",
+    company: 'Pamantasan ng Lungsod ng Valenzuela',
+    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png',
+    period: "January 2024 - July 2024 • 7 mos",
+    title: "Full Stack Developer",
     points: [
       `Built a web application that handled over 12,000 student affairs records and processed 9,000+
 cases and appeals, featuring secure data delivery to official school email without requiring
@@ -57,12 +63,14 @@ ensuring 99% system availability.`,
     ],
     photos: [],
     documentsLinks: [],
-    address: "Makati City, Philippines",
+    address: "Valenzuela City, Philippines",
     companyLink: "",
   },
   {
-    period: "March 2023 - December 2023",
-    title: "Junior Web Developer at Asia Pacific Digital GrowthOps",
+    company: 'Asia Pacific Digital GrowthOps',
+    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png',
+    period: "March 2023 - December 2023 • 10 mos",
+    title: "Junior Web Developer",
     points: [
       `Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand
 websites.
@@ -83,6 +91,8 @@ enabling advanced analytics and remarketing strategies.`,
 ];
 
 const TimelineItem: React.FC<ExperienceItem> = ({
+  company,
+  logo,
   period,
   title,
   points,
@@ -90,33 +100,32 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   address,
 }) => (
   <div className="w-full flex justify-start gap-4">
-    <div className="hidden md:flex flex-col items-center justify-center gap-5">
-      <div className="w-full flex justify-center items-start">
-        <BsSuitcaseLg size={16} className="-mt-[2px] text-white" />
-      </div>
-      <div className="w-[1px] h-full bg-slate-100/20"></div>
-    </div>
+     
+     <div className="w-[60px] h-[60px] p-3 rounded-lg border border-slate-100/20 flex-shrink-0">
+        <img src={logo} className="filter brightness-100 contrast-150"/>
+     </div>
 
     <div className="flex flex-col items-start">
-      <div className="flex items-center gap-2 text-white text-[14px] leading-none tracking-wide pb-2">
-        <div>{period}</div>
-      </div>
-      <Spacer size="small" />
-      <div className="flex items-center gap-2 group">
-        <div className="text-[28px] text-white cursor-pointer">{title}</div>
-        <BsArrowUpRight
-          size={22}
+      <div className="flex items-center gap-3 group -mt-1 pb-2">
+        <div className="text-[22px] font-[theory] text-white cursor-pointer tracking-wide">{company}</div>
+        <BsLinkedin
+          size={18}
           className="opacity-0 group-hover:opacity-100 text-white"
         />
       </div>
-      <Spacer size="small" />
-      <div className="flex items-center gap-2 text-white text-[14px] leading-none tracking-wide pb-2">
+      <div className="text-md font-[semi-bold] text-white cursor-pointer pb-[1px]">{title}</div>
+      <Spacer size="xs" />
+      <div className="flex items-center gap-2 text-gray-400 text-sm leading-none tracking-wide pb-2">
+        <div>{period}</div>
+      </div>
+      <Spacer size="xs" />
+      <div className="flex items-center gap-2 text-white text-sm leading-none tracking-wider pb-2 font-[extra-light]">
         <div>{address}</div>
       </div>
       <Spacer size="small" />
       <ul className="list-disc list-inside space-y-4 md:space-y-2">
         {points.map((point, idx) => (
-          <li key={idx} className="text-white text-[14px] tracking-wide">
+          <li key={idx} className="text-white text-sm tracking-wide">
             {point}
           </li>
         ))}
@@ -133,7 +142,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
                 className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-neutral-100 border border-slate-100/30 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
               >
                 <MdLink size={20} />
-                <span className="text-[14px] mt-[2px] tracking-wide">
+                <span className="text-sm mt-[2px] tracking-wide">
                   {link}
                 </span>
               </div>

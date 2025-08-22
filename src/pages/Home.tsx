@@ -355,11 +355,11 @@ const HomePage: React.FC<Home> = () => {
               <div className="flex items-center gap-3 rounded-xl">
                 <div className="w-auto h-auto">
                   <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo.png"
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo-white.png"
                     className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
                   />
                 </div>
-                <span className="text-white text-2xl font-[theory]">Flexi</span>
+                <span className="text-white text-2xl font-[theory]">Flex</span>
               </div>
             </SwiperSlide>
           </Swiper>
