@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import type { Swiper as SwiperType } from 'swiper';
-import Spacer from '../../utils/Spacer';
-import Card from './Card';
-import { Certification as CertificationType } from '../../types/Certification';
-import CertificationData from '../../assets/data/Certification.json';
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import Spacer from "../../utils/Spacer";
+import Card from "./Card";
+import { Certification as CertificationType } from "../../types/Certification";
+import CertificationData from "../../assets/data/Certification.json";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 interface Props {
   certificationRef: React.RefObject<HTMLElement>;
@@ -28,7 +28,7 @@ const Certification: React.FC<Props> = ({ certificationRef }) => {
     onInit: (swiper: SwiperType) => {
       if (
         swiper.params.navigation &&
-        typeof swiper.params.navigation !== 'boolean'
+        typeof swiper.params.navigation !== "boolean"
       ) {
         swiper.params.navigation.prevEl = prevRef.current;
         swiper.params.navigation.nextEl = nextRef.current;
@@ -41,7 +41,7 @@ const Certification: React.FC<Props> = ({ certificationRef }) => {
       767: { slidesPerView: 2 },
     },
     modules: [Autoplay, Pagination, Navigation],
-    className: 'certification-swiper',
+    className: "certification-swiper",
   };
 
   return (
@@ -60,7 +60,7 @@ const Certification: React.FC<Props> = ({ certificationRef }) => {
           <div className="flex flex-col">
             <span>Check out my certifications</span>
             <span className="text-[#919191] font-[regular] black-sweep">
-              These works aspires to be best
+              I’ve got {certifications.length} certs in total
             </span>
           </div>
         </div>
@@ -77,22 +77,21 @@ const Certification: React.FC<Props> = ({ certificationRef }) => {
           <div className="w-[50%] flex gap-[20px]">
             <div
               ref={prevRef}
-              className="flex justify-center items-center gap-2 cursor-pointer w-[50%] h-[40px] border border-gray-300 hover:bg-slate-100/80 rounded-lg"
+              className="flex justify-center items-center gap-2 cursor-pointer w-[50%] h-[40px] border border-slate-400/90 hover:bg-black hover:border-black hover:text-white rounded-lg transition-colors ease-in-out duration-300"
             >
               <BsChevronLeft className="-ml-2" />
               <span className="text-sm mt-[1px]">Prev</span>
             </div>
             <div
               ref={nextRef}
-              className="flex justify-center items-center gap-2 cursor-pointer w-[50%] h-[40px] border border-gray-300 hover:bg-slate-100/80 rounded-lg"
+              className="flex justify-center items-center gap-2 cursor-pointer w-[50%] h-[40px] border border-slate-400/90 hover:bg-black hover:border-black hover:text-white rounded-lg transition-colors ease-in-out duration-300"
             >
               <span className="text-sm mt-[1px] ml-2">Next</span>
               <BsChevronRight className="" />
             </div>
           </div>
         </div>
-        <Spacer size="small" />
-        <Spacer size="small" />
+        <Spacer size="medium" />
         <Spacer size="xs" />
         <Swiper {...SWIPER_CONFIG}>
           {certifications && certifications.length > 0 ? (

@@ -25,6 +25,12 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Blog from "../components/Blog/Blog";
 import Certification from "../components/Certification/Certification";
 import Typewriter from "../utils/Typewriter";
+import {
+  BsArrowUp,
+  BsArrowUpCircle,
+  BsArrowUpCircleFill,
+  BsArrowUpShort,
+} from "react-icons/bs";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -377,6 +383,7 @@ const HomePage: React.FC<Home> = () => {
       >
         <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">
+            <div className="spacer-xs"></div>
             <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
             <div className="w-full flex flex-col justify-start items-center">
@@ -399,59 +406,65 @@ const HomePage: React.FC<Home> = () => {
                   <textarea
                     name="message"
                     placeholder="Write me some message..."
-                    className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-none bg-[#fefefe]"
+                    className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-none bg-[#fefefe] rounded-lg"
                   />
                 </div>
                 <div className="spacer-small"></div>
                 <button
                   type="submit"
-                  className="w-full cursor-pointer py-[0.75rem] w-full footer-btn"
+                  className="w-full cursor-pointer py-[0.75rem] w-full bg-black/90 text-white border border-black/80 hover:bg-black transition-all ease-in duration-300"
                 >
                   Recruit me
                 </button>
               </form>
-              <div className="spacer-small"></div>
+              <div className="spacer-xs"></div>
               <div className="spacer-medium"></div>
-              <div className="flex justify-center items-center gap-5">
-                <FaGithub size={32} className="cursor-pointer text-gray-900" />
-                <FaLinkedinIn
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-                <RxEnvelopeClosed
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-                <FaFacebook
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-              </div>
             </div>
-            <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-[#e5e7eb]"></div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
+        <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
+          <div className="flex items-center gap-3 px-3 py-2 border border-gray-300 rounded-lg">
+            <div className="relative flex h-3 w-3">
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{" "}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{" "}
+            </div>
+            <span className="tracking-wide text-sm">Normal</span>
+          </div>
+          <div className="flex gap-2 items-center group">
+            <div className="flex gap-2 items-center py-2 pl-3 pr-4 border border-gray-300 rounded-lg text-sm hover:bg-black hover:text-white hover:border-black cursor-pointer tracking-wide transition-all ease-in duration-300">
+              <BsArrowUpShort size={20} className="-mt-[1px]" />
+              <span>Back to top</span>
+            </div>
+          </div>
+        </div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
+        <div className="w-full h-[1px] bg-gray-200"></div>
         <div className="spacer-xs"></div>
         <div className="spacer-small"></div>
         <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
           <div className="flex justify-end items-center gap-2">
-            <FaRegCopyright size={14} className="-mt-1" />
-            <span className="tracking-wider text-[14px]">Kludy</span>
+            <span className="tracking-widest text-[14px]">
+              2025 • All rights reserved
+            </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{" "}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{" "}
+            <div className="flex justify-center items-center gap-4">
+              <FaGithub size={28} className="cursor-pointer text-black" />
+              <FaLinkedinIn size={28} className="cursor-pointer text-black" />
+              <RxEnvelopeClosed
+                size={28}
+                className="cursor-pointer text-black"
+              />
+              <FaFacebook size={28} className="cursor-pointer text-black" />
             </div>
-            <span className="tracking-wider text-[14px]">
-              No issues detected
-            </span>
           </div>
         </div>
         <div className="spacer-xs"></div>
-        <div className="spacer-small"></div>
+        <div className="spacer-medium"></div>
       </footer>
     </>
   );
