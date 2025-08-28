@@ -1,8 +1,49 @@
 import { useState } from "react";
-import { BsAward, BsBox, BsChatSquare, BsChatSquareText, BsCoin, BsCollection, BsCupHot, BsFolder, BsFolder2, BsFolder2Open, BsLayers, BsMegaphone, BsPatchCheck, BsPentagon, BsRss, BsSuitcaseLg, BsTextarea, BsTextareaResize, BsTrophy, BsWindow } from "react-icons/bs";
-import { FaMedal } from "react-icons/fa6";
+import {
+  BsApp,
+  BsAppIndicator,
+  BsArchive,
+  BsAward,
+  BsBook,
+  BsBox,
+  BsCardText,
+  BsCassette,
+  BsChat,
+  BsChatSquare,
+  BsChatSquareText,
+  BsCodeSquare,
+  BsCoin,
+  BsCollection,
+  BsCupHot,
+  BsDiamond,
+  BsFloppy,
+  BsFolder,
+  BsFolder2,
+  BsFolder2Open,
+  BsHandThumbsUp,
+  BsJournal,
+  BsLaptop,
+  BsLayers,
+  BsMegaphone,
+  BsPatchCheck,
+  BsPentagon,
+  BsPersonCheck,
+  BsPuzzle,
+  BsRss,
+  BsShare,
+  BsShield,
+  BsStar,
+  BsStars,
+  BsSticky,
+  BsSuitcaseLg,
+  BsTerminal,
+  BsTextarea,
+  BsTextareaResize,
+  BsTrophy,
+  BsWindow,
+} from "react-icons/bs";
+import { PiCertificateThin } from "react-icons/pi";
 import { HiOutlineXMark } from "react-icons/hi2";
-import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
 
 interface NavbarProps {
   isHeroSectionActive: boolean;
@@ -119,7 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsBox size={16} className="-mt-[1px]" />
+                  <BsFolder2 size={16} className="-mt-[1px]" />
                 </div>
 
                 <span
@@ -140,7 +181,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsWindow size={16} className="-mt-[1px]" />
+                  <BsLaptop size={16} className="-mt-[1px]" />
                 </div>
 
                 <span
@@ -182,7 +223,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsAward size={16} className="-mt-[1px]" />
+                  <BsApp size={16} className="-mt-[1px]" />
                 </div>
 
                 <span

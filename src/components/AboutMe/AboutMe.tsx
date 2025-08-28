@@ -1,13 +1,13 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFlip } from 'swiper/modules';
-import Spacer from '../../utils/Spacer';
-import profilePic from '../../assets/images/profilepic.svg';
-import { PiSealCheckFill } from 'react-icons/pi';
-import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import AboutMeData from '../../assets/data/AboutMe.json';
-import { AboutMe as AboutMeType } from '../../types/AboutMe';
-import Technology from './Technology';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFlip } from "swiper/modules";
+import Spacer from "../../utils/Spacer";
+import profilePic from "../../assets/images/profilepic.svg";
+import { PiSealCheckFill } from "react-icons/pi";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import AboutMeData from "../../assets/data/AboutMe.json";
+import { AboutMe as AboutMeType } from "../../types/AboutMe";
+import Technology from "./Technology";
 
 interface Props {
   aboutMeRef: React.RefObject<HTMLElement>;
@@ -23,7 +23,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
         <Spacer size="large" />
         <div className="text-[#282828]">About me</div>
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-gray-200"></div>
+        <div className="w-full h-[1px] bg-gray-100"></div>
         <Spacer size="small" />
         <Spacer size="small" />
         <div className="w-full flex justify-between items-center">
@@ -67,7 +67,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
           </div>
           <div className="w-[40%] h-[160px]">
             <Swiper
-              effect={'flip'}
+              effect={"flip"}
               autoplay={{
                 delay: 5000,
               }}
@@ -77,32 +77,32 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-gray-300 rounded-xl">
-                  <div className="text-sm tracking-wide leading-relaxed">
-                    With a knack for{' '}
+                <div className="w-full h-full flex flex-col gap-4 p-4 border border-dashed border-gray-400 rounded-xl">
+                  <div className="text-[#282828] text-sm tracking-wide leading-[1.8]">
+                    With a knack for{" "}
                     <span className="tracking-wider font-[semi-bold]">
-                      web development
-                    </span>{' '}
-                    and a track record of turning{' '}
+                      Web Dev, GenAI, CyberSec
+                    </span>{" "}
+                    and a track record of turning{" "}
                     <span className="tracking-wider font-[semi-bold]">
                       challenges
-                    </span>{' '}
-                    into{' '}
+                    </span>{" "}
+                    into{" "}
                     <span className="tracking-wider font-[semi-bold]">
                       results
                     </span>
                     , I’m eager to bring
                     <span className="tracking-wider font-[semi-bold]">
-                      {' '}
-                      innovative yet careful
-                    </span>{' '}
-                    ideas to the company. I’m ready to transform a line of{' '}
+                      {" "}
+                      innovative yet empathic
+                    </span>{" "}
+                    ideas to the company. I’m ready to transform a line of{" "}
                     <span className="tracking-wider font-[semi-bold]">
                       code
-                    </span>{' '}
+                    </span>{" "}
                     into a
                     <span className="tracking-wider font-[semi-bold]">
-                      {' '}
+                      {" "}
                       robust infrastructure
                     </span>
                     .
@@ -123,7 +123,9 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
         </div>
         <Spacer size="small" />
         <Spacer size="small" />
+        <div className="w-full h-[1px] bg-gray-100"></div>
         <Spacer size="small" />
+        <Spacer size="xs" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
         <Spacer size="small" />
         <div className="flex flex-wrap items-center gap-2">
