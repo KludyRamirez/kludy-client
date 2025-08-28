@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { BsFolder2, BsSuitcaseLg, BsTrophy, BsWindow } from "react-icons/bs";
+import { BsAward, BsBox, BsChatSquare, BsChatSquareText, BsCoin, BsCollection, BsCupHot, BsFolder, BsFolder2, BsFolder2Open, BsLayers, BsMegaphone, BsPatchCheck, BsPentagon, BsRss, BsSuitcaseLg, BsTextarea, BsTextareaResize, BsTrophy, BsWindow } from "react-icons/bs";
+import { FaMedal } from "react-icons/fa6";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { RiMedalLine, RiSpeakLine } from "react-icons/ri";
 
@@ -118,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsFolder2 size={16} className="-mt-[1px]" />
+                  <BsBox size={16} className="-mt-[1px]" />
                 </div>
 
                 <span
@@ -181,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <RiMedalLine size={16} className="-mt-[1px]" />
+                  <BsAward size={16} className="-mt-[1px]" />
                 </div>
 
                 <span
@@ -197,7 +198,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </div>
               <div className="cursor-pointer flex items-center group gap-2">
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <RiSpeakLine size={16} className="-mt-[1px]" />
+                  <BsChatSquare size={16} className="-mt-[1px]" />
                 </div>
 
                 <span

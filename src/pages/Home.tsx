@@ -1,36 +1,26 @@
-import React, { useState, useEffect, useRef, FormEvent } from "react";
-import { Home } from "../types/Home";
-import Navbar from "../components/Navbar/Navbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
-import emailjs from "emailjs-com";
+import React, { useState, useEffect, useRef, FormEvent } from 'react';
+import { Home } from '../types/Home';
+import Navbar from '../components/Navbar/Navbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+import emailjs from 'emailjs-com';
 
-import projectsGif from "../assets/gif/projects-gif.gif";
+import projectsGif from '../assets/gif/projects-gif.gif';
 
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedinIn,
-  FaRegCopyright,
-} from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
-import { RxEnvelopeClosed } from "react-icons/rx";
+import { RxEnvelopeClosed } from 'react-icons/rx';
 
-import toast from "react-hot-toast";
-import Project from "../components/Project/Project";
-import Experience from "../components/Experience/Experience";
-import Badge from "../components/Badge/Badge";
-import AboutMe from "../components/AboutMe/AboutMe";
-import Blog from "../components/Blog/Blog";
-import Certification from "../components/Certification/Certification";
-import Typewriter from "../utils/Typewriter";
-import {
-  BsArrowUp,
-  BsArrowUpCircle,
-  BsArrowUpCircleFill,
-  BsArrowUpShort,
-} from "react-icons/bs";
+import toast from 'react-hot-toast';
+import Project from '../components/Project/Project';
+import Experience from '../components/Experience/Experience';
+import Badge from '../components/Badge/Badge';
+import AboutMe from '../components/AboutMe/AboutMe';
+import Blog from '../components/Blog/Blog';
+import Certification from '../components/Certification/Certification';
+import Typewriter from '../utils/Typewriter';
+import { BsChevronUp } from 'react-icons/bs';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -156,10 +146,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        "service_7ps65lj",
-        "template_gy0m0sm",
+        'service_7ps65lj',
+        'template_gy0m0sm',
         e.currentTarget,
-        "PxOfC-PYxo4STwqcF"
+        'PxOfC-PYxo4STwqcF'
       )
       .then(
         (result) => {
@@ -174,7 +164,7 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToHero = () => {
     if (heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: "smooth" });
+      heroRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -186,31 +176,31 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToExperiences = () => {
     if (experienceRef.current) {
-      experienceRef.current.scrollIntoView({ behavior: "smooth" });
+      experienceRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToProjects = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: "smooth" });
+      projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToBlogs = () => {
     if (blogRef.current) {
-      blogRef.current.scrollIntoView({ behavior: "smooth" });
+      blogRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToCertifications = () => {
     if (certificationRef.current) {
-      certificationRef.current.scrollIntoView({ behavior: "smooth" });
+      certificationRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToBadges = () => {
     if (badgeRef.current) {
-      badgeRef.current.scrollIntoView({ behavior: "smooth" });
+      badgeRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -242,15 +232,15 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
-                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
-                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{' '}
+                <span className="text-[#919191] font-[regular]">I'm</span>{' '}
                 <span>Kludy</span>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
-                <Typewriter words={["Frontend", "Backend"]} />
+                <Typewriter words={['Frontend', 'Backend']} />
                 <div className="text-[#919191]">and</div>
                 <div className="font-[semi-bold] text-white"> GenAI</div>
-                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
+                <Typewriter words={['Leader', 'Oracle', 'Builder', 'Nerd']} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -428,15 +418,15 @@ const HomePage: React.FC<Home> = () => {
         <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
           <div className="flex items-center gap-3 px-3 py-2 border border-gray-300 rounded-lg">
             <div className="relative flex h-3 w-3">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{" "}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{" "}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{' '}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{' '}
             </div>
             <span className="tracking-wide text-sm">Normal</span>
           </div>
           <div className="flex gap-2 items-center group">
             <div className="flex gap-2 items-center py-2 pl-3 pr-4 border border-gray-300 rounded-lg text-sm hover:bg-black hover:text-white hover:border-black cursor-pointer tracking-wide transition-all ease-in duration-300">
-              <BsArrowUpShort size={20} className="-mt-[1px]" />
-              <span>Back to top</span>
+              <BsChevronUp size={16} className="ml-[2px] -mt-[1px]" />
+              <span className="pl-[3px]">Back to top</span>
             </div>
           </div>
         </div>
