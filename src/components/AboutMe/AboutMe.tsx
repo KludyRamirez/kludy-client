@@ -77,8 +77,8 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 p-4 border border-dashed border-gray-400 rounded-xl">
-                  <div className="text-[#282828] text-sm tracking-wide leading-[1.8]">
+                <div className="w-full h-full flex flex-col gap-4 px-4 py-[14px] border border-dashed border-gray-400 rounded-xl">
+                  <div className="text-[#282828] text-sm tracking-wide leading-[1.860]">
                     With a knack for{" "}
                     <span className="tracking-wider font-[semi-bold]">
                       Web Dev, GenAI, CyberSec
