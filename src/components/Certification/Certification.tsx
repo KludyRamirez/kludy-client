@@ -60,7 +60,7 @@ const Certification: React.FC<Props> = ({ certificationRef }) => {
           <div className="flex flex-col">
             <span>Check out my certifications</span>
             <span className="text-[#919191] font-[regular] black-sweep">
-              I’ve got {certifications.length} certs in total
+              I’ve got {certifications.length} so far
             </span>
           </div>
         </div>
