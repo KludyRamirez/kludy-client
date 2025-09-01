@@ -22,8 +22,8 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: 'Flexicon Solution Inc.',
-    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png',
+    company: "Flexicon Solution Inc.",
+    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png",
     period: "July 2024 - Present • 1 yr and 2 mos",
     title: "Mid Level Software Engineer",
     points: [
@@ -46,8 +46,8 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
     companyLink: "",
   },
   {
-    company: 'Pamantasan ng Lungsod ng Valenzuela',
-    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png',
+    company: "Pamantasan ng Lungsod ng Valenzuela",
+    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
     period: "January 2024 - July 2024 • 7 mos",
     title: "Full Stack Developer",
     points: [
@@ -67,8 +67,8 @@ ensuring 99% system availability.`,
     companyLink: "",
   },
   {
-    company: 'Asia Pacific Digital GrowthOps',
-    logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png',
+    company: "Asia Pacific Digital GrowthOps",
+    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png",
     period: "March 2023 - December 2023 • 10 mos",
     title: "Junior Web Developer",
     points: [
@@ -100,20 +100,23 @@ const TimelineItem: React.FC<ExperienceItem> = ({
   address,
 }) => (
   <div className="w-full flex justify-start gap-4">
-     
-     <div className="w-[60px] h-[60px] p-3 rounded-lg border border-slate-100/20 flex-shrink-0">
-        <img src={logo} className="filter brightness-100 contrast-150"/>
-     </div>
+    <div className="w-[60px] h-[60px] p-3 rounded-lg border border-slate-100/20 flex-shrink-0">
+      <img src={logo} className="filter brightness-100 contrast-150" />
+    </div>
 
     <div className="flex flex-col items-start">
       <div className="flex items-center gap-3 group -mt-1 pb-2">
-        <div className="text-[22px] font-[theory] text-white cursor-pointer tracking-wide">{company}</div>
+        <div className="text-[24px] font-[semi-bold] text-white cursor-pointer tracking-wide">
+          {company}
+        </div>
         <BsLinkedin
           size={18}
           className="opacity-0 group-hover:opacity-100 text-white"
         />
       </div>
-      <div className="text-md font-[semi-bold] text-white cursor-pointer pb-[1px]">{title}</div>
+      <div className="text-md font-[semi-bold] text-white cursor-pointer pb-[1px]">
+        {title}
+      </div>
       <Spacer size="xs" />
       <div className="flex items-center gap-2 text-gray-400 text-sm leading-none tracking-wide pb-2">
         <div>{period}</div>
@@ -142,9 +145,7 @@ const TimelineItem: React.FC<ExperienceItem> = ({
                 className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-neutral-100 border border-slate-100/30 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
               >
                 <MdLink size={20} />
-                <span className="text-sm mt-[2px] tracking-wide">
-                  {link}
-                </span>
+                <span className="text-sm mt-[2px] tracking-wide">{link}</span>
               </div>
             ))}
           </div>

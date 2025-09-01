@@ -55,6 +55,7 @@ const Blog: React.FC<Props> = ({ blogRef }) => {
             </div>
           )}
         </div>
+        <Spacer size="xs" />
         <Spacer size="large" />
       </div>
     </section>

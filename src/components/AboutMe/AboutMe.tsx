@@ -8,6 +8,8 @@ import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import AboutMeData from "../../assets/data/AboutMe.json";
 import { AboutMe as AboutMeType } from "../../types/AboutMe";
 import Technology from "./Technology";
+import { RxEnvelopeClosed } from "react-icons/rx";
+import { BsAt } from "react-icons/bs";
 
 interface Props {
   aboutMeRef: React.RefObject<HTMLElement>;
@@ -40,13 +42,15 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                 <PiSealCheckFill size={22} className="text-[#1d9bf0]" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-sm text-[#282828] tracking-wider">
-                  Valenzuela, Philippines
-                </span>
+                <div className="text-sm text-[#282828] tracking-wider">
+                  <span className="text-[24px] font-[semi-bold]">V</span>
+                  alenzuela City, Philippines
+                </div>
               </div>
-              <div className="flex items-center gap-3 mt-[2px]">
-                <span className="text-sm text-[#282828] tracking-wide light-sweep">
-                  Full Stack Developer and Certified GenAI Leader
+              <div className="flex items-center mt-[2px] hover:underline cursor-pointer font-[extra-light]">
+                <BsAt />
+                <span className="text-sm text-[#282828] tracking-wider">
+                  ramirezkludy23@gmail.com
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-[6px]">
@@ -77,31 +81,34 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 px-4 py-[14px] border border-dashed border-gray-400 rounded-xl">
-                  <div className="text-[#282828] text-sm tracking-wide leading-[1.860]">
-                    With a knack for{" "}
-                    <span className="tracking-wider font-[semi-bold]">
-                      Web Dev, GenAI, CyberSec
+                <div className="w-full h-full flex flex-col gap-4">
+                  <div className="text-[#282828] text-md tracking-wide leading-[1.8]">
+                    <span className="text-[24px] font-[semi-bold] leading-[0] align-middle -ml-[2px]">
+                      W
+                    </span>
+                    ith a knack for{" "}
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
+                      Software Development
                     </span>{" "}
                     and a track record of turning{" "}
-                    <span className="tracking-wider font-[semi-bold]">
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       challenges
                     </span>{" "}
                     into{" "}
-                    <span className="tracking-wider font-[semi-bold]">
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       results
                     </span>
                     , I’m eager to bring
-                    <span className="tracking-wider font-[semi-bold]">
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       {" "}
                       innovative yet empathic
                     </span>{" "}
                     ideas to the company. I’m ready to transform a line of{" "}
-                    <span className="tracking-wider font-[semi-bold]">
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       code
                     </span>{" "}
                     into a
-                    <span className="tracking-wider font-[semi-bold]">
+                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       {" "}
                       robust infrastructure
                     </span>

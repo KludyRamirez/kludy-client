@@ -1,48 +1,18 @@
 import { useState } from "react";
 import {
   BsApp,
-  BsAppIndicator,
-  BsArchive,
-  BsAward,
-  BsBook,
-  BsBox,
-  BsCardText,
-  BsCassette,
-  BsChat,
   BsChatSquare,
-  BsChatSquareText,
-  BsCodeSquare,
-  BsCoin,
-  BsCollection,
-  BsCupHot,
-  BsDiamond,
-  BsFloppy,
-  BsFolder,
   BsFolder2,
-  BsFolder2Open,
-  BsHandThumbsUp,
-  BsJournal,
   BsLaptop,
-  BsLayers,
-  BsMegaphone,
-  BsPatchCheck,
-  BsPentagon,
-  BsPersonCheck,
-  BsPuzzle,
-  BsRss,
-  BsShare,
-  BsShield,
-  BsStar,
-  BsStars,
-  BsSticky,
   BsSuitcaseLg,
-  BsTerminal,
-  BsTextarea,
-  BsTextareaResize,
   BsTrophy,
-  BsWindow,
 } from "react-icons/bs";
-import { PiCertificateThin } from "react-icons/pi";
+import {
+  PiChatsTeardropLight,
+  PiChatTeardropLight,
+  PiCheckSquareOffsetLight,
+  PiMedalMilitary,
+} from "react-icons/pi";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 interface NavbarProps {
@@ -223,7 +193,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsApp size={16} className="-mt-[1px]" />
+                  <PiCheckSquareOffsetLight size={20} className="-mt-[2px]" />
                 </div>
 
                 <span
@@ -239,7 +209,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </div>
               <div className="cursor-pointer flex items-center group gap-2">
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsChatSquare size={16} className="-mt-[1px]" />
+                  <PiChatTeardropLight size={20} className="-mt-[1px]" />
                 </div>
 
                 <span
