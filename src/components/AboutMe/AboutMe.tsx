@@ -23,13 +23,11 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
     <section id="aboutme" className="bg-white relative" ref={aboutMeRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
         <Spacer size="large" />
-        <div className="text-[#282828]">About me</div>
+        <div className="text-[#282828]">About</div>
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-gray-100"></div>
-        <Spacer size="small" />
-        <Spacer size="small" />
+        <Spacer size="xs" />
         <div className="w-full flex justify-between items-center">
-          <div className="w-[60%] flex flex-wrap justify-start items-center gap-8">
+          <div className="w-[58%] flex flex-wrap justify-start items-center gap-8">
             <img
               src={profilePic}
               className="w-[160px] h-[160px] shadow-lg rounded-xl"
@@ -43,12 +41,11 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="text-sm text-[#282828] tracking-wider">
-                  <span className="text-[24px] font-[semi-bold]">V</span>
-                  alenzuela City, Philippines
+                  Valenzuela City, Philippines
                 </div>
               </div>
               <div className="flex items-center mt-[2px] hover:underline cursor-pointer font-[extra-light]">
-                <BsAt />
+                {/* <BsAt /> */}
                 <span className="text-sm text-[#282828] tracking-wider">
                   ramirezkludy23@gmail.com
                 </span>
@@ -69,7 +66,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               </div>
             </div>
           </div>
-          <div className="w-[40%] h-[160px]">
+          <div className="w-[42%] h-[160px]">
             <Swiper
               effect={"flip"}
               autoplay={{
@@ -81,8 +78,8 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4">
-                  <div className="text-[#282828] text-md tracking-wide leading-[1.8]">
+                <div className="w-full h-full flex flex-col gap-4 justify-center p-6 rounded-xl bg-gradient-to-bl from-blue-400 via-black to-red-500">
+                  <div className="text-white text-sm tracking-wider leading-[1.8] mt-[4px]">
                     <span className="text-[24px] font-[semi-bold] leading-[0] align-middle -ml-[2px]">
                       W
                     </span>
@@ -116,23 +113,12 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
-                <div className="flex flex-col gap-2 w-full h-full overflow-hidden rounded-xl">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755158653/aboutmeexplosion.gif"
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </SwiperSlide>
             </Swiper>
           </div>
         </div>
         <Spacer size="small" />
         <Spacer size="small" />
-        <div className="w-full h-[1px] bg-gray-100"></div>
         <Spacer size="small" />
-        <Spacer size="xs" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
         <Spacer size="small" />
         <div className="flex flex-wrap items-center gap-2">
