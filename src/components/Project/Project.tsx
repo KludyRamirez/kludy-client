@@ -1,14 +1,14 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
-import Spacer from "../../utils/Spacer";
-import Card from "./Card";
-import { useGetProjectsQuery } from "../../features/api/Project";
-import { Project as ProjectType } from "../../types/Project";
-import ProjectData from "../../assets/data/Project.json";
-import Loader from "../../utils/Loader";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import Spacer from '../../utils/Spacer';
+import Card from './Card';
+import { useGetProjectsQuery } from '../../features/api/Project';
+import { Project as ProjectType } from '../../types/Project';
+import ProjectData from '../../assets/data/Project.json';
+import Loader from '../../utils/Loader';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 interface Props {
   projectRef: React.RefObject<HTMLElement>;
@@ -30,7 +30,7 @@ const Project: React.FC<Props> = ({ projectRef }) => {
     onInit: (swiper: SwiperType) => {
       if (
         swiper.params.navigation &&
-        typeof swiper.params.navigation !== "boolean"
+        typeof swiper.params.navigation !== 'boolean'
       ) {
         swiper.params.navigation.prevEl = prevRef.current;
         swiper.params.navigation.nextEl = nextRef.current;
@@ -43,7 +43,7 @@ const Project: React.FC<Props> = ({ projectRef }) => {
       767: { slidesPerView: 2 },
     },
     modules: [Autoplay, Pagination, Navigation],
-    className: "project-swiper",
+    className: 'project-swiper',
   };
 
   return (
@@ -66,13 +66,13 @@ const Project: React.FC<Props> = ({ projectRef }) => {
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
         <Spacer size="small" />
-        <div className="flex items-center justify-between gap-4">
-          <div className="w-[50%]">
+        <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <div className="min-w-[50%]">
             <h3 className="text-[1.75rem] text-[#282828] font-[regular] whitespace">
               Recent projects
             </h3>
           </div>
-          <div className="w-[50%] flex gap-[20px]">
+          <div className="w-full lg:min-w-[50%] flex gap-[20px]">
             <div
               ref={prevRef}
               className="flex justify-center items-center gap-2 cursor-pointer w-[50%] h-[40px] border border-slate-400/90 hover:bg-black hover:border-black hover:text-white rounded-lg transition-colors ease-in-out duration-300"

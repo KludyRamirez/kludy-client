@@ -1,17 +1,17 @@
-import React from "react";
-import { Blog as BlogType } from "../../types/Blog";
-import { BsArrowRightShort } from "react-icons/bs";
+import React from 'react';
+import { Blog as BlogType } from '../../types/Blog';
+import { BsArrowRightShort } from 'react-icons/bs';
 
 const Card: React.FC<{ blog: BlogType }> = ({ blog }) => {
   return (
     <div className="cursor-pointer p-4 relative group border border-slate-100/20 hover:border-white hover:bg-white text-gray-200 hover:text-black rounded-xl transition-all duration-500 hover:scale-[102%] flex flex-col gap-4">
       <div id="meta" className="flex items-center">
         <span className="text-xs tracking-wide">
-          {new Date(blog.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}{" "}
+          {new Date(blog.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}{' '}
           • {blog.minRead}
         </span>
       </div>
