@@ -4,7 +4,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 
 const Card: React.FC<{ blog: BlogType }> = ({ blog }) => {
   return (
-    <div className="cursor-pointer p-4 relative group border border-slate-100/20 hover:bg-neutral-100/10 text-gray-200 hover:text-white rounded-xl hover:scale-[101%] transition-transform duration-400 flex flex-col gap-4">
+    <div className="cursor-pointer p-4 relative group border border-slate-100/20 hover:border-white hover:bg-white text-gray-200 hover:text-black rounded-xl transition-all duration-500 hover:scale-[102%] flex flex-col gap-4">
       <div id="meta" className="flex items-center">
         <span className="text-xs tracking-wide">
           {new Date(blog.date).toLocaleDateString('en-US', {
@@ -27,7 +27,7 @@ const Card: React.FC<{ blog: BlogType }> = ({ blog }) => {
           {blog.categories.map((category, index) => (
             <div
               key={index}
-              className="py-1 px-3 border border-slate-100/20 rounded-md group-hover:bg-neutral-950 group-hover:border-neutral-700"
+              className="py-1 px-3 border border-white/60 rounded-md group-hover:border-slate-500/90"
             >
               {category}
             </div>
@@ -36,7 +36,7 @@ const Card: React.FC<{ blog: BlogType }> = ({ blog }) => {
         <div className="flex items-center gap-1 group">
           <BsArrowRightShort
             size={24}
-            className="-ml-7 text-white transform transition-transform duration-300 group-hover:translate-x-1"
+            className="-ml-7 text-white transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-black"
           />
         </div>
       </div>

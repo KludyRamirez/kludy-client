@@ -1,19 +1,12 @@
 import React, { useState, useEffect, useRef, FormEvent } from 'react';
 import { Home } from '../types/Home';
 import Navbar from '../components/Navbar/Navbar';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import emailjs from 'emailjs-com';
 
 import projectsGif from '../assets/gif/projects-gif.gif';
 
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedinIn,
-  FaRegCopyright,
-} from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
 import { RxEnvelopeClosed } from 'react-icons/rx';
 
@@ -25,29 +18,124 @@ import AboutMe from '../components/AboutMe/AboutMe';
 import Blog from '../components/Blog/Blog';
 import Certification from '../components/Certification/Certification';
 import Typewriter from '../utils/Typewriter';
+import { BsChevronUp } from 'react-icons/bs';
+import Spacer from '../utils/Spacer';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
+  const [isAboutMeSectionActive, setIsAboutMeSectionActive] = useState(false);
+  const [isExperienceSectionActive, setIsExperienceSectionActive] =
+    useState(false);
+  const [isProjectSectionActive, setIsProjectSectionActive] = useState(false);
+  const [isBlogSectionActive, setIsBlogSectionActive] = useState(false);
+  const [isCertificationSectionActive, setIsCertificationSectionActive] =
+    useState(false);
+  const [isBadgeSectionActive, setIsBadgeSectionActive] = useState(false);
 
-  const heroSectionRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const aboutMeRef = useRef<HTMLDivElement | null>(null);
+  const experienceRef = useRef<HTMLDivElement | null>(null);
+  const projectRef = useRef<HTMLDivElement | null>(null);
+  const blogRef = useRef<HTMLDivElement | null>(null);
+  const certificationRef = useRef<HTMLDivElement | null>(null);
+  const badgeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const heroObserver = new IntersectionObserver(
       ([entry]) => {
         setIsHeroSectionActive(entry.isIntersecting);
       },
-      { threshold: 0.9 }
+      { threshold: 0.1 }
+    );
+    const aboutMeObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsAboutMeSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const experienceObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsExperienceSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const projectObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsProjectSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const blogObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsBlogSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const certificationObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsCertificationSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
     );
 
-    const heroSection = heroSectionRef.current;
+    const badgeObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsBadgeSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const heroSection = heroRef.current;
+    const aboutMeSection = aboutMeRef.current;
+    const experienceSection = experienceRef.current;
+    const projectSection = projectRef.current;
+    const blogSection = blogRef.current;
+    const certificationSection = certificationRef.current;
+    const badgeSection = badgeRef.current;
 
     if (heroSection) {
       heroObserver.observe(heroSection);
+    }
+    if (aboutMeSection) {
+      aboutMeObserver.observe(aboutMeSection);
+    }
+    if (experienceSection) {
+      experienceObserver.observe(experienceSection);
+    }
+    if (projectSection) {
+      projectObserver.observe(projectSection);
+    }
+    if (blogSection) {
+      blogObserver.observe(blogSection);
+    }
+    if (certificationSection) {
+      certificationObserver.observe(certificationSection);
+    }
+    if (badgeSection) {
+      badgeObserver.observe(badgeSection);
     }
 
     return () => {
       if (heroSection) {
         heroObserver.unobserve(heroSection);
+      }
+      if (aboutMeSection) {
+        aboutMeObserver.unobserve(aboutMeSection);
+      }
+      if (experienceSection) {
+        experienceObserver.unobserve(experienceSection);
+      }
+      if (projectSection) {
+        projectObserver.unobserve(projectSection);
+      }
+      if (blogSection) {
+        blogObserver.unobserve(blogSection);
+      }
+      if (certificationSection) {
+        certificationObserver.unobserve(certificationSection);
+      }
+      if (badgeSection) {
+        badgeObserver.unobserve(badgeSection);
       }
     };
   }, []);
@@ -73,39 +161,33 @@ const HomePage: React.FC<Home> = () => {
       );
   };
 
-  const blogsRef = useRef<HTMLDivElement | null>(null);
-  const experiencesRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const badgesRef = useRef<HTMLDivElement | null>(null);
-  const certificationRef = useRef<HTMLDivElement | null>(null);
-
   const scrollToHero = () => {
-    if (heroSectionRef.current) {
-      heroSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (heroRef.current) {
+      heroRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToBlogs = () => {
-    if (blogsRef.current) {
-      blogsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToAboutMe = () => {
+  //   if (aboutMeRef.current) {
+  //     aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   const scrollToExperiences = () => {
-    if (experiencesRef.current) {
-      experiencesRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (experienceRef.current) {
+      experienceRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const scrollToProjects = () => {
-    if (projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (projectRef.current) {
+      projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToBadges = () => {
-    if (badgesRef.current) {
-      badgesRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBlogs = () => {
+    if (blogRef.current) {
+      blogRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -115,10 +197,49 @@ const HomePage: React.FC<Home> = () => {
     }
   };
 
+  const scrollToBadges = () => {
+    if (badgeRef.current) {
+      badgeRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const items = [
+    {
+      name: 'AIA',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png',
+    },
+    {
+      name: 'GrowthOps',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png',
+    },
+    {
+      name: 'APD',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755247013/apd-logo-white.png',
+    },
+    {
+      name: 'GO Asia',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png',
+    },
+    {
+      name: 'BPI',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755242964/bpi-logo.png',
+    },
+    {
+      name: 'Flexicon Inc.',
+      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo-white.png',
+    },
+  ];
+
   return (
     <>
       <Navbar
         isHeroSectionActive={isHeroSectionActive}
+        isAboutMeSectionActive={isAboutMeSectionActive}
+        isExperienceSectionActive={isExperienceSectionActive}
+        isProjectSectionActive={isProjectSectionActive}
+        isBlogSectionActive={isBlogSectionActive}
+        isCertificationSectionActive={isCertificationSectionActive}
+        isBadgeSectionActive={isBadgeSectionActive}
         scrollToHero={scrollToHero}
         scrollToBlogs={scrollToBlogs}
         scrollToExperiences={scrollToExperiences}
@@ -126,11 +247,7 @@ const HomePage: React.FC<Home> = () => {
         scrollToBadges={scrollToBadges}
         scrollToCertifications={scrollToCertifications}
       />
-      <section
-        id="hero"
-        className="hero-section h-screen relative"
-        ref={heroSectionRef}
-      >
+      <section id="hero" className="lg:h-screen relative" ref={heroRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-medium"></div>
@@ -178,135 +295,54 @@ const HomePage: React.FC<Home> = () => {
           </div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
-          <Swiper
-            spaceBetween="42"
-            autoplay={{
-              delay: 2000,
-            }}
-            loop={true}
-            breakpoints={{
-              639: {
-                slidesPerView: 1,
-              },
-              767: {
-                slidesPerView: 2,
-              },
-              1023: {
-                slidesPerView: 3,
-              },
-              1279: {
-                slidesPerView: 5,
-              },
-            }}
-            modules={[Autoplay, Pagination]}
-            className="hero-swiper"
-          >
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  AIA PH
-                </span>
+          <div className="relative w-full overflow-hidden">
+            <div className="marquee">
+              <div className="marquee-inner">
+                {items.map((item, i) => (
+                  <div key={`a-${i}`} className="marquee-item">
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="max-w-[52px] max-h-[52px] filter brightness-125 contrast-200"
+                    />
+                    <span className="ml-4 text-white text-2xl font-[semi-bold]">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755247013/apd-logo-white.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  APD
-                </span>
+              <div className="marquee-inner">
+                {items.map((item, i) => (
+                  <div key={`b-${i}`} className="marquee-item">
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="max-w-[52px] max-h-[52px]"
+                    />
+                    <span className="ml-4 text-white text-2xl font-[semi-bold]">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  AIA TH
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-150 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  GO
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  GO Asia
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755242964/bpi-logo.png"
-                    className="max-w-[54px] max-h-[54px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  BPI
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center gap-3 rounded-xl">
-                <div className="w-auto h-auto">
-                  <img
-                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo.png"
-                    className="max-w-[52px] max-h-[52px] filter brightness-100 contrast-125"
-                  />
-                </div>
-                <span className="text-white text-2xl font-[semi-bold] tracking-wide">
-                  Flexicon
-                </span>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+            </div>
+          </div>
         </div>
+        <Spacer size="large" />
       </section>
-      <AboutMe />
-      <Experience experiencesRef={experiencesRef} />
-      <Project projectsRef={projectsRef} projectsGif={projectsGif} />
-      <Blog blogsRef={blogsRef} />
+      <AboutMe aboutMeRef={aboutMeRef} />
+      <Experience experienceRef={experienceRef} />
+      <Project projectRef={projectRef} projectsGif={projectsGif} />
+      <Blog blogRef={blogRef} />
       <Certification certificationRef={certificationRef} />
-      <Badge badgesRef={badgesRef} />
+      <Badge badgeRef={badgeRef} />
       <footer
         id="footer"
         className="bg-white relative flex flex-col items-center"
       >
         <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
           <div className="w-full lg:w-[45%] mx-auto relative z-20">
+            <div className="spacer-xs"></div>
             <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
             <div className="w-full flex flex-col justify-start items-center">
@@ -329,59 +365,65 @@ const HomePage: React.FC<Home> = () => {
                   <textarea
                     name="message"
                     placeholder="Write me some message..."
-                    className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-none bg-[#fefefe]"
+                    className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-none bg-[#fefefe] rounded-lg"
                   />
                 </div>
                 <div className="spacer-small"></div>
                 <button
                   type="submit"
-                  className="w-full cursor-pointer py-[0.75rem] w-full footer-btn"
+                  className="w-full cursor-pointer py-[0.75rem] w-full bg-black/90 text-white border border-black/80 hover:bg-black transition-all ease-in duration-300"
                 >
                   Recruit me
                 </button>
               </form>
-              <div className="spacer-small"></div>
+              <div className="spacer-xs"></div>
               <div className="spacer-medium"></div>
-              <div className="flex justify-center items-center gap-5">
-                <FaGithub size={32} className="cursor-pointer text-gray-900" />
-                <FaLinkedinIn
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-                <RxEnvelopeClosed
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-                <FaFacebook
-                  size={32}
-                  className="cursor-pointer text-gray-900"
-                />
-              </div>
             </div>
-            <div className="spacer-small"></div>
             <div className="spacer-medium"></div>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-[#e5e7eb]"></div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
+        <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
+          <div className="flex items-center gap-3 px-3 py-2 border border-gray-300 rounded-lg">
+            <div className="relative flex h-3 w-3">
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{' '}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{' '}
+            </div>
+            <span className="tracking-wide text-sm">Normal</span>
+          </div>
+          <div className="flex gap-2 items-center group">
+            <div className="flex gap-2 items-center py-2 pl-3 pr-4 border border-gray-300 rounded-lg text-sm hover:bg-black hover:text-white hover:border-black cursor-pointer tracking-wide transition-all ease-in duration-300">
+              <BsChevronUp size={16} className="ml-[2px] -mt-[1px]" />
+              <span className="pl-[3px]">Back to top</span>
+            </div>
+          </div>
+        </div>
+        <div className="spacer-xs"></div>
+        <div className="spacer-small"></div>
+        <div className="w-full h-[1px] bg-gray-200"></div>
         <div className="spacer-xs"></div>
         <div className="spacer-small"></div>
         <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
           <div className="flex justify-end items-center gap-2">
-            <FaRegCopyright size={14} className="-mt-1" />
-            <span className="tracking-wider text-[14px]">Kludy</span>
+            <span className="tracking-widest text-[14px]">
+              2025 • All rights reserved
+            </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="relative flex h-3 w-3 -mt-1">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></div>{' '}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></div>{' '}
+            <div className="flex justify-center items-center gap-4">
+              <FaGithub size={28} className="cursor-pointer text-black" />
+              <FaLinkedinIn size={28} className="cursor-pointer text-black" />
+              <RxEnvelopeClosed
+                size={28}
+                className="cursor-pointer text-black"
+              />
+              <FaFacebook size={28} className="cursor-pointer text-black" />
             </div>
-            <span className="tracking-wider text-[14px]">
-              No issues detected
-            </span>
           </div>
         </div>
         <div className="spacer-xs"></div>
-        <div className="spacer-small"></div>
+        <div className="spacer-medium"></div>
       </footer>
     </>
   );

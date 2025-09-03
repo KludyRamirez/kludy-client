@@ -1,13 +1,17 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFlip } from "swiper/modules";
-import Spacer from "../../utils/Spacer";
-import profilePic from "../../assets/images/profilepic.svg";
-import { PiSealCheckFill } from "react-icons/pi";
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import AboutMeData from "../../assets/data/AboutMe.json";
-import { AboutMe as AboutMeType } from "../../types/AboutMe";
-import Technology from "./Technology";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, EffectFlip } from 'swiper/modules';
+import Spacer from '../../utils/Spacer';
+import profilePic from '../../assets/images/profilepic.svg';
+import { PiSealCheckFill } from 'react-icons/pi';
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedinIn,
+} from 'react-icons/fa6';
+import AboutMeData from '../../assets/data/AboutMe.json';
+import { AboutMe as AboutMeType } from '../../types/AboutMe';
+import Technology from './Technology';
 
 interface Props {
   aboutMeRef: React.RefObject<HTMLElement>;
@@ -21,30 +25,32 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
     <section id="aboutme" className="bg-white relative" ref={aboutMeRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto relative overflow-hidden">
         <Spacer size="large" />
-        <div className="text-[#282828]">About</div>
+        <div className="text-[#282828]">About me</div>
         <Spacer size="small" />
-        <div className="w-full bg-slate-200 h-[1px]"></div>
-        <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
-          <div className="min-w-[59%] flex flex-wrap justify-start items-center gap-8 py-8">
+        <div className="w-full h-[1px] bg-gray-200"></div>
+        <Spacer size="small" />
+        <Spacer size="small" />
+        <div className="w-full flex justify-between items-center">
+          <div className="w-[60%] flex flex-wrap justify-start items-center gap-8">
             <img
               src={profilePic}
               className="w-[160px] h-[160px] shadow-lg rounded-xl"
             ></img>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <span className="font-[semi-bold] text-2xl text-[#282828] tracking-wide">
+                <span className="font-[semi-bold] text-2xl text-[#282828]">
                   Kludy Ramirez
                 </span>
                 <PiSealCheckFill size={22} className="text-[#1d9bf0]" />
               </div>
               <div className="flex items-center gap-2">
-                <div className="text-sm text-[#282828] tracking-wider">
-                  Valenzuela City, Philippines
-                </div>
-              </div>
-              <div className="flex items-center mt-[2px] hover:underline cursor-pointer font-[extra-light]">
                 <span className="text-sm text-[#282828] tracking-wider">
-                  ramirezkludy23@gmail.com
+                  Valenzuela, Philippines
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mt-[2px]">
+                <span className="text-sm text-[#282828] tracking-wide light-sweep">
+                  Full Stack Developer and Certified GenAI Leader
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-[6px]">
@@ -63,59 +69,67 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               </div>
             </div>
           </div>
-          <div className="min-w-[40%] min-h-[224px]">
+          <div className="w-[40%] h-[160px]">
             <Swiper
-              effect={"flip"}
+              effect={'flip'}
               autoplay={{
                 delay: 5000,
               }}
               loop={true}
               pagination={true}
-              modules={[Autoplay, EffectFlip]}
+              modules={[Autoplay, Pagination, EffectFlip]}
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full min-h-[224px] flex flex-col gap-4 justify-center p-8 border-l border-slate-200">
-                  <div className="text-[#282828] text-sm tracking-wider leading-[1.8] mt-[3px]">
-                    <span className="text-[24px] leading-[0] align-middle -ml-[1px] pr-[1px]">
-                      W
-                    </span>
-                    ith a knack for{" "}
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
-                      Software Development
-                    </span>{" "}
-                    and a track record of turning{" "}
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
+                <div className="w-full h-full flex flex-col gap-4 px-4 pt-[14px] border border-slate-300 rounded-xl">
+                  <div className="text-sm tracking-wide leading-relaxed">
+                    With a knack for{' '}
+                    <span className="tracking-wider font-[semi-bold]">
+                      web development
+                    </span>{' '}
+                    and a track record of turning{' '}
+                    <span className="tracking-wider font-[semi-bold]">
                       challenges
-                    </span>{" "}
-                    into{" "}
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
+                    </span>{' '}
+                    into{' '}
+                    <span className="tracking-wider font-[semi-bold]">
                       results
                     </span>
                     , I’m eager to bring
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
-                      {" "}
-                      innovative yet empathic
-                    </span>{" "}
-                    ideas to the company. I’m ready to transform a line of{" "}
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
+                    <span className="tracking-wider font-[semi-bold]">
+                      {' '}
+                      innovative yet careful
+                    </span>{' '}
+                    ideas to the company. I’m ready to transform a line of{' '}
+                    <span className="tracking-wider font-[semi-bold]">
                       code
-                    </span>{" "}
+                    </span>{' '}
                     into a
-                    <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
-                      {" "}
+                    <span className="tracking-wider font-[semi-bold]">
+                      {' '}
                       robust infrastructure
                     </span>
                     .
                   </div>
                 </div>
               </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex flex-col gap-2 w-full h-full overflow-hidden rounded-xl">
+                  <img
+                    src="https://res.cloudinary.com/dni1vtbsv/image/upload/v1755158653/aboutmeexplosion.gif"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
-        <div className="w-full bg-slate-200 h-[1px]"></div>
         <Spacer size="small" />
         <Spacer size="small" />
+        <div className="w-full h-[1px] bg-gray-200"></div>
+        <Spacer size="small" />
+        <Spacer size="xs" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
         <Spacer size="small" />
         <div className="flex flex-wrap items-center gap-2">
@@ -179,18 +193,16 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
         <Spacer size="small" />
         <h3 className="text-[1.75rem] font-[regular]">Cloud</h3>
         <Spacer size="small" />
-        <div className="w-full flex items-center justify-between gap-4">
-          <div className="w-[80%] flex flex-wrap items-center gap-2">
-            {cloud?.length > 0 ? (
-              cloud.map((technology, index) => (
-                <Technology key={index} technology={technology} />
-              ))
-            ) : (
-              <div className="text-center text-[#919191] w-full py-10">
-                No information found.
-              </div>
-            )}
-          </div>
+        <div className="flex flex-wrap items-center gap-2">
+          {cloud?.length > 0 ? (
+            cloud.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))
+          ) : (
+            <div className="text-center text-[#919191] w-full py-10">
+              No information found.
+            </div>
+          )}
         </div>
         <Spacer size="large" />
       </div>

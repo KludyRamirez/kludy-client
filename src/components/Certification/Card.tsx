@@ -4,12 +4,14 @@ import Spacer from "../../utils/Spacer";
 import { Certification as CertificationType } from "../../types/Certification"; // changed
 
 import {
-  FaBullseye,
   FaCloud,
   FaCode,
   FaCrown,
+  FaDatabase,
   FaFireFlameCurved,
+  FaMedal,
   FaShieldHalved,
+  FaTrophy,
 } from "react-icons/fa6";
 import { SiOpenai } from "react-icons/si";
 
@@ -25,8 +27,8 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
         day: "numeric",
       })}
     </span>
-    <span>|</span>
-    <span>by {authors.join(", ")}</span>
+    <span>•</span>
+    <span>{authors.join(", ")}</span>
   </div>
 );
 
@@ -45,9 +47,9 @@ const Links: React.FC<{
 );
 
 const Clogo: React.FC<{ category: string }> = ({ category }) => (
-  <div className="certification-clogo cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-gray-300 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
+  <div className="certification-clogo cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border border-slate-400/90 text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[6px] transition-all duration-300">
     {category === "Certification" ? (
-      <FaBullseye size={14} />
+      <FaTrophy size={14} />
     ) : category === "AI / ML" ? (
       <SiOpenai size={14} />
     ) : category === "Popular" ? (
@@ -60,6 +62,10 @@ const Clogo: React.FC<{ category: string }> = ({ category }) => (
       <FaCrown size={16} />
     ) : category === "Development" ? (
       <FaCode size={14} />
+    ) : category === "Data" ? (
+      <FaDatabase size={14} />
+    ) : category === "Completion" ? (
+      <FaMedal size={14} />
     ) : (
       ""
     )}
@@ -81,20 +87,22 @@ const Card: React.FC<{ certification: CertificationType }> = ({
   certification,
 }) => {
   return (
-    <div className="certification w-full h-full p-2 relative group hover:p-4 hover:border hover:border-gray-300 hover:rounded-xl">
+    <div className="certification w-full h-full relative group hover:border hover:border-gray-300 hover:rounded-xl overflow-hidden">
       <Image photo={certification.photo} title={certification.title} />
 
       <Spacer size="small" />
 
-      <Meta date={certification.date} authors={certification.providers} />
+      <div className="certification-details group-hover:pb-4 group-hover:px-4">
+        <Meta date={certification.date} authors={certification.providers} />
 
-      <Spacer size="xs" />
+        <Spacer size="xs" />
 
-      <Links url={certification.url} title={certification.title} />
+        <Links url={certification.url} title={certification.title} />
 
-      <Spacer size="small" />
+        <Spacer size="small" />
 
-      <Categories categories={certification.categories} />
+        <Categories categories={certification.categories} />
+      </div>
     </div>
   );
 };

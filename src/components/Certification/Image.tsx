@@ -9,7 +9,7 @@ const Image: React.FC<{
       <img
         src={photo}
         alt={`${title} badge`}
-        className="max-w-full max-h-full object-contain transition-hover duration-[400ms] ease-in-out filter brightness-100 contrast-150 grayscale group-hover:grayscale-0"
+        className="aspect-[3/2] object-contain transition-hover duration-[400ms] ease-in-out filter brightness-100 contrast-150 grayscale group-hover:grayscale-0"
       />
     </div>
   );

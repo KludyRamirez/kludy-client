@@ -14,7 +14,43 @@
     "date": "2024-11-21T00:00:00Z",
     "title": "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
     "providers": ["Oracle"],
-    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=76E311E22A9F506E15C9E2E7F098394A10A3CAE03705998B08EEE1E644E67C68",
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=3557639427BF6F7E34E0D16F03B6AECA77B28C750D231B26512FC7FB00236070",
     "categories": ["Certification", "AI / ML", "Popular"]
+  },
+  {
+    "_id": "certification-3",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755696934/ocidmcert.png",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Data Management 2023 Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E38C16DFB5DA8B0A0EA4BA0698082A79A2B06C6534063349FFA4B697DA149CF4",
+    "categories": ["Certification", "Data", "Popular"]
+  },
+  {
+    "_id": "certification-4",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755783239/ocicert.png",
+    "date": "2024-11-21T00:00:00Z",
+    "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    "providers": ["Oracle"],
+    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E38C16DFB5DA8B0A0EA4BA0698082A79A2B06C6534063349FFA4B697DA149CF4",
+    "categories": ["Certification", "Cloud", "Popular"]
+  },
+  {
+    "_id": "certification-5",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755784530/sc900cert.png",
+    "date": "2023-10-11T00:00:00Z",
+    "title": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+    "providers": ["Oracle"],
+    "url": "https://learn.microsoft.com/en-us/users/kludyramirez-9112/credentials/974ee59fb18f9cc8",
+    "categories": ["Certification", "Security", "Popular"]
+  },
+  {
+    "_id": "certification-6",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755784530/sc900cert.png",
+    "date": "2023-10-11T00:00:00Z",
+    "title": "OPSWAT File Security Associate",
+    "providers": ["Oracle"],
+    "url": "https://learn.microsoft.com/en-us/users/kludyramirez-9112/credentials/974ee59fb18f9cc8",
+    "categories": ["Certification", "Security", "Popular"]
   }
 ]
