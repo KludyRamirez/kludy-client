@@ -24,7 +24,7 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
 const Links: React.FC<{
   url: ProjectType["url"];
   githubLink: ProjectType["githubLink"];
-}> = ({ url, githubLink }) => (
+}> = ({ githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
       <div className="project-links cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-gray-300 hover:bg-[#282828] hover:text-white hover:border-gray-600 rounded-lg transition-all duration-300">
