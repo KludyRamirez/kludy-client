@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { Project as ProjectType } from '../../types/Project';
-import { BsGithub, BsGlobeAmericas } from 'react-icons/bs';
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { Project as ProjectType } from "../../types/Project";
+import { BsGithub } from "react-icons/bs";
 
 const Meta: React.FC<{ date: string; authors: string[] }> = ({
   date,
@@ -10,20 +10,20 @@ const Meta: React.FC<{ date: string; authors: string[] }> = ({
 }) => (
   <div className="flex gap-2 text-sm text-gray-400 tracking-wide font-[extra-light]">
     <span>
-      {new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+      {new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       })}
     </span>
     <span>•</span>
-    <span>{authors.join(', ')}</span>
+    <span>{authors.join(", ")}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: ProjectType['url'];
-  githubLink: ProjectType['githubLink'];
+  url: ProjectType["url"];
+  githubLink: ProjectType["githubLink"];
 }> = ({ url, githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,7 @@ const Technology: React.FC<{ technology: string }> = ({ technology }) => (
   </div>
 );
 
-const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
+const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
   technologies,
 }) => (
   <div className="project-technologies w-full flex flex-wrap justify-start items-start gap-2">

@@ -1,14 +1,13 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFlip } from 'swiper/modules';
-import Spacer from '../../utils/Spacer';
-import profilePic from '../../assets/images/profilepic.svg';
-import { PiSealCheckFill } from 'react-icons/pi';
-import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import AboutMeData from '../../assets/data/AboutMe.json';
-import { AboutMe as AboutMeType } from '../../types/AboutMe';
-import Technology from './Technology';
-import { BsArrowDownShort } from 'react-icons/bs';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFlip } from "swiper/modules";
+import Spacer from "../../utils/Spacer";
+import profilePic from "../../assets/images/profilepic.svg";
+import { PiSealCheckFill } from "react-icons/pi";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import AboutMeData from "../../assets/data/AboutMe.json";
+import { AboutMe as AboutMeType } from "../../types/AboutMe";
+import Technology from "./Technology";
 
 interface Props {
   aboutMeRef: React.RefObject<HTMLElement>;
@@ -24,16 +23,16 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
         <Spacer size="large" />
         <div className="text-[#282828]">About</div>
         <Spacer size="small" />
-        <Spacer size="xs" />
-        <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center gap-6">
-          <div className="min-w-[59%] flex flex-wrap justify-start items-center gap-8">
+        <div className="w-full bg-slate-200 h-[1px]"></div>
+        <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
+          <div className="min-w-[59%] flex flex-wrap justify-start items-center gap-8 py-8">
             <img
               src={profilePic}
               className="w-[160px] h-[160px] shadow-lg rounded-xl"
             ></img>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <span className="font-[semi-bold] text-2xl text-[#282828]">
+                <span className="font-[semi-bold] text-2xl text-[#282828] tracking-wide">
                   Kludy Ramirez
                 </span>
                 <PiSealCheckFill size={22} className="text-[#1d9bf0]" />
@@ -44,7 +43,6 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                 </div>
               </div>
               <div className="flex items-center mt-[2px] hover:underline cursor-pointer font-[extra-light]">
-                {/* <BsAt /> */}
                 <span className="text-sm text-[#282828] tracking-wider">
                   ramirezkludy23@gmail.com
                 </span>
@@ -65,9 +63,9 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               </div>
             </div>
           </div>
-          <div className="min-w-[40%] min-h-[160px]">
+          <div className="min-w-[40%] min-h-[224px]">
             <Swiper
-              effect={'flip'}
+              effect={"flip"}
               autoplay={{
                 delay: 5000,
               }}
@@ -77,35 +75,35 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full flex flex-col gap-4 justify-center p-6 rounded-xl hero-desc-bg border border-slate-300">
-                  <div className="text-[#282828] text-sm tracking-wider leading-[1.8] mt-1">
+                <div className="w-full h-full min-h-[224px] flex flex-col gap-4 justify-center p-8 border-l border-slate-200">
+                  <div className="text-[#282828] text-sm tracking-wider leading-[1.8] mt-[3px]">
                     <span className="text-[24px] leading-[0] align-middle -ml-[1px] pr-[1px]">
                       W
                     </span>
-                    ith a knack for{' '}
+                    ith a knack for{" "}
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       Software Development
-                    </span>{' '}
-                    and a track record of turning{' '}
+                    </span>{" "}
+                    and a track record of turning{" "}
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       challenges
-                    </span>{' '}
-                    into{' '}
+                    </span>{" "}
+                    into{" "}
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       results
                     </span>
                     , I’m eager to bring
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
-                      {' '}
+                      {" "}
                       innovative yet empathic
-                    </span>{' '}
-                    ideas to the company. I’m ready to transform a line of{' '}
+                    </span>{" "}
+                    ideas to the company. I’m ready to transform a line of{" "}
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
                       code
-                    </span>{' '}
+                    </span>{" "}
                     into a
                     <span className="tracking-wider font-[semi-bold] leading-[0] align-middle">
-                      {' '}
+                      {" "}
                       robust infrastructure
                     </span>
                     .
@@ -115,7 +113,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
             </Swiper>
           </div>
         </div>
-        <Spacer size="small" />
+        <div className="w-full bg-slate-200 h-[1px]"></div>
         <Spacer size="small" />
         <Spacer size="small" />
         <h3 className="text-[1.75rem] font-[regular]">Frontend</h3>
@@ -192,10 +190,6 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                 No information found.
               </div>
             )}
-          </div>
-          <div className="flex items-center gap-1 hero-desc-bg h-[34px] px-3 rounded-[6px]">
-            <span className="text-white text-sm">See more below</span>
-            <BsArrowDownShort size={20} className="text-white text-sm" />
           </div>
         </div>
         <Spacer size="large" />
