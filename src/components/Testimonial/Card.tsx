@@ -1,7 +1,7 @@
 import React from "react";
 import { Testimonial as TestimonialType } from "../../types/Testimonial";
 
-const Card: React.FC<{ testimonial: TestimonialType }> = ({ testimonial }) => {
+const Card: React.FC<{ testimonial: TestimonialType }> = ({}) => {
   return (
     <div className="w-[480px] hover:bg-gray-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden border border-slate-100/10 cursor-pointer">
       <div className="absolute top-4 left-4 text-gray-500 text-sm font-semibold">
