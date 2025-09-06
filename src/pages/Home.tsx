@@ -1,25 +1,26 @@
-import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { Home } from '../types/Home';
-import Navbar from '../components/Navbar/Navbar';
-import 'swiper/swiper-bundle.css';
-import emailjs from 'emailjs-com';
+import React, { useState, useEffect, useRef, FormEvent } from "react";
+import { Home } from "../types/Home";
+import Navbar from "../components/Navbar/Navbar";
+import "swiper/swiper-bundle.css";
+import emailjs from "emailjs-com";
 
-import projectsGif from '../assets/gif/projects-gif.gif';
+import projectsGif from "../assets/gif/projects-gif.gif";
 
-import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
-import { RxEnvelopeClosed } from 'react-icons/rx';
+import { RxEnvelopeClosed } from "react-icons/rx";
 
-import toast from 'react-hot-toast';
-import Project from '../components/Project/Project';
-import Experience from '../components/Experience/Experience';
-import Badge from '../components/Badge/Badge';
-import AboutMe from '../components/AboutMe/AboutMe';
-import Blog from '../components/Blog/Blog';
-import Certification from '../components/Certification/Certification';
-import Typewriter from '../utils/Typewriter';
-import { BsChevronUp } from 'react-icons/bs';
-import Spacer from '../utils/Spacer';
+import toast from "react-hot-toast";
+import Project from "../components/Project/Project";
+import Experience from "../components/Experience/Experience";
+import Badge from "../components/Badge/Badge";
+import AboutMe from "../components/AboutMe/AboutMe";
+import Blog from "../components/Blog/Blog";
+import Certification from "../components/Certification/Certification";
+import Typewriter from "../utils/Typewriter";
+import { BsChevronUp } from "react-icons/bs";
+import Spacer from "../utils/Spacer";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -31,6 +32,8 @@ const HomePage: React.FC<Home> = () => {
   const [isCertificationSectionActive, setIsCertificationSectionActive] =
     useState(false);
   const [isBadgeSectionActive, setIsBadgeSectionActive] = useState(false);
+  const [isTestimonialSectionActive, setIsTestimonialSectionActive] =
+    useState(false);
 
   const heroRef = useRef<HTMLDivElement | null>(null);
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
@@ -39,6 +42,7 @@ const HomePage: React.FC<Home> = () => {
   const blogRef = useRef<HTMLDivElement | null>(null);
   const certificationRef = useRef<HTMLDivElement | null>(null);
   const badgeRef = useRef<HTMLDivElement | null>(null);
+  const testimonialRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const heroObserver = new IntersectionObserver(
@@ -85,6 +89,13 @@ const HomePage: React.FC<Home> = () => {
       { threshold: 0.1 }
     );
 
+    const testimonialObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsTestimonialSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
     const heroSection = heroRef.current;
     const aboutMeSection = aboutMeRef.current;
     const experienceSection = experienceRef.current;
@@ -92,6 +103,7 @@ const HomePage: React.FC<Home> = () => {
     const blogSection = blogRef.current;
     const certificationSection = certificationRef.current;
     const badgeSection = badgeRef.current;
+    const testimonialSection = testimonialRef.current;
 
     if (heroSection) {
       heroObserver.observe(heroSection);
@@ -113,6 +125,9 @@ const HomePage: React.FC<Home> = () => {
     }
     if (badgeSection) {
       badgeObserver.observe(badgeSection);
+    }
+    if (testimonialSection) {
+      testimonialObserver.observe(testimonialSection);
     }
 
     return () => {
@@ -137,6 +152,9 @@ const HomePage: React.FC<Home> = () => {
       if (badgeSection) {
         badgeObserver.unobserve(badgeSection);
       }
+      if (testimonialSection) {
+        testimonialObserver.unobserve(testimonialSection);
+      }
     };
   }, []);
 
@@ -145,10 +163,10 @@ const HomePage: React.FC<Home> = () => {
 
     emailjs
       .sendForm(
-        'service_7ps65lj',
-        'template_gy0m0sm',
+        "service_7ps65lj",
+        "template_gy0m0sm",
         e.currentTarget,
-        'PxOfC-PYxo4STwqcF'
+        "PxOfC-PYxo4STwqcF"
       )
       .then(
         (result) => {
@@ -163,70 +181,70 @@ const HomePage: React.FC<Home> = () => {
 
   const scrollToHero = () => {
     if (heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: 'smooth' });
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // const scrollToAboutMe = () => {
-  //   if (aboutMeRef.current) {
-  //     aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
-
-  const scrollToExperiences = () => {
+  const scrollToExperience = () => {
     if (experienceRef.current) {
-      experienceRef.current.scrollIntoView({ behavior: 'smooth' });
+      experienceRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const scrollToProjects = () => {
+  const scrollToProject = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: 'smooth' });
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const scrollToBlogs = () => {
+  const scrollToBlog = () => {
     if (blogRef.current) {
-      blogRef.current.scrollIntoView({ behavior: 'smooth' });
+      blogRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const scrollToCertifications = () => {
+  const scrollToCertification = () => {
     if (certificationRef.current) {
-      certificationRef.current.scrollIntoView({ behavior: 'smooth' });
+      certificationRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const scrollToBadges = () => {
+  const scrollToBadge = () => {
     if (badgeRef.current) {
-      badgeRef.current.scrollIntoView({ behavior: 'smooth' });
+      badgeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToTestimonial = () => {
+    if (testimonialRef.current) {
+      testimonialRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const items = [
     {
-      name: 'AIA',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png',
+      name: "AIA",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1751014508/aia-ph-logo.png",
     },
     {
-      name: 'GrowthOps',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png',
+      name: "GrowthOps",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246559/go-logo.png",
     },
     {
-      name: 'APD',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755247013/apd-logo-white.png',
+      name: "APD",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755247013/apd-logo-white.png",
     },
     {
-      name: 'GO Asia',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png',
+      name: "GO Asia",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755246691/go-asia.png",
     },
     {
-      name: 'BPI',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755242964/bpi-logo.png',
+      name: "BPI",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755242964/bpi-logo.png",
     },
     {
-      name: 'Flexicon Inc.',
-      logo: 'https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo-white.png',
+      name: "Flexicon Inc.",
+      logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/flexicon-hero-logo-white.png",
     },
   ];
 
@@ -240,12 +258,14 @@ const HomePage: React.FC<Home> = () => {
         isBlogSectionActive={isBlogSectionActive}
         isCertificationSectionActive={isCertificationSectionActive}
         isBadgeSectionActive={isBadgeSectionActive}
+        isTestimonialSectionActive={isTestimonialSectionActive}
         scrollToHero={scrollToHero}
-        scrollToBlogs={scrollToBlogs}
-        scrollToExperiences={scrollToExperiences}
-        scrollToProjects={scrollToProjects}
-        scrollToBadges={scrollToBadges}
-        scrollToCertifications={scrollToCertifications}
+        scrollToBlog={scrollToBlog}
+        scrollToExperience={scrollToExperience}
+        scrollToProject={scrollToProject}
+        scrollToBadge={scrollToBadge}
+        scrollToCertification={scrollToCertification}
+        scrollToTestimonial={scrollToTestimonial}
       />
       <section id="hero" className="lg:h-screen relative" ref={heroRef}>
         <div className="max-w-5xl px-[1.25rem] mx-auto relative z-20">
@@ -258,15 +278,15 @@ const HomePage: React.FC<Home> = () => {
           <div className="text-7xl leading-[1.275]">
             <div className="flex flex-col justify-center items-center text-white tracking-wide">
               <div className="text-center font-[semi-bold]">
-                <span className="text-[#919191] font-[regular]">'Zup,</span>{' '}
-                <span className="text-[#919191] font-[regular]">I'm</span>{' '}
+                <span className="text-[#919191] font-[regular]">'Zup,</span>{" "}
+                <span className="text-[#919191] font-[regular]">I'm</span>{" "}
                 <span>Kludy</span>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2 md:gap-4 text-[#919191] relative tracking-wide text-white">
-                <Typewriter words={['Frontend', 'Backend']} />
+                <Typewriter words={["Frontend", "Backend"]} />
                 <div className="text-[#919191]">and</div>
                 <div className="font-[semi-bold] text-white"> GenAI</div>
-                <Typewriter words={['Leader', 'Oracle', 'Builder', 'Nerd']} />
+                <Typewriter words={["Leader", "Oracle", "Builder", "Nerd"]} />
               </div>
               <div className="spacer-small"></div>
             </div>
@@ -276,7 +296,7 @@ const HomePage: React.FC<Home> = () => {
             <div
               className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide"
               onClick={() => {
-                scrollToCertifications();
+                scrollToCertification();
               }}
             >
               Recruit me
@@ -336,6 +356,7 @@ const HomePage: React.FC<Home> = () => {
       <Blog blogRef={blogRef} />
       <Certification certificationRef={certificationRef} />
       <Badge badgeRef={badgeRef} />
+      <Testimonial testimonialRef={testimonialRef} />
       <footer
         id="footer"
         className="bg-white relative flex flex-col items-center"
@@ -387,8 +408,8 @@ const HomePage: React.FC<Home> = () => {
         <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">
           <div className="flex items-center gap-3 px-3 py-2 border border-gray-300 rounded-lg">
             <div className="relative flex h-3 w-3">
-              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{' '}
-              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{' '}
+              <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500"></div>{" "}
+              <div className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></div>{" "}
             </div>
             <span className="tracking-wide text-sm">Normal</span>
           </div>

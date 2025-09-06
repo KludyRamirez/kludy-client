@@ -46,15 +46,15 @@ const Badge: React.FC<Props> = ({ badgeRef }) => {
   };
 
   return (
-    <section id="badge" className="" ref={badgeRef}>
+    <section id="badge" className="bg-blue-950/30" ref={badgeRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
-        <div className="text-white">Badges and Certifications</div>
+        <div className="text-white">Badges</div>
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <div className="text-[2.875rem] text-white leading-[1.275]">
-          <span>Check out my medals</span>
+          <span>Check out my badges</span>
           <br />
           <span className="text-[#919191] font-[regular] light-sweep">
             These are proofs of commitment

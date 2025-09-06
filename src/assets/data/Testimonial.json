@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "testimonial-1",
+    "content": "https://res.cloudinary.com/dni1vtbsv/image/upload/ociaiprocert.png",
+    "author": "2024-11-21T00:00:00Z",
+    "position": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    "company": ""
+  },
+  {
+    "_id": "testimonial-2",
+    "content": "https://res.cloudinary.com/dni1vtbsv/image/upload/ociaicert.png",
+    "author": "2024-11-21T00:00:00Z",
+    "position": "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
+    "company": "Oracle"
+  },
+  {
+    "_id": "testimonial-3",
+    "content": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755696934/ocidmcert.png",
+    "author": "2024-11-21T00:00:00Z",
+    "position": "Oracle Cloud Data Management 2023 Certified Foundations Associate",
+    "company": "Oracle"
+  },
+  {
+    "_id": "testimonial-4",
+    "content": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755783239/ocicert.png",
+    "author": "2024-11-21T00:00:00Z",
+    "position": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    "company": "Oracle"
+  }
+]
