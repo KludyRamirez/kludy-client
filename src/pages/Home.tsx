@@ -296,7 +296,7 @@ const HomePage: React.FC<Home> = () => {
             <div
               className="cursor-pointer py-[0.70rem] px-[1.75rem] text-md bg-gray-200 border border-white hover:bg-white rounded-lg tracking-wide"
               onClick={() => {
-                scrollToCertification();
+                scrollToTestimonial();
               }}
             >
               Recruit me

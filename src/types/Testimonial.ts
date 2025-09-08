@@ -4,4 +4,5 @@ export interface Testimonial {
   author: string;
   position: string;
   company: string;
+  photo: string;
 }

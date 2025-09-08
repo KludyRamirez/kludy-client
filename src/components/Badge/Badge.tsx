@@ -8,7 +8,11 @@ import { Badge as BadgeType } from "../../types/Badge";
 import { useGetBadgesQuery } from "../../features/api/Badge";
 import BadgeData from "../../assets/data/Badge.json";
 import Loader from "../../utils/Loader";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import {
+  BsArrowRightShort,
+  BsChevronLeft,
+  BsChevronRight,
+} from "react-icons/bs";
 
 interface Props {
   badgeRef: React.RefObject<HTMLElement>;
@@ -46,7 +50,7 @@ const Badge: React.FC<Props> = ({ badgeRef }) => {
   };
 
   return (
-    <section id="badge" className="bg-blue-950/30" ref={badgeRef}>
+    <section id="badge" className="" ref={badgeRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-white">Badges</div>
@@ -56,9 +60,13 @@ const Badge: React.FC<Props> = ({ badgeRef }) => {
         <div className="text-[2.875rem] text-white leading-[1.275]">
           <span>Check out my badges</span>
           <br />
-          <span className="text-[#919191] font-[regular] light-sweep">
-            These are proofs of commitment
-          </span>
+          <div className="flex items-center gap-2 text-[#919191] font-[regular]">
+            <div className="light-sweep">I've got {badges.length} so far.</div>
+            <div className="flex items-center gap-1 group cursor-pointer hover:text-white">
+              See more
+              <BsArrowRightShort className="transition-transform duration-200 group-hover:translate-x-1" />
+            </div>
+          </div>
         </div>
         <Spacer size="medium" />
         <Spacer size="small" />

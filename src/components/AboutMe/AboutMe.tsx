@@ -48,18 +48,40 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-[6px]">
-                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#141b23]/60 text-sm text-[#141b23] hover:bg-[#141b23] hover:text-white transition-all duration-300 rounded-md">
-                  <FaGithub />
-                  <div className="text-sm mt-[2px] tracking-wide">GitHub</div>
-                </div>
-                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0d66be]/60 text-sm text-[#0d66be] hover:bg-[#0d66be] hover:text-white transition-all duration-300 rounded-md">
-                  <FaLinkedinIn />
-                  <div className="text-sm mt-[2px] tracking-wide">LinkedIn</div>
-                </div>
-                <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0a68ff]/60 text-sm text-[#0a68ff] hover:bg-[#0a68ff] hover:text-white transition-all duration-300 rounded-md">
-                  <FaFacebook />
-                  <div className="text-sm mt-[2px] tracking-wide">Facebook</div>
-                </div>
+                <a
+                  href="https://github.com/KludyRamirez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#141b23]/60 text-sm text-[#141b23] hover:bg-[#141b23] hover:text-white transition-all duration-300 rounded-md">
+                    <FaGithub />
+                    <div className="text-sm mt-[2px] tracking-wide">GitHub</div>
+                  </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/kludyramirez/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0d66be]/60 text-sm text-[#0d66be] hover:bg-[#0d66be] hover:text-white transition-all duration-300 rounded-md">
+                    <FaLinkedinIn />
+                    <div className="text-sm mt-[2px] tracking-wide">
+                      LinkedIn
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://www.facebook.com/kludy.ramirez19"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 bg-transparent border border-[#0a68ff]/60 text-sm text-[#0a68ff] hover:bg-[#0a68ff] hover:text-white transition-all duration-300 rounded-md">
+                    <FaFacebook />
+                    <div className="text-sm mt-[2px] tracking-wide">
+                      Facebook
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

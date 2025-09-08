@@ -2,7 +2,6 @@ import React from "react";
 import Spacer from "../../utils/Spacer";
 import { Testimonial as TestimonialType } from "../../types/Testimonial";
 import TestimonialData from "../../assets/data/Testimonial.json";
-import { Link } from "react-router-dom";
 import Card from "./Card";
 
 interface Props {
@@ -21,10 +20,10 @@ const Testimonial: React.FC<Props> = ({ testimonialRef }) => {
         <div className="w-full h-[1px] bg-slate-100/20"></div>
         <Spacer size="small" />
         <div className="text-[2.875rem] text-white leading-[1.275]">
-          <span>Check out the reviews</span>
+          <span>Check out the feedbacks</span>
           <br />
           <span className="text-[#919191] font-[regular] light-sweep">
-            These feedbacks honed me
+            I received {testimonials.length} so far
           </span>
         </div>
         <Spacer size="medium" />
