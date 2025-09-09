@@ -73,9 +73,7 @@ const Blog: React.FC = () => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
-        <Spacer size="small" />
-        <Spacer size="small" />
-        <article className="prose prose-md max-w-none">
+        <article className="prose prose-md max-w-none prose-p:my-1 prose-h2:mt-8 prose-h2:mb-2">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {blog.content}
           </ReactMarkdown>

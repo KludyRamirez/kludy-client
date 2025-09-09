@@ -40,7 +40,7 @@ const Blog: React.FC<Props> = ({ blogRef }) => {
         </h3>
         <Spacer size="medium" />
         <Spacer size="xs" />
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4">
           {blogs?.length > 0 ? (
             blogs.map((blog) => (
               <Link key={blog._id} to={`/blog/${blog._id}`}>
