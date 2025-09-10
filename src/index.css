@@ -150,7 +150,6 @@
 
 .light-sweep {
   display: inline-block;
-  width: 100%;
   background: #282828 -webkit-linear-gradient(left, #282828, #fff) no-repeat 0 0 /
     60px;
   background-clip: text;

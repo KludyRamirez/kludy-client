@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-// import Spacer from '../../utils/Spacer';
+import { useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { Blog as BlogType } from "../types/Blog";
 import BlogData from "../assets/data/Blog.json";
 import { BsArrowLeftShort } from "react-icons/bs";
 import Spacer from "../utils/Spacer";
+import { useNavigate } from "react-router-dom";
 
 const Blog: React.FC = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const [blog, setBlog] = useState<BlogType | null>(null);
 
   useEffect(() => {
@@ -28,12 +32,15 @@ const Blog: React.FC = () => {
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="medium" />
         <Spacer size="small" />
-        <Link to="/">
-          <div className="flex items-center gap-2 text-[#282828] hover:underline">
-            <BsArrowLeftShort size={24} className="-mt-1" />
-            <span className="text-md">Go Back</span>
+        <div
+          onClick={() => navigate(-1)}
+          className="cursor-pointer flex items-center gap-3 text-[#282828] group"
+        >
+          <div className="flex items-center justify-center group-hover:bg-black rounded-[50%] group-hover:p-2 group -mt-[3px] group-hover:-ml-1 transition-all ease-in-out duration-500">
+            <BsArrowLeftShort size={24} className="group-hover:text-white" />
           </div>
-        </Link>
+          <span className="text-md">Go Back</span>
+        </div>
         <Spacer size="medium" />
         <div className="flex w-full justify-between items-center">
           <div className="text-[#282828]">Blog • {blog.minRead}</div>
@@ -66,9 +73,11 @@ const Blog: React.FC = () => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
-        <Spacer size="small" />
-        <Spacer size="small" />
-        <div className="text-md">{blog.description}</div>
+        <article className="prose prose-md max-w-none prose-p:my-1 prose-h2:mt-8 prose-h2:mb-2">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {blog.content}
+          </ReactMarkdown>
+        </article>
         <Spacer size="medium" />
         <Spacer size="xs" />
         <Spacer size="large" />

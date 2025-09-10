@@ -22,9 +22,9 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "Flexicon Solution Inc.",
+    company: "Flexicon Solutions Inc.",
     logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png",
-    period: "July 2024 - Present • 1 yr and 2 mos",
+    period: "July 2024 - Present • 1 yr and 3 mos",
     title: "Mid Level Software Engineer",
     points: [
       `Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js,
@@ -49,7 +49,7 @@ branches, including maintaining detailed changelogs to ensure consistent and tra
     company: "Pamantasan ng Lungsod ng Valenzuela",
     logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
     period: "January 2024 - July 2024 • 7 mos",
-    title: "Full Stack Developer",
+    title: "Web Developer",
     points: [
       `Built a web application that handled over 12,000 student affairs records and processed 9,000+
 cases and appeals, featuring secure data delivery to official school email without requiring
@@ -67,10 +67,10 @@ ensuring 99% system availability.`,
     companyLink: "",
   },
   {
-    company: "Asia Pacific Digital GrowthOps",
+    company: "Asia Pacific Digital | GrowthOps",
     logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png",
-    period: "March 2023 - December 2023 • 10 mos",
-    title: "Junior Web Developer",
+    period: "March 2023 - November 2023 • 9 mos",
+    title: "Junior Web Developer Intern",
     points: [
       `Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand
 websites.

@@ -1,24 +1,15 @@
 [
   {
     "_id": "project-1",
-    "date": "2025-11-21T00:00:00Z",
+    "date": "2025-09-05T00:00:00Z",
     "minRead": "3 min read",
-    "title": "Navigating the Startup Jungle: Building a Productive and Positive Culture",
-    "description": "This post explores the key elements of a successful startup culture, offering practical tips and examples for fostering a productive and positive environment.",
-    "content": "",
-    "categories": ["Programming", "Web Development"]
+    "title": "Interview for Tech Process Senior Associate role at Google Operations Center",
+    "description": "This post talks about my experience and insights from the Google Operations Center interview process for the Tech Process Senior Associate position.",
+    "content": "## Getting Started\nWhen I first applied for the role, I honestly didn’t know exactly what to expect. I read up on the position, tried to understand what the Google Operations Center focuses on, and brushed up on the basics of process improvement and problem-solving. My main goal was to go in with a clear head and be ready to share how I think, rather than just memorizing answers.\n\n## The Interview Experience\nThe actual interviews felt more like conversations than rigid tests. The interviewers asked about my background, past projects, and how I usually handle challenges. There were a few scenario-based questions too, which really pushed me to explain my thought process step by step. What I appreciated most was that they weren’t just listening for the “right” answer, but for how I approached problems in a practical and logical way.\n\n## Takeaways\nPreparing for this role reminded me how important it is to stay grounded in your own experiences. It’s less about having a perfect answer and more about being able to clearly share your perspective and show how you adapt to challenges. The process also made me realize that interviews can be a two-way street—while they’re learning about you, you also get to learn a lot about the company and how they value people.\n\n## Final Thoughts\nOverall, it was a positive experience. I left the interviews feeling that I had learned something about myself and the kind of work culture I’d love to be part of. If you’re preparing for a similar role, my advice would be: focus on your real experiences, practice explaining your thought process, and don’t forget to be yourself.",
+    "categories": ["Interview", "FinTech", "Google"]
   },
   {
     "_id": "project-2",
-    "date": "2025-11-21T00:00:00Z",
-    "minRead": "3 min read",
-    "title": "Navigating the Startup Jungle: Building a Productive and Positive Culture",
-    "description": "This post explores the key elements of a successful startup culture, offering practical tips and examples for fostering a productive and positive environment.",
-    "content": "",
-    "categories": ["Programming", "Web Development"]
-  },
-  {
-    "_id": "project-3",
     "date": "2025-11-21T00:00:00Z",
     "minRead": "3 min read",
     "title": "Navigating the Startup Jungle: Building a Productive and Positive Culture",

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import {
-  BsEmojiGrin,
   BsFolder2,
+  BsHeptagon,
+  BsJournal,
   BsLaptop,
   BsSuitcaseLg,
   BsTrophy,
 } from "react-icons/bs";
-import { PiCheckSquareOffsetLight } from "react-icons/pi";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 interface NavbarProps {
@@ -17,12 +17,14 @@ interface NavbarProps {
   isBlogSectionActive: boolean;
   isCertificationSectionActive: boolean;
   isBadgeSectionActive: boolean;
+  isTestimonialSectionActive: boolean;
   scrollToHero: () => void;
-  scrollToBlogs: () => void;
-  scrollToExperiences: () => void;
-  scrollToProjects: () => void;
-  scrollToBadges: () => void;
-  scrollToCertifications: () => void;
+  scrollToBlog: () => void;
+  scrollToExperience: () => void;
+  scrollToProject: () => void;
+  scrollToBadge: () => void;
+  scrollToCertification: () => void;
+  scrollToTestimonial: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
@@ -33,12 +35,14 @@ const Navbar: React.FC<NavbarProps> = ({
   isBlogSectionActive,
   isCertificationSectionActive,
   isBadgeSectionActive,
+  isTestimonialSectionActive,
   scrollToHero,
-  scrollToBlogs,
-  scrollToExperiences,
-  scrollToProjects,
-  scrollToBadges,
-  scrollToCertifications,
+  scrollToBlog,
+  scrollToExperience,
+  scrollToProject,
+  scrollToBadge,
+  scrollToCertification,
+  scrollToTestimonial,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(false);
@@ -74,6 +78,8 @@ const Navbar: React.FC<NavbarProps> = ({
               ? "text-black"
               : isBadgeSectionActive
               ? "text-white"
+              : isTestimonialSectionActive
+              ? "text-white"
               : "text-neutral-500"
           }`}
         >
@@ -99,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
-                  scrollToExperiences();
+                  scrollToExperience();
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
@@ -120,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
-                  scrollToProjects();
+                  scrollToProject();
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
@@ -141,7 +147,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
-                  scrollToBlogs();
+                  scrollToBlog();
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
@@ -162,7 +168,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
-                  scrollToCertifications();
+                  scrollToCertification();
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
@@ -183,11 +189,11 @@ const Navbar: React.FC<NavbarProps> = ({
               <div
                 className="cursor-pointer flex items-center group gap-2"
                 onClick={() => {
-                  scrollToBadges();
+                  scrollToBadge();
                 }}
               >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <PiCheckSquareOffsetLight size={20} className="-mt-[2px]" />
+                  <BsHeptagon size={16} className="-mt-[2px]" />
                 </div>
 
                 <span
@@ -201,14 +207,23 @@ const Navbar: React.FC<NavbarProps> = ({
                   Badges
                 </span>
               </div>
-              <div className="cursor-pointer flex items-center group gap-2">
+              <div
+                className="cursor-pointer flex items-center group gap-2"
+                onClick={() => {
+                  scrollToTestimonial();
+                }}
+              >
                 <div className="flex items-center gap-2 p-2 rounded-[70px]">
-                  <BsEmojiGrin size={16} className="-mt-[1px]" />
+                  <BsJournal size={15} className="-mt-[1px]" />
                 </div>
 
                 <span
-                  className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[120px] group-hover:opacity-100
-               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest tracking-wide"
+                  className={`overflow-hidden group-hover:max-w-[120px] group-hover:opacity-100
+               transition-all duration-500 ease-in-out text-sm font-[semi-bold] tracking-widest group-hover:pr-2 ${
+                 isTestimonialSectionActive
+                   ? "max-w-[120px] opacity-100 pr-2"
+                   : "max-w-0 opacity-0 pr-0"
+               }`}
                 >
                   Testimonials
                 </span>
@@ -252,7 +267,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToBlogs();
+                  scrollToBlog();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 border-b-[1px] hover:bg-gray-100 hover:border-t-[1px]"
@@ -261,7 +276,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToExperiences();
+                  scrollToExperience();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 border-b-[1px] hover:bg-gray-100"
@@ -270,7 +285,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToProjects();
+                  scrollToProject();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 border-b-[1px] hover:bg-gray-100"
@@ -279,7 +294,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToBadges();
+                  scrollToBadge();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 border-b-[1px] hover:bg-gray-100"
@@ -288,7 +303,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span
                 onClick={() => {
-                  scrollToCertifications();
+                  scrollToCertification();
                   handleToggleWindow();
                 }}
                 className="cursor-pointer p-6 hover:bg-gray-100 hover:border-b-[1px]"

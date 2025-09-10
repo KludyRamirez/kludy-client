@@ -27,7 +27,7 @@ const Links: React.FC<{
 }> = ({ githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
-      <div className="project-links cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-gray-300 hover:bg-[#282828] hover:text-white hover:border-gray-600 rounded-lg transition-all duration-300">
+      <div className="project-links cursor-pointer flex justify-center items-center w-full gap-2 py-2 border-[1px] border-slate-400/70 hover:bg-[#282828] hover:text-white hover:border-gray-600 rounded-lg transition-all duration-300">
         <span className="font-[semi-bold] text-[#282828] text-[12px] tracking-wider block group-hover:hidden">
           View Source
         </span>
