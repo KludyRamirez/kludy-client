@@ -5,4 +5,5 @@ export interface Testimonial {
   position: string;
   company: string;
   photo: string;
+  linkedInUrl: string;
 }
