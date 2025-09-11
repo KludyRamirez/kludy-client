@@ -20,10 +20,11 @@
   {
     "_id": "testimonial-3",
     "content": "Kludy is a highly regarded friend with strong expertise in IT, excelling at solving complex technical problems and delivering solutions under tight time constraints.",
-    "author": "Jayce Aron Go",
-    "position": "Multimedia Artist",
-    "company": "Las Casas Gaming",
-    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1757231991/chadhilis.jpg"
+    "author": "Gerald Pagsuyoin",
+    "position": "Front-end Developer",
+    "company": "Flexicon Solutions Inc.",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1757567902/geraldpagsuyoin.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/gerald-coderis-pagsuyoin/"
   },
   {
     "_id": "testimonial-4",
@@ -31,6 +32,7 @@
     "author": "Leandro Lacson",
     "position": "Manual QA Tester",
     "company": "Stotsenberg Leisure Park Hotel and Corp.",
-    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1757231991/chadhilis.jpg"
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1757567362/leandrolacson.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/leandro-lacson-09ba6b281/"
   }
 ]
