@@ -12,7 +12,11 @@ const Testimonial: React.FC<Props> = ({ testimonialRef }) => {
   const testimonials: TestimonialType[] = TestimonialData as TestimonialType[];
 
   return (
-    <section id="testimonial" className="bg-blue-950/40" ref={testimonialRef}>
+    <section
+      id="testimonial"
+      className="bg-gradient-to-b from-black to-blue-950/40"
+      ref={testimonialRef}
+    >
       <div className="max-w-5xl px-[1.25rem] mx-auto">
         <Spacer size="large" />
         <div className="text-white">Testimonials</div>

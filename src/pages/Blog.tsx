@@ -34,7 +34,7 @@ const Blog: React.FC = () => {
         <Spacer size="small" />
         <div
           onClick={() => navigate(-1)}
-          className="cursor-pointer flex items-center gap-3 text-[#282828] group"
+          className="cursor-pointer flex items-center gap-3 text-[#282828] group -ml-1"
         >
           <div className="flex items-center justify-center group-hover:bg-black rounded-[50%] group-hover:p-2 group -mt-[3px] group-hover:-ml-1 transition-all ease-in-out duration-500">
             <BsArrowLeftShort size={24} className="group-hover:text-white" />
@@ -73,6 +73,7 @@ const Blog: React.FC = () => {
         <Spacer size="medium" />
         <Spacer size="small" />
         <div className="w-full h-[1px] bg-gray-200"></div>
+        <Spacer size="xs" />
         <article className="prose prose-md max-w-none prose-p:my-1 prose-h2:mt-8 prose-h2:mb-2">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {blog.content}

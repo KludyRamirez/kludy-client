@@ -1,161 +1,16 @@
 import React from "react";
 import Spacer from "../../utils/Spacer";
-
-import { MdLink } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
+import { Experience as ExperienceType } from "../../types/Experience";
+import ExperienceData from "../../assets/data/Experience.json";
+import TimelineItem from "./TimelineItem";
 
 interface Props {
   experienceRef: React.RefObject<HTMLElement>;
 }
 
-interface ExperienceItem {
-  company: string;
-  logo: string;
-  period: string;
-  title: string;
-  points: string[];
-  photos: string[];
-  documentsLinks?: string[];
-  address: string;
-  companyLink: string;
-}
-
-const experiences: ExperienceItem[] = [
-  {
-    company: "Flexicon Solutions Inc.",
-    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png",
-    period: "July 2024 - Present • 1 yr and 3 mos",
-    title: "Mid Level Software Engineer",
-    points: [
-      `Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js,
-Storybook.js, Pug.js, Cypress, and Jest.`,
-      `Chosen as one of the key engineers to collaborate with international developers on building back-office systems (sensitive data) for online gaming platforms. (Full Stack)`,
-      `Led agile sprint cycles to deliver responsive, high-performance interfaces for back-office
-systems, ensuring alignment with technical standards and business goals.
-`,
-      `Shipped reliable bug fixes via dedicated branches and managed version control on target
-branches, including maintaining detailed changelogs to ensure consistent and traceable releases.`,
-    ],
-    photos: [
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png",
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
-    ],
-    documentsLinks: [],
-    address: "Makati City, Philippines",
-    companyLink: "",
-  },
-  {
-    company: "Pamantasan ng Lungsod ng Valenzuela",
-    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
-    period: "January 2024 - July 2024 • 7 mos",
-    title: "Web Developer",
-    points: [
-      `Built a web application that handled over 12,000 student affairs records and processed 9,000+
-cases and appeals, featuring secure data delivery to official school email without requiring
-student account creation.`,
-      `Implemented user-friendly UI interfaces using React.js and Tailwind CSS, resulting increase in
-user satisfaction compared to the previous system.
-`,
-      `Engineered RESTful APIs, WebSockets, and microservices with Express.js and SocketIO,
-streamlining backend operations enough to handle a high volume of concurrent users while
-ensuring 99% system availability.`,
-    ],
-    photos: [],
-    documentsLinks: [],
-    address: "Valenzuela City, Philippines",
-    companyLink: "",
-  },
-  {
-    company: "Asia Pacific Digital | GrowthOps",
-    logo: "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png",
-    period: "March 2023 - November 2023 • 9 mos",
-    title: "Junior Web Developer Intern",
-    points: [
-      `Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand
-websites.
-`,
-      `Developed user-friendly UI interfaces with Material UI and Bootstrap framework, leading to an
-increase in user engagement based on analytics data.`,
-      `Integrated and configured Google Tag Manager and Facebook Pixel to track user interactions,
-enabling advanced analytics and remarketing strategies.`,
-      `Configured dynamic meta tags in SPAs for accurate SEO and crawler rendering.`,
-    ],
-    photos: [
-      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png",
-    ],
-    documentsLinks: ["Performance Review"],
-    address: "Makati City, Philippines",
-    companyLink: "",
-  },
-];
-
-const TimelineItem: React.FC<ExperienceItem> = ({
-  company,
-  logo,
-  period,
-  title,
-  points,
-  documentsLinks,
-  address,
-}) => (
-  <div className="w-full flex justify-start gap-4">
-    <div className="w-[60px] h-[60px] p-3 rounded-lg border border-slate-100/20 flex-shrink-0">
-      <img src={logo} className="filter brightness-100 contrast-150" />
-    </div>
-
-    <div className="flex flex-col items-start">
-      <div className="flex items-center gap-3 group -mt-1 pb-2">
-        <div className="text-[24px] font-[semi-bold] text-white cursor-pointer tracking-wide">
-          {company}
-        </div>
-        <BsLinkedin
-          size={18}
-          className="opacity-0 group-hover:opacity-100 text-white"
-        />
-      </div>
-      <div className="text-md font-[semi-bold] text-white cursor-pointer pb-[1px]">
-        {title}
-      </div>
-      <Spacer size="xs" />
-      <div className="flex items-center gap-2 text-gray-400 text-sm leading-none tracking-wide pb-2">
-        <div>{period}</div>
-      </div>
-      <Spacer size="xs" />
-      <div className="flex items-center gap-2 text-white text-sm leading-none tracking-wider pb-2 font-[extra-light]">
-        <div>{address}</div>
-      </div>
-      <Spacer size="small" />
-      <ul className="list-disc list-inside space-y-4 md:space-y-2">
-        {points.map((point, idx) => (
-          <li key={idx} className="text-white text-sm tracking-wide">
-            {point}
-          </li>
-        ))}
-      </ul>
-
-      {documentsLinks && documentsLinks.length > 0 ? (
-        <>
-          <Spacer size="xs" />
-          <Spacer size="small" />
-          <div className="flex items-center gap-3">
-            {documentsLinks?.map((link, index) => (
-              <div
-                key={index}
-                className="cursor-pointer flex items-center gap-2 group tracking-wide pl-3 pr-4 py-1 text-neutral-100 border border-slate-100/30 group hover:bg-white hover:border-white hover:text-black transition-hover duration-[300ms] rounded-md"
-              >
-                <MdLink size={20} />
-                <span className="text-sm mt-[2px] tracking-wide">{link}</span>
-              </div>
-            ))}
-          </div>
-        </>
-      ) : null}
-    </div>
-  </div>
-);
-
 const Experience: React.FC<Props> = ({ experienceRef }) => {
+  const experiences: ExperienceType[] = ExperienceData as ExperienceType[];
+
   return (
     <section id="experiences" ref={experienceRef}>
       <div className="max-w-5xl px-[1.25rem] mx-auto">

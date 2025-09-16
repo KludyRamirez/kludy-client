@@ -62,8 +62,8 @@ const Badge: React.FC<Props> = ({ badgeRef }) => {
           <br />
           <div className="flex items-center gap-2 text-[#919191] font-[regular]">
             <div className="light-sweep">I've got {badges.length} so far.</div>
-            <div className="flex items-center gap-1 group cursor-pointer hover:text-white">
-              See more
+            <div className="flex items-center gap-1 ml-2 group cursor-pointer text-[#717171] hover:text-white">
+              See each
               <BsArrowRightShort className="transition-transform duration-200 group-hover:translate-x-1" />
             </div>
           </div>

@@ -40,17 +40,35 @@
     "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755784530/sc900cert.png",
     "date": "2023-10-11T00:00:00Z",
     "title": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
-    "providers": ["Oracle"],
+    "providers": ["Microsoft"],
     "url": "https://learn.microsoft.com/en-us/users/kludyramirez-9112/credentials/974ee59fb18f9cc8",
     "categories": ["Certification", "Security", "Popular"]
   },
   {
     "_id": "certification-6",
-    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755784530/sc900cert.png",
-    "date": "2023-10-11T00:00:00Z",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1758012540/icipcert.png",
+    "date": "2024-06-11T00:00:00Z",
+    "title": "Introduction to Critical Infrastructure Protection",
+    "providers": ["OPSWAT"],
+    "url": "https://www.credly.com/badges/30cb08b7-97f0-4480-8070-55df43158979",
+    "categories": ["Certification", "Security", "Popular"]
+  },
+  {
+    "_id": "certification-7",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1758012367/ofsacert.png",
+    "date": "2024-06-25T00:00:00Z",
     "title": "OPSWAT File Security Associate",
-    "providers": ["Oracle"],
-    "url": "https://learn.microsoft.com/en-us/users/kludyramirez-9112/credentials/974ee59fb18f9cc8",
+    "providers": ["OPSWAT"],
+    "url": "https://www.credly.com/badges/b8a61bab-560a-4b7c-8a0f-7f236e02292a",
+    "categories": ["Certification", "Security", "Popular"]
+  },
+  {
+    "_id": "certification-8",
+    "photo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1758013476/pwastcert.png",
+    "date": "2024-06-30T00:00:00Z",
+    "title": "Practical Web Application Security and Testing",
+    "providers": ["TCM Security"],
+    "url": "",
     "categories": ["Certification", "Security", "Popular"]
   }
 ]

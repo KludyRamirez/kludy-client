@@ -1,0 +1,69 @@
+[
+  {
+    "company": "Flexicon Solutions Inc.",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755834553/flexicon-hero-logo-white.png",
+    "period": "July 2024 - Present • 1 yr and 3 mos",
+    "title": "Mid Level Software Engineer",
+    "points": [
+      "Developed renowned online gaming platforms (e.g., JILI, LakiWin, etc.), utilizing Vue.js, Nuxt.js, Storybook.js, Pug.js, Cypress, and Jest.",
+      "Chosen as one of the key engineers to collaborate with international developers on building back-office systems (sensitive data) for online gaming platforms. (Full Stack)",
+      "Led agile sprint cycles to deliver responsive, high-performance interfaces for back-office systems, ensuring alignment with technical standards and business goals.",
+      "Shipped reliable bug fixes via dedicated branches and managed version control on target branches, including maintaining detailed changelogs to ensure consistent and traceable releases."
+    ],
+    "photos": [
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-hiring-experience.png",
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png"
+    ],
+    "documents": [
+      {
+        "name": "Performance Review",
+        "link": "https://drive.google.com/file/d/1Qd12Srib7F7NRwbKzFSamxT6gV6A15kK/view?usp=sharing"
+      },
+      {
+        "name": "Regularization Letter",
+        "link": "https://drive.google.com/file/d/1fap_NIX6ZNRKB9ryINcS8SFeXvdtSICo/view?usp=sharing"
+      }
+    ],
+    "address": "Makati City, Philippines",
+    "companyLink": "https://www.linkedin.com/company/flexicon-solution-inc/"
+  },
+  {
+    "company": "Pamantasan ng Lungsod ng Valenzuela",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
+    "period": "January 2024 - July 2024 • 7 mos",
+    "title": "Full Stack Web Developer",
+    "points": [
+      "Built a web application that handled over 12,000 student affairs records and processed 9,000+ cases and appeals, featuring secure data delivery to official school email without requiring student account creation.",
+      "Implemented user-friendly UI interfaces using React.js and Tailwind CSS, resulting increase in user satisfaction compared to the previous system.",
+      "Engineered RESTful APIs, WebSockets, and microservices with Express.js and SocketIO, streamlining backend operations enough to handle a high volume of concurrent users while ensuring 99% system availability."
+    ],
+    "photos": [],
+    "documents": [{ "name": "Performance Review", "link": "" }],
+    "address": "Valenzuela City, Philippines",
+    "companyLink": "https://www.linkedin.com/school/pamantasan-ng-lungsod-ng-valenzuela/"
+  },
+  {
+    "company": "Asia Pacific Digital | GrowthOps",
+    "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png",
+    "period": "June 2023 - November 2023 • 6 mos",
+    "title": "Junior Web Developer Intern",
+    "points": [
+      "Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand websites.",
+      "Developed user-friendly UI interfaces with Material UI and Bootstrap framework, leading to an increase in user engagement based on analytics data.",
+      "Integrated and configured Google Tag Manager and Facebook Pixel to track user interactions, enabling advanced analytics and remarketing strategies.",
+      "Configured dynamic meta tags in SPAs for accurate SEO and crawler rendering."
+    ],
+    "photos": [
+      "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png"
+    ],
+    "documents": [
+      {
+        "name": "Performance Review",
+        "link": "https://drive.google.com/file/d/1Qd12Srib7F7NRwbKzFSamxT6gV6A15kK/view?usp=sharing"
+      }
+    ],
+    "address": "Makati City, Philippines",
+    "companyLink": "https://www.linkedin.com/company/apdnow/"
+  }
+]
