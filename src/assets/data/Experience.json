@@ -15,29 +15,38 @@
       "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-regularization-experience.png",
       "https://res.cloudinary.com/dni1vtbsv/image/upload/flexicon-se-team-experience.png"
     ],
-    "documents": [],
+    "documents": [
+      {
+        "name": "Performance Review",
+        "link": "https://drive.google.com/file/d/1Qd12Srib7F7NRwbKzFSamxT6gV6A15kK/view?usp=sharing"
+      },
+      {
+        "name": "Regularization Letter",
+        "link": "https://drive.google.com/file/d/1fap_NIX6ZNRKB9ryINcS8SFeXvdtSICo/view?usp=sharing"
+      }
+    ],
     "address": "Makati City, Philippines",
-    "companyLink": ""
+    "companyLink": "https://www.linkedin.com/company/flexicon-solution-inc/"
   },
   {
     "company": "Pamantasan ng Lungsod ng Valenzuela",
     "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/plv-osa-logo.png",
     "period": "January 2024 - July 2024 • 7 mos",
-    "title": "Web Developer",
+    "title": "Full Stack Web Developer",
     "points": [
       "Built a web application that handled over 12,000 student affairs records and processed 9,000+ cases and appeals, featuring secure data delivery to official school email without requiring student account creation.",
       "Implemented user-friendly UI interfaces using React.js and Tailwind CSS, resulting increase in user satisfaction compared to the previous system.",
       "Engineered RESTful APIs, WebSockets, and microservices with Express.js and SocketIO, streamlining backend operations enough to handle a high volume of concurrent users while ensuring 99% system availability."
     ],
     "photos": [],
-    "documents": [],
+    "documents": [{ "name": "Performance Review", "link": "" }],
     "address": "Valenzuela City, Philippines",
-    "companyLink": ""
+    "companyLink": "https://www.linkedin.com/school/pamantasan-ng-lungsod-ng-valenzuela/"
   },
   {
     "company": "Asia Pacific Digital | GrowthOps",
     "logo": "https://res.cloudinary.com/dni1vtbsv/image/upload/v1755248176/go-asia.png",
-    "period": "March 2023 - November 2023 • 9 mos",
+    "period": "June 2023 - November 2023 • 6 mos",
     "title": "Junior Web Developer Intern",
     "points": [
       "Key contributor to the development of the BPI-AIA, AIA Philippines, and AIA Thailand websites.",
@@ -51,10 +60,10 @@
     "documents": [
       {
         "name": "Performance Review",
-        "link": ""
+        "link": "https://drive.google.com/file/d/1Qd12Srib7F7NRwbKzFSamxT6gV6A15kK/view?usp=sharing"
       }
     ],
     "address": "Makati City, Philippines",
-    "companyLink": ""
+    "companyLink": "https://www.linkedin.com/company/apdnow/"
   }
 ]

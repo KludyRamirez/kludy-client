@@ -97,7 +97,7 @@ const AboutMe: React.FC<Props> = ({ aboutMeRef }) => {
               className="about-me-desc-swiper"
             >
               <SwiperSlide>
-                <div className="w-full h-full min-h-[224px] flex flex-col gap-4 justify-center p-8 border-l border-slate-200">
+                <div className="w-full h-full min-h-[224px] flex flex-col gap-4 justify-center p-8 border-l border-r border-slate-200">
                   <div className="text-[#282828] text-sm tracking-wider leading-[1.8] mt-[3px]">
                     <span className="text-[24px] leading-[0] align-middle -ml-[1px] pr-[1px]">
                       W

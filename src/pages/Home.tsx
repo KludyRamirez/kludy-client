@@ -361,48 +361,53 @@ const HomePage: React.FC<Home> = () => {
         id="footer"
         className="bg-white relative flex flex-col items-center"
       >
-        <div className="w-full lg:max-w-5xl px-[1.25rem] flex flex-col items-center relative">
-          <div className="w-full lg:w-[45%] mx-auto relative z-20">
-            <div className="spacer-xs"></div>
-            <div className="spacer-small"></div>
-            <div className="spacer-medium"></div>
-            <div className="w-full flex flex-col justify-start items-center">
-              <span className="text-[44px] font-[semi-bold]">
-                Let's Connect
-              </span>
-              <div className="spacer-medium"></div>
-              <form className="w-full" onSubmit={sendEmail}>
-                <div className="w-full flex justify-center">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                    className="w-full h-[50px] border-[1px] border-gray-300 px-4 focus:border-none bg-[#fefefe]"
-                  />
-                </div>
-                <div className="spacer-small"></div>
-                <div className="w-full flex justify-center">
-                  <textarea
-                    name="message"
-                    placeholder="Write me some message..."
-                    className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-none bg-[#fefefe] rounded-lg"
-                  />
-                </div>
-                <div className="spacer-small"></div>
-                <button
-                  type="submit"
-                  className="w-full cursor-pointer py-[0.75rem] w-full bg-black/90 text-white border border-black/80 hover:bg-black transition-all ease-in duration-300"
-                >
-                  Recruit me
-                </button>
-              </form>
+        <div className="spacer-medium"></div>
+        <div className="w-full lg:max-w-5xl px-[1.25rem]">
+          <div className="w-full flex flex-col items-center relative border rounded-2xl">
+            <div className="w-full lg:w-[45%] mx-auto relative z-20">
               <div className="spacer-xs"></div>
+              <div className="spacer-small"></div>
+              <div className="spacer-medium"></div>
+              <div className="w-full flex flex-col justify-start items-center">
+                <span className="text-[44px] font-[semi-bold]">
+                  Let's Connect
+                </span>
+                <div className="spacer-medium"></div>
+                <form className="w-full" onSubmit={sendEmail}>
+                  <div className="w-full flex justify-center">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                      className="w-full h-[50px] border-[1px] border-gray-300 px-4 focus:border-black focus:outline-none bg-[#fefefe]"
+                    />
+                  </div>
+                  <div className="spacer-small"></div>
+                  <div className="w-full flex justify-center">
+                    <textarea
+                      name="message"
+                      placeholder="Write me some message..."
+                      className="w-full h-[120px] border-[1px] border-gray-300 p-4 focus:border-black focus:outline-none bg-[#fefefe]"
+                    />
+                  </div>
+                  <div className="spacer-small"></div>
+                  <button
+                    type="submit"
+                    className="w-full cursor-pointer py-[0.75rem] w-full bg-black/90 text-white border border-black/80 hover:bg-black transition-all ease-in duration-300"
+                  >
+                    Recruit me
+                  </button>
+                </form>
+                <div className="spacer-xs"></div>
+                <div className="spacer-medium"></div>
+              </div>
               <div className="spacer-medium"></div>
             </div>
-            <div className="spacer-medium"></div>
           </div>
         </div>
+        <div className="spacer-medium"></div>
+        <div className="w-full h-[1px] bg-gray-200"></div>
         <div className="spacer-xs"></div>
         <div className="spacer-small"></div>
         <div className="w-full max-w-5xl px-[1.25rem] flex flex-wrap justify-center md:justify-between items-center gap-3">

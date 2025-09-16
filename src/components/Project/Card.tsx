@@ -1,29 +1,18 @@
-import React from 'react';
-import Image from './Image';
-import Spacer from '../../utils/Spacer';
-import { Project as ProjectType } from '../../types/Project';
-import { BsGithub } from 'react-icons/bs';
+import React from "react";
+import Image from "./Image";
+import Spacer from "../../utils/Spacer";
+import { Project as ProjectType } from "../../types/Project";
+import { BsGithub } from "react-icons/bs";
 
-const Meta: React.FC<{ date: string; authors: string[] }> = ({
-  date,
-  authors,
-}) => (
+const Meta: React.FC<{ url: string }> = ({ url }) => (
   <div className="flex gap-2 text-sm text-gray-400 tracking-wide font-[extra-light]">
-    <span>
-      {new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-      })}
-    </span>
-    <span>•</span>
-    <span>{authors.join(', ')}</span>
+    <span>{url}</span>
   </div>
 );
 
 const Links: React.FC<{
-  url: ProjectType['url'];
-  githubLink: ProjectType['githubLink'];
+  url: ProjectType["url"];
+  githubLink: ProjectType["githubLink"];
 }> = ({ githubLink }) => (
   <>
     <a href={githubLink} target="_blank" rel="noopener noreferrer">
@@ -48,7 +37,7 @@ const Technology: React.FC<{ technology: string }> = ({ technology }) => (
   </div>
 );
 
-const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
+const Technologies: React.FC<{ technologies: ProjectType["technologies"] }> = ({
   technologies,
 }) => (
   <div className="project-technologies w-full flex flex-wrap justify-start items-start gap-2">
@@ -60,7 +49,7 @@ const Technologies: React.FC<{ technologies: ProjectType['technologies'] }> = ({
 
 const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
   return (
-    <>
+    <a href={project.url} target="_blank" rel="noopener noreferrer">
       <div className="project cursor-pointer w-full h-full group relative hover:border hover:border-slate-300 hover:rounded-xl overflow-hidden">
         <Image
           logo={project.logo}
@@ -69,11 +58,11 @@ const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
         />
         <div className="group-hover:px-4 group-hover:pb-5 project-details">
           <Spacer size="small" />
-          <Meta date={project.date} authors={project.authors} />
-          <Spacer size="xs" />
           <div className="text-[#282828] text-[20px] cursor-pointer transition-all duration-300">
             {project.title}
           </div>
+          <Spacer size="xs" />
+          <Meta url={project.url} />
           <Spacer size="xs" />
           <span className="text-[#282828] text-[14px] tracking-wide">
             {project.description}
@@ -86,7 +75,7 @@ const Card: React.FC<{ project: ProjectType }> = ({ project }) => {
           <Technologies technologies={project.technologies} />
         </div>
       </div>
-    </>
+    </a>
   );
 };
 
