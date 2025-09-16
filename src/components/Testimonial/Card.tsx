@@ -1,12 +1,12 @@
-import React from 'react';
-import { Testimonial as TestimonialType } from '../../types/Testimonial';
-import { BsLinkedin } from 'react-icons/bs';
-import { BiSolidQuoteSingleLeft } from 'react-icons/bi';
+import React from "react";
+import { Testimonial as TestimonialType } from "../../types/Testimonial";
+import { BsLinkedin } from "react-icons/bs";
+import { BiSolidQuoteSingleLeft } from "react-icons/bi";
 
 const Card: React.FC<{ testimonial: TestimonialType }> = ({ testimonial }) => {
   return (
     <a href={testimonial.linkedInUrl} target="_blank" rel="noopener noreferrer">
-      <div className="h-[286px] w-[480px] hover:bg-gray-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden border border-slate-100/10 cursor-pointer">
+      <div className="min-h-[286px] max-w-[480px] hover:bg-gray-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden border border-slate-100/10 cursor-pointer">
         <div className="absolute top-4 left-4 w-20 h-20">
           <BsLinkedin />
         </div>
